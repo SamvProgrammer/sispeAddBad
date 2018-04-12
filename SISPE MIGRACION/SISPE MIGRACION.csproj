@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C82172EE-01DE-4FFE-9B5E-94C8ADF5C232}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SISPE_MIGRACION</RootNamespace>
+    <AssemblyName>SISPE MIGRACION</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Npgsql, Version=3.2.7.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.3.2.7\lib\net451\Npgsql.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="codigo\baseDatos\baseDatos.cs" />
+    <Compile Include="codigo\baseDatos\repositorios\repositorios.cs" />
+    <Compile Include="codigo\globales.cs" />
+    <Compile Include="codigo\herramientas\forms\frmDescuentosDePensiones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="codigo\herramientas\forms\frmDescuentosDePensiones.Designer.cs">
+      <DependentUpon>frmDescuentosDePensiones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="codigo\herramientas\forms\frmReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="codigo\herramientas\forms\frmReporte.Designer.cs">
+      <DependentUpon>frmReporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="codigo\herramientas\forms\frmTasaDeInteresescs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="codigo\herramientas\forms\frmTasaDeInteresescs.Designer.cs">
+      <DependentUpon>frmTasaDeInteresescs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="codigo\herramientas\herramientas.cs" />
+    <Compile Include="codigo\herramientas\Prompt.cs" />
+    <Compile Include="codigo\herramientas\validaciones.cs" />
+    <Compile Include="formularios\CATÁLOGOS\frmCatalogoP_quirog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\CATÁLOGOS\frmCatalogoP_quirog.Designer.cs">
+      <DependentUpon>frmCatalogoP_quirog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\CATÁLOGOS\frmCatemplea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\CATÁLOGOS\frmCatemplea.Designer.cs">
+      <DependentUpon>frmCatemplea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\CATÁLOGOS\frmdependencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\CATÁLOGOS\frmdependencias.Designer.cs">
+      <DependentUpon>frmdependencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\CATÁLOGOS\frmEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\CATÁLOGOS\frmEmpleados.Designer.cs">
+      <DependentUpon>frmEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\CATÁLOGOS\frmFirmas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\CATÁLOGOS\frmFirmas.Designer.cs">
+      <DependentUpon>frmFirmas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\CATÁLOGOS\frmMovimientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\CATÁLOGOS\frmMovimientos.Designer.cs">
+      <DependentUpon>frmMovimientos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\CATÁLOGOS\frmCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\CATÁLOGOS\frmCategorias.Designer.cs">
+      <DependentUpon>frmCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\CATÁLOGOS\frmProyecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\CATÁLOGOS\frmProyecto.Designer.cs">
+      <DependentUpon>frmProyecto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\menuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\menuPrincipal.Designer.cs">
+      <DependentUpon>menuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\frmAltas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\frmAltas.Designer.cs">
+      <DependentUpon>frmAltas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\frmdiacheque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\frmdiacheque.Designer.cs">
+      <DependentUpon>frmdiacheque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\frmprogchq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\frmprogchq.Designer.cs">
+      <DependentUpon>frmprogchq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\reportes\frmSolicitudEntrega.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\reportes\frmSolicitudEntrega.Designer.cs">
+      <DependentUpon>frmSolicitudEntrega.cs</DependentUpon>
+    </Compile>
+    <Compile Include="principal.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reportes\tablas.cs">
+      <DependentUpon>tablas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="reportes\tablas1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tablas.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="codigo\herramientas\forms\frmDescuentosDePensiones.resx">
+      <DependentUpon>frmDescuentosDePensiones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="codigo\herramientas\forms\frmReporte.resx">
+      <DependentUpon>frmReporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="codigo\herramientas\forms\frmTasaDeInteresescs.resx">
+      <DependentUpon>frmTasaDeInteresescs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\CATÁLOGOS\frmCatalogoP_quirog.resx">
+      <DependentUpon>frmCatalogoP_quirog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\CATÁLOGOS\frmCatemplea.resx">
+      <DependentUpon>frmCatemplea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\CATÁLOGOS\frmdependencias.resx">
+      <DependentUpon>frmdependencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\CATÁLOGOS\frmEmpleados.resx">
+      <DependentUpon>frmEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\CATÁLOGOS\frmFirmas.resx">
+      <DependentUpon>frmFirmas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\CATÁLOGOS\frmMovimientos.resx">
+      <DependentUpon>frmMovimientos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\CATÁLOGOS\frmCategorias.resx">
+      <DependentUpon>frmCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\CATÁLOGOS\frmProyecto.resx">
+      <DependentUpon>frmProyecto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\menuPrincipal.resx">
+      <DependentUpon>menuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\frmAltas.resx">
+      <DependentUpon>frmAltas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\frmdiacheque.resx">
+      <DependentUpon>frmdiacheque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\frmprogchq.resx">
+      <DependentUpon>frmprogchq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\reportes\frmSolicitudEntrega.resx">
+      <DependentUpon>frmSolicitudEntrega.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="reportes\p_quirogSolicitud.rdlc" />
+    <EmbeddedResource Include="reportes\reporteSolicitudEntrega.rdlc" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="recursos\imagenPrincipal.PNG" />
+    <None Include="reportes\tablas.xsc">
+      <DependentUpon>tablas.xsd</DependentUpon>
+    </None>
+    <None Include="reportes\tablas.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tablas1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="reportes\tablas.xss">
+      <DependentUpon>tablas.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\logo_pensiones.jpg" />
+    <None Include="Resources\logo_oaxaca.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

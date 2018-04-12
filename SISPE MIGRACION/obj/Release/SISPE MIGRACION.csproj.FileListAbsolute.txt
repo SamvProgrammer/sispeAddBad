@@ -1,0 +1,15 @@
+c:\users\santiago antonio\documents\visual studio 2015\Projects\SISPE MIGRACION\SISPE MIGRACION\bin\Release\SISPE MIGRACION.exe.config
+c:\users\santiago antonio\documents\visual studio 2015\Projects\SISPE MIGRACION\SISPE MIGRACION\bin\Release\SISPE MIGRACION.exe
+c:\users\santiago antonio\documents\visual studio 2015\Projects\SISPE MIGRACION\SISPE MIGRACION\bin\Release\SISPE MIGRACION.pdb
+c:\users\santiago antonio\documents\visual studio 2015\Projects\SISPE MIGRACION\SISPE MIGRACION\bin\Release\Npgsql.dll
+c:\users\santiago antonio\documents\visual studio 2015\Projects\SISPE MIGRACION\SISPE MIGRACION\bin\Release\System.Threading.Tasks.Extensions.dll
+c:\users\santiago antonio\documents\visual studio 2015\Projects\SISPE MIGRACION\SISPE MIGRACION\bin\Release\Npgsql.xml
+c:\users\santiago antonio\documents\visual studio 2015\Projects\SISPE MIGRACION\SISPE MIGRACION\bin\Release\System.Threading.Tasks.Extensions.xml
+c:\users\santiago antonio\documents\visual studio 2015\Projects\SISPE MIGRACION\SISPE MIGRACION\obj\Release\SISPE MIGRACION.csprojResolveAssemblyReference.cache
+c:\users\santiago antonio\documents\visual studio 2015\Projects\SISPE MIGRACION\SISPE MIGRACION\obj\Release\SISPE_MIGRACION.datosConexion.resources
+c:\users\santiago antonio\documents\visual studio 2015\Projects\SISPE MIGRACION\SISPE MIGRACION\obj\Release\SISPE_MIGRACION.formularios.login.resources
+c:\users\santiago antonio\documents\visual studio 2015\Projects\SISPE MIGRACION\SISPE MIGRACION\obj\Release\SISPE_MIGRACION.formularios.menuPrincipal.resources
+c:\users\santiago antonio\documents\visual studio 2015\Projects\SISPE MIGRACION\SISPE MIGRACION\obj\Release\SISPE_MIGRACION.Properties.Resources.resources
+c:\users\santiago antonio\documents\visual studio 2015\Projects\SISPE MIGRACION\SISPE MIGRACION\obj\Release\SISPE MIGRACION.csproj.GenerateResource.Cache
+c:\users\santiago antonio\documents\visual studio 2015\Projects\SISPE MIGRACION\SISPE MIGRACION\obj\Release\SISPE MIGRACION.exe
+c:\users\santiago antonio\documents\visual studio 2015\Projects\SISPE MIGRACION\SISPE MIGRACION\obj\Release\SISPE MIGRACION.pdb
