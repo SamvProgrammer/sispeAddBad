@@ -61,6 +61,7 @@ namespace SISPE_MIGRACION.codigo.baseDatos.repositorios
         public double secuen { get; set; }
         public double porc { get; set; }
         public char carta { get; set; }
+        public List<d_quirog> lista { get; set; }
     }
     //===============================================================
     //==                    TABLA D_QUIROG                         ==
