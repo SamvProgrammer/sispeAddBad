@@ -948,7 +948,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Importe liquido:  $</Value>
+                    <Value>Importe líquido:  $</Value>
                     <Style>
                       <FontSize>6pt</FontSize>
                     </Style>
@@ -2983,6 +2983,7 @@
               <Border>
                 <Style>Solid</Style>
               </Border>
+              <BackgroundColor>Silver</BackgroundColor>
             </Style>
           </Rectangle>
           <Textbox Name="Textbox54">
@@ -3337,6 +3338,7 @@
           <Border>
             <Style>Solid</Style>
           </Border>
+          <BackgroundColor>Silver</BackgroundColor>
         </Style>
       </Rectangle>
       <Tablix Name="Tablix4">

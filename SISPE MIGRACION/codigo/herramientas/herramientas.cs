@@ -63,7 +63,55 @@ namespace SISPE_MIGRACION.codigo.herramientas
             
 
             }
+        public static string numerosALetras(int number)
+        {
+            if (number == 0)
+                return "Cero";
 
-       
+            if (number < 0)
+                return "Menos " + numerosALetras(Math.Abs(number));
+
+            string words = "";
+
+            if ((number / 1000000) > 0)
+            {
+                words += numerosALetras(number / 1000000) + " Millones ";
+                number %= 1000000;
+            }
+
+            if ((number / 1000) > 0)
+            {
+                words += numerosALetras(number / 1000) + " Mil ";
+                number %= 1000;
+            }
+
+            if ((number / 100) > 0)
+            {
+                words += numerosALetras(number / 100) + " Cien ";
+                number %= 100;
+            }
+
+            if (number > 0)
+            {
+                if (words != "")
+                    words += "Y ";
+
+                var unitsMap = new[] { "cero", "Uno", "Dos", "Tres", "Cuatro", "Cinco", "Seis", "Siete", "Ocho", "Nueve", "Diez", "Once", "Doce", "Trece", "Catorce", "Quince", "Dieciséis", "diecisiete", "dieciocho", "diecinueve" };
+                var tensMap = new[] { "Cero", "Diez", "Veinte", "Treinta", "Cuarenta", "Cincuenta", "Sesenta", "Setenta", "Ochenta", "Noventa" };
+
+                if (number < 20)
+                    words += unitsMap[number];
+                else
+                {
+                    words += tensMap[number / 10];
+                    if ((number % 10) > 0)
+                        words += "-" + unitsMap[number % 10];
+                }
+            }
+
+            return words;
+        }
+
+
     }
 }

@@ -72,7 +72,7 @@ namespace SISPE_MIGRACION.codigo.herramientas.forms
             if (imprimir)
             {
                 MessageBox.Show(this.mensaje, "Impresión", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Thread.Sleep(1000);
+                
                 reportViewer1.PrintDialog();
                 Close();
             }

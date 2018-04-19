@@ -601,8 +601,7 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
 
         private void button3_Click(object sender, EventArgs e)
         {
-            globales.reportes("reportePagareQuiro","",null,null);
-            return;
+
 
             if (string.IsNullOrWhiteSpace(txtRfc.Text))
             {
@@ -1178,7 +1177,9 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
 
         private void imprimir(p_quirog obj)
         {
+            //Se necesita para sacar los meses de acuerdo al DataTime.............
             string[] meses = {
+                "Enero",
                 "Enero",
                 "Febrero",
                 "Marzo",
@@ -1193,62 +1194,99 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
                 "Diciembre"
             };
 
+            #region plazos del quirografario.....
+            //Empieza el arreglo para sacar los plazoz del quirografario junto con su importe...
+            string[] ar_fecharsve = new string[48];
+            string[] ar_fechasca = new string[48];
+            string fev = obj.f_primdesc;
+            if (obj.tipo_pago == Convert.ToChar("Q"))
+            {
+                int band = 15;
+                for (int x = 0; x < obj.plazo; x++)
+                {
+                    fev = fev.Replace("'", "");
+                    ar_fecharsve[x] = fev;
+                    ar_fechasca[x] = obj.imp_unit.ToString("#.##");
+                    if (band == 15)
+                    {
+                        string[] split = fev.Split('-');
+                        if (split[1] == "2")
+                        {
+                            fev = string.Format("{0}-02-28", split[0]);
+                        }
+                        else
+                        {
+                            fev = string.Format("{0}-{1}-30", split[0], split[1]);
+                        }
+                        band = 30;
+                    }
+                    else
+                    {
+                        string[] split = fev.Split('-');
+                        int año = Convert.ToInt32(split[0]);
+                        int mes = Convert.ToInt32(split[1]);
+                        DateTime fechaAux = new DateTime(año, mes, 1);
+                        fechaAux = fechaAux.AddDays(35);
+                        fev = string.Format("{0}-{1}-15", fechaAux.Year, fechaAux.Month);
+                        band = 15;
+                    }
+                }
 
+            }
+
+
+            #endregion
+
+
+            #region Asignación de los reportes.........
 
             string fecha = string.Format("{0} de {1} del {2}", DateTime.Now.Day, meses[DateTime.Now.Month], DateTime.Now.Year);
-            //Parte de los reportes....................
+            string t1 = string.Format("OAXACA DE JUÁREZ, OAX., {0} de {1} del {2}", DateTime.Now.Day, meses[DateTime.Now.Month], DateTime.Now.Year);
+            string terminosYCondiciones = string.Format("Debo(emos) y Pagaré(mos) incondicionalmente por este pagaré mercantil, en esta plaza ( o en cualquier otro lugar a elección del" +
+                " acreedor), a la orden de la \"OFICINA DE PENSIONES DEL ESTADO DE OAXACA\", él día: {0} la cantidad de ${1} {2} 00/100 M.N), valor recibido a mi entera sastifacción.", ar_fecharsve[Convert.ToInt32(obj.plazo) - 1], obj.importe, globales.numerosLetras(Convert.ToInt32(obj.importe)));
+            
 
             object quir = null;
+            object quir2 = null;
             if (obj.lista.Count == 1)
             {
-                object[] quiro = {
-                    obj.folio, string.Format("OAXACA DE JUAREZ, OAX., {0}", fecha), obj.nombre_em, obj.rfc, obj.direccion, obj.proyecto, obj.descripcion, obj.telefono,obj.importe,obj.plazo, obj.tipo_pago,
-               obj.interes,obj.fondo_g,obj.importe,"","","","","","",obj.sueldo_m,string.Format("{0}A {1}M {2}Q", obj.ant_a, obj.ant_m, obj.ant_q),obj.nue,obj.nap,obj.f_emischeq,
-                  (obj.lista[0].nombre_em == null) ? "" : obj.lista[0].nombre_em,
-            (obj.lista[0].direccion == null) ? "" : obj.lista[0].direccion,
-            (obj.lista[0].rfc == null) ? "" : obj.lista[0].rfc,
-            (obj.lista[0].proyecto == null) ? "" : obj.lista[0].proyecto,
-            (obj.lista[0].antig == null) ? "" : Convert.ToString(obj.lista[0].antig),
-            (obj.lista[0].nue == null) ? "" : obj.lista[0].nue,
-            (obj.lista[0].nap == null) ? "" : Convert.ToString(obj.lista[0].nap)};
+                object[] quiro = {obj.folio, string.Format("OAXACA DE JUAREZ, OAX., {0}", fecha), obj.nombre_em, obj.rfc, obj.direccion, obj.proyecto, obj.descripcion, obj.telefono,obj.importe,obj.plazo, obj.tipo_pago,
+                                  obj.interes,obj.fondo_g,obj.importe,"","","","","","",obj.sueldo_m,string.Format("{0}A {1}M {2}Q", obj.ant_a, obj.ant_m, obj.ant_q),obj.nue,obj.nap,obj.f_emischeq,obj.lista[0].nombre_em,
+                                  obj.lista[0].direccion,obj.lista[0].rfc, obj.lista[0].proyecto,obj.lista[0].antig,obj.lista[0].nue,obj.lista[0].nap};
                 quir = quiro;
             }
             else if (obj.lista.Count == 2)
             {
-                object[] quiro = {
-                    obj.folio, string.Format("OAXACA DE JUAREZ, OAX., {0}", fecha), obj.nombre_em, obj.rfc, obj.direccion, obj.proyecto, obj.descripcion, obj.telefono,obj.importe,obj.plazo, obj.tipo_pago,
-               obj.interes,obj.fondo_g,obj.importe,"","","","","","",obj.sueldo_m,string.Format("{0}A {1}M {2}Q", obj.ant_a, obj.ant_m, obj.ant_q),obj.nue,obj.nap,obj.f_emischeq,
-                  (obj.lista[0].nombre_em == null) ? "" : obj.lista[0].nombre_em,
-            (obj.lista[0].direccion == null) ? "" : obj.lista[0].direccion,
-            (obj.lista[0].rfc == null) ? "" : obj.lista[0].rfc,
-            (obj.lista[0].proyecto == null) ? "" : obj.lista[0].proyecto,
-            (obj.lista[0].antig == null) ? "" : Convert.ToString(obj.lista[0].antig),
-            (obj.lista[0].nue == null) ? "" : obj.lista[0].nue,
-            (obj.lista[0].nap == null) ? "" : Convert.ToString(obj.lista[0].nap),
-                (obj.lista[1].nombre_em == null) ? "" : obj.lista[1].nombre_em,
-            (obj.lista[1].direccion == null) ? "" : obj.lista[1].direccion,
-            (obj.lista[1].rfc == null) ? "" : obj.lista[1].rfc,
-            (obj.lista[1].proyecto == null) ? "" : obj.lista[1].proyecto,
-            (obj.lista[1].antig == null) ? "" : Convert.ToString(obj.lista[1].antig),
-            (obj.lista[1].nue == null) ? "" : obj.lista[1].nue,
-            (obj.lista[1].nap == null) ? "" : Convert.ToString(obj.lista[1].nap)};
+                object[] quiro = {obj.folio, string.Format("OAXACA DE JUAREZ, OAX., {0}", fecha), obj.nombre_em, obj.rfc, obj.direccion, obj.proyecto, obj.descripcion, obj.telefono,obj.importe,obj.plazo, obj.tipo_pago,
+                                  obj.interes,obj.fondo_g,obj.importe,"","","","","","",obj.sueldo_m,string.Format("{0}A {1}M {2}Q", obj.ant_a, obj.ant_m, obj.ant_q),obj.nue,obj.nap,obj.f_emischeq,obj.lista[0].nombre_em,obj.lista[0].direccion, obj.lista[0].rfc,
+                                  obj.lista[0].proyecto,obj.lista[0].antig,obj.lista[0].nue,obj.lista[0].nap,obj.lista[1].nombre_em,obj.lista[1].direccion,obj.lista[1].rfc,obj.lista[1].proyecto,obj.lista[1].antig,obj.lista[1].nue,obj.lista[1].nap};
                 quir = quiro;
             }
             else
             {
-                object[] quiro = {
-                    obj.folio, string.Format("OAXACA DE JUAREZ, OAX., {0}", fecha), obj.nombre_em, obj.rfc, obj.direccion, obj.proyecto, obj.descripcion, obj.telefono,obj.importe,obj.plazo, obj.tipo_pago,
-               obj.interes,obj.fondo_g,obj.importe,"","","","","","",obj.sueldo_m,string.Format("{0}A {1}M {2}Q", obj.ant_a, obj.ant_m, obj.ant_q),obj.nue,obj.nap,obj.f_emischeq};
+                object[] quiro = {obj.folio, string.Format("OAXACA DE JUAREZ, OAX., {0}", fecha), obj.nombre_em, obj.rfc, obj.direccion, obj.proyecto, obj.descripcion, obj.telefono,obj.importe,obj.plazo, obj.tipo_pago,
+                                  obj.interes,obj.fondo_g,obj.importe,"","","","","","",obj.sueldo_m,string.Format("{0}A {1}M {2}Q", obj.ant_a, obj.ant_m, obj.ant_q),obj.nue,obj.nap,obj.f_emischeq};
+
+                object[] quiro2 = { obj.folio, obj.plazo, t1, obj.importe, terminosYCondiciones, obj.nombre_em, obj.rfc, obj.proyecto, obj.nap, obj.direccion ,"sa","saa","saaa","saaaa","deedede","dedede","dded","frfr","hghj","rferf", ar_fecharsve[0], ar_fecharsve[1] , ar_fecharsve[2] , ar_fecharsve[3] , ar_fecharsve[4] , ar_fecharsve[5],
+                                    ar_fecharsve[6],ar_fecharsve[7],ar_fecharsve[8],ar_fecharsve[9],ar_fecharsve[10],ar_fecharsve[11],ar_fecharsve[12],ar_fecharsve[13],ar_fecharsve[14],ar_fecharsve[15],ar_fecharsve[16],ar_fecharsve[17],ar_fecharsve[18],ar_fecharsve[19],ar_fecharsve[20],ar_fecharsve[21],ar_fecharsve[22],
+                                    ar_fecharsve[23],ar_fecharsve[24],ar_fecharsve[25],ar_fecharsve[26],ar_fecharsve[27],ar_fecharsve[28],ar_fecharsve[29],ar_fecharsve[30],ar_fecharsve[31],ar_fecharsve[32],ar_fecharsve[33],ar_fecharsve[34],ar_fecharsve[35],ar_fecharsve[36],ar_fecharsve[37],ar_fecharsve[38],ar_fecharsve[39],
+                                    ar_fecharsve[40],ar_fecharsve[41],ar_fecharsve[42],ar_fecharsve[43],ar_fecharsve[44],ar_fecharsve[45],ar_fecharsve[46],ar_fecharsve[47],ar_fechasca[0],ar_fechasca[1],ar_fechasca[2],ar_fechasca[3],ar_fechasca[4],ar_fechasca[5],ar_fechasca[6],ar_fechasca[7],ar_fechasca[8],ar_fechasca[9],ar_fechasca[10],
+                                    ar_fechasca[11],ar_fechasca[12],ar_fechasca[13],ar_fechasca[14],ar_fechasca[15],ar_fechasca[16],ar_fechasca[17],ar_fechasca[18],ar_fechasca[19],ar_fechasca[20],ar_fechasca[21],ar_fechasca[22],ar_fechasca[23],ar_fechasca[24],ar_fechasca[25],ar_fechasca[26],ar_fechasca[27],ar_fechasca[28],ar_fechasca[29],ar_fechasca[30],
+                                    ar_fechasca[31],ar_fechasca[32],ar_fechasca[33],ar_fechasca[34],ar_fechasca[35],ar_fechasca[36],ar_fechasca[37],ar_fechasca[38],ar_fechasca[39],ar_fechasca[40],ar_fechasca[41],ar_fechasca[42],ar_fechasca[43],ar_fechasca[44],ar_fechasca[45],ar_fechasca[46],ar_fechasca[47]
+                                    };
                 quir = quiro;
+                quir2 = quiro2;
             }
 
 
 
             object[] objeto = { quir };
+            object[] objeto2 = { quir2 };
 
-            globales.reportes("p_quirogSolicitud", "p_quirog_solicitud", objeto, "Se imprimira solicitud de QUIROGRAFARIO", true);
-
-            //globales.reportes("reportePagareQuiro", "", objeto, "Se imprimira el pagaré único", true);
+            globales.reportes("p_quirogSolicitud", "p_quirog_solicitud", objeto, "Se imprimira solicitud de QUIROGRAFARIO");
+            globales.reportes("reportePagareQuiro", "pagare_quirog", objeto2, "Se imprimira el pagare de QUIROGRAFARIO");
+           
+            #endregion
 
 
         }
@@ -1262,5 +1300,7 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
         {
             e.Graphics.DrawString("hola desde todo", new Font("Arial", 40, FontStyle.Bold), Brushes.Black, 150, 125);
         }
+
+
     }
 }

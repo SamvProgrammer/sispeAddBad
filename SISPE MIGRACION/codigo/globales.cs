@@ -41,5 +41,8 @@ class globales
     public static void reportes(string nombreReporte,string tablaSetNombre,object[] objeto,string mensaje="",bool imprimir = false) {
        herramientas.reportes(nombreReporte,tablaSetNombre,objeto,mensaje,imprimir);
     }
+    public static string numerosLetras(int numero) {
+        return herramientas.numerosALetras(numero);
+    }
 }
 
