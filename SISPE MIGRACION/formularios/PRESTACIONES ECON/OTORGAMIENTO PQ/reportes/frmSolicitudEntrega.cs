@@ -80,8 +80,13 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.reportes
                 contador++;
             }
 
+            //object[] parametros = { "fecha1","fecha2" };
+            //object[] valor = { fecha1.Text,"fin de año" };
+            //object[][] enviarParametros= new object[2][];
+            //enviarParametros[0] = parametros;
+            //enviarParametros[1] = valor;
 
-
+            //globales.reportes("reporteSolicitudEntrega", "p_quirog",aux2,"",false, enviarParametros);
             globales.reportes("reporteSolicitudEntrega", "p_quirog",aux2);
         }
 

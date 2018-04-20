@@ -1599,6 +1599,8 @@ namespace SISPE_MIGRACION.reportes {
             
             private global::System.Data.DataColumn columnnap2;
             
+            private global::System.Data.DataColumn columne;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public p_quirog_solicitudDataTable() {
@@ -1946,6 +1948,14 @@ namespace SISPE_MIGRACION.reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn eColumn {
+                get {
+                    return this.columne;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2020,7 +2030,8 @@ namespace SISPE_MIGRACION.reportes {
                         string proyecto2, 
                         string antiguedad2, 
                         string nue2, 
-                        string nap2) {
+                        string nap2, 
+                        string e) {
                 p_quirog_solicitudRow rowp_quirog_solicitudRow = ((p_quirog_solicitudRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         folio,
@@ -2061,7 +2072,8 @@ namespace SISPE_MIGRACION.reportes {
                         proyecto2,
                         antiguedad2,
                         nue2,
-                        nap2};
+                        nap2,
+                        e};
                 rowp_quirog_solicitudRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowp_quirog_solicitudRow);
                 return rowp_quirog_solicitudRow;
@@ -2123,6 +2135,7 @@ namespace SISPE_MIGRACION.reportes {
                 this.columnantiguedad2 = base.Columns["antiguedad2"];
                 this.columnnue2 = base.Columns["nue2"];
                 this.columnnap2 = base.Columns["nap2"];
+                this.columne = base.Columns["e"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2206,6 +2219,8 @@ namespace SISPE_MIGRACION.reportes {
                 base.Columns.Add(this.columnnue2);
                 this.columnnap2 = new global::System.Data.DataColumn("nap2", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnap2);
+                this.columne = new global::System.Data.DataColumn("e", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columne);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6162,6 +6177,22 @@ namespace SISPE_MIGRACION.reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string e {
+                get {
+                    try {
+                        return ((string)(this[this.tablep_quirog_solicitud.eColumn]));
+                    }
+                    catch (global::System.InvalidCastException e1) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'e\' in table \'p_quirog_solicitud\' is DBNull.", e1);
+                    }
+                }
+                set {
+                    this[this.tablep_quirog_solicitud.eColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsfolioNull() {
                 return this.IsNull(this.tablep_quirog_solicitud.folioColumn);
             }
@@ -6626,6 +6657,18 @@ namespace SISPE_MIGRACION.reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setnap2Null() {
                 this[this.tablep_quirog_solicitud.nap2Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IseNull() {
+                return this.IsNull(this.tablep_quirog_solicitud.eColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SeteNull() {
+                this[this.tablep_quirog_solicitud.eColumn] = global::System.Convert.DBNull;
             }
         }
         
