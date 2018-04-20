@@ -593,20 +593,10 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //Parte de los reportes....................
-            object[] quiro = { "21345", "santia", "sdmif", "nombre", "solicitud", "entrega", "importe", "proyecto", "RFC", "domicilio particular"
-            , "ascripcion", "telefono"};
+            object[] quiro = { "21345", "OAXACA DE JUAREZ, OAX., 5 DE ABRIL DE 2018", "SANTIAGO ANTONIO MARISCAL VELASQUEZ", "MAVS976859HOORCLR", "AVENIDA CENTRAL # 206 COL LA SOLEDAD", "34534534543", "SECTOR JUDICIAL", "5492620"};
             object[] objeto = { quiro };
-            globales.reportes("p_quirogSolicitud", "p_quirog", objeto, true);
 
-            //object[] t1 = { "santiago", "43" };
-            //object[] t2 = { "tiago", "44" };
-            //object[] t3 = { "sango", "45" };
-            //object[] t4 = { "santia", "46" };
-            //object[] aux = {t1,t2,t3,t4};
-
-            //globales.reportes("tem","temporal",aux);
-            
+            globales.reportes("p_quirogSolicitud", "p_quirog_solicitud", objeto, "Se imprimira solicitud de QUIROGRAFARIO", true);
             return;
             if (string.IsNullOrWhiteSpace(txtRfc.Text)) {
                 MessageBox.Show("Se debe insertar un RFC para continuar", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -662,7 +652,7 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
             obj.fondo_g = (string.IsNullOrWhiteSpace(txtFondo_g.Text))?0: Convert.ToDouble(txtFondo_g.Text);
             obj.liquido = (string.IsNullOrWhiteSpace(txtliquido.Text))?0: Convert.ToDouble(txtliquido.Text);
             obj.carta = (string.IsNullOrWhiteSpace(this.carta)) ? Convert.ToChar("") : Convert.ToChar(this.carta);
-
+            obj.f_solicitud = string.Format("{0}-{1}-{2}", DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
 
             if (obj.f_emischeq != "null") {
                 string[] aux2 = obj.f_emischeq.Split('/');
@@ -685,13 +675,13 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
             } else if (guardar) {
                 if (insertarRegistro(obj)) {
                     MessageBox.Show("Registro guardado exitosamente!!", "Registro guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    DialogResult resultado =  MessageBox.Show("¿Desea impirmir la presenta solicitud?","Atención",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+                    DialogResult resultado =  MessageBox.Show("¿Desea impirmir la presente solicitud?","Atención",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
                     if (resultado == DialogResult.No) {
                         MessageBox.Show("Puede impirmir más adelante!!", "Impresión", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
                     }
                     this.Cursor = Cursors.WaitCursor;
-                    imprimir();
+                    imprimir(obj);
                 }
                 else
                     MessageBox.Show("Error al guardar el registor, contactar al equipo de sistemas!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -714,15 +704,16 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
                 obj.folio = maximo;
 
                 query = "insert into datos.p_quirog(folio,rfc,nombre_em,proyecto,secretaria,antig_q,sueldo_base,descripcion,telefono,extension,direccion,nue,nap,"+
-                    "sueldo_m,ant_a,ant_m,ant_q,meses_corres,otros_desc,trel,porc,plazo,tipo_pago,f_emischeq,f_primdesc,f_ultimode,imp_unit,importe,interes,fondo_g,liquido,carta) values({0},'{1}','{2}','{3}','{4}',{5},{6},'{7}','{8}','{9}',"+
-                    "'{10}','{11}',{12},{13},{14},{15},{16},{17},{18},'{19}',{20},{21},'{22}',{23},{24},{25},{26},{27},{28},{29},{30},{31})";
+                    "sueldo_m,ant_a,ant_m,ant_q,meses_corres,otros_desc,trel,porc,plazo,tipo_pago,f_emischeq,f_primdesc,f_ultimode,imp_unit,importe,interes,fondo_g,liquido,carta,f_solicitud) values({0},'{1}','{2}','{3}','{4}',{5},{6},'{7}','{8}','{9}',"+
+                    "'{10}','{11}',{12},{13},{14},{15},{16},{17},{18},'{19}',{20},{21},'{22}',{23},{24},{25},{26},{27},{28},{29},{30},'{31}','{32}')";
                 query = string.Format(query, obj.folio, obj.rfc, obj.nombre_em, obj.proyecto, obj.secretaria, obj.antig_q, obj.sueldo_base,obj.descripcion,obj.telefono,obj.extencion,obj.direccion,obj.nue,obj.nap,
                     obj.sueldo_m,obj.ant_a,obj.ant_m,obj.ant_q,obj.meses_corres,obj.otros_desc,obj.trel,obj.porc,obj.plazo,obj.tipo_pago,obj.f_emischeq,obj.f_primdesc,obj.f_ultmode,obj.imp_unit,obj.importe,obj.interes,obj.fondo_g,obj.liquido,
-                    obj.carta);
+                    obj.carta,obj.f_solicitud);
 
 
                 if (globales.consulta(query, true))
                 {
+                    registro = true;
                     if (!string.IsNullOrWhiteSpace(txtRfc1.Text))
                     {
                         d_quirog detalleQuirog = new d_quirog();
@@ -739,9 +730,7 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
                         globales.consulta(query, true);
                         registro = true;
                     }
-                    else {
-                        registro = false;
-                    }
+                   
                     if (!string.IsNullOrWhiteSpace(txtrfc2.Text))
                     {
                         d_quirog detalleQuirog = new d_quirog();
@@ -757,9 +746,6 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
                         query = string.Format(query, detalleQuirog.folio, detalleQuirog.rfc, detalleQuirog.nombre_em, detalleQuirog.direccion, detalleQuirog.proyecto, detalleQuirog.nap, detalleQuirog.nue, detalleQuirog.antig);
                         globales.consulta(query, true);
                         registro = true;
-                    }
-                    else {
-                        registro = false;
                     }
                 }
                 else {
@@ -1164,9 +1150,14 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
             txtSueldoBase.Text = texto;
         }
 
-        private void imprimir()
+        private void imprimir(p_quirog obj)
         {
-            
+
+            //Parte de los reportes....................
+          
+            //globales.reportes("reportePagareQuiro", "", objeto, "Se imprimira el pagaré único", true);
+
+
         }
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)

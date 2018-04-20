@@ -85,7 +85,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1444, 618);
+            this.panel1.Size = new System.Drawing.Size(1370, 618);
             this.panel1.TabIndex = 1;
             // 
             // menuStrip1
@@ -96,7 +96,7 @@
             this.prestacionesEconómicasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1444, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1370, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -250,26 +250,28 @@
             // solicEntregaToolStripMenuItem
             // 
             this.solicEntregaToolStripMenuItem.Name = "solicEntregaToolStripMenuItem";
-            this.solicEntregaToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.solicEntregaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.solicEntregaToolStripMenuItem.Text = "Solic/Entrega";
             this.solicEntregaToolStripMenuItem.Click += new System.EventHandler(this.solicEntregaToolStripMenuItem_Click);
             // 
             // pagaresToolStripMenuItem
             // 
             this.pagaresToolStripMenuItem.Name = "pagaresToolStripMenuItem";
-            this.pagaresToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.pagaresToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.pagaresToolStripMenuItem.Text = "Pagares";
+            this.pagaresToolStripMenuItem.Click += new System.EventHandler(this.pagaresToolStripMenuItem_Click);
             // 
             // alfabéticoToolStripMenuItem
             // 
             this.alfabéticoToolStripMenuItem.Name = "alfabéticoToolStripMenuItem";
-            this.alfabéticoToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.alfabéticoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.alfabéticoToolStripMenuItem.Text = "Alfabético";
+            this.alfabéticoToolStripMenuItem.Click += new System.EventHandler(this.alfabéticoToolStripMenuItem_Click);
             // 
             // montosToolStripMenuItem
             // 
             this.montosToolStripMenuItem.Name = "montosToolStripMenuItem";
-            this.montosToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.montosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.montosToolStripMenuItem.Text = "Montos";
             // 
             // tasasToolStripMenuItem
@@ -426,7 +428,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1444, 618);
+            this.ClientSize = new System.Drawing.Size(1370, 618);
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
             this.Name = "menuPrincipal";

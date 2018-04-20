@@ -185,6 +185,18 @@
     <Compile Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\frmprogchq.Designer.cs">
       <DependentUpon>frmprogchq.cs</DependentUpon>
     </Compile>
+    <Compile Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\reportes\frmAlfabet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\reportes\frmAlfabet.Designer.cs">
+      <DependentUpon>frmAlfabet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\reportes\frmPagares.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\reportes\frmPagares.Designer.cs">
+      <DependentUpon>frmPagares.cs</DependentUpon>
+    </Compile>
     <Compile Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\reportes\frmSolicitudEntrega.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -249,6 +261,12 @@
     <EmbeddedResource Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\frmprogchq.resx">
       <DependentUpon>frmprogchq.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\reportes\frmAlfabet.resx">
+      <DependentUpon>frmAlfabet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\reportes\frmPagares.resx">
+      <DependentUpon>frmPagares.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\reportes\frmSolicitudEntrega.resx">
       <DependentUpon>frmSolicitudEntrega.cs</DependentUpon>
     </EmbeddedResource>
@@ -263,7 +281,10 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="reportes\p_quirogSolicitud.rdlc" />
+    <EmbeddedResource Include="reportes\reportePagareQuiro.rdlc" />
+    <EmbeddedResource Include="reportes\reporteAlfa.rdlc" />
     <EmbeddedResource Include="reportes\reporteSolicitudEntrega.rdlc" />
+    <EmbeddedResource Include="reportes\Reportpagare.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -308,6 +329,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PH\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

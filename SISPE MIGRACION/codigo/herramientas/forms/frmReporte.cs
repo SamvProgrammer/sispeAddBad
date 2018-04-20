@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -14,7 +15,7 @@ namespace SISPE_MIGRACION.codigo.herramientas.forms
     {
         private bool cargando;
         private bool imprimir;
-
+        private string mensaje;
         public frmReporte(string nombreReporte, string tablaDataSet)
         {
             InitializeComponent();
@@ -68,10 +69,17 @@ namespace SISPE_MIGRACION.codigo.herramientas.forms
 
         private void reportViewer1_Load(object sender, EventArgs e)
         {
-            if (imprimir) {
-                MessageBox.Show("Se va a imprimri la solicitud quirografario", "Solicitud Quirografario", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (imprimir)
+            {
+                MessageBox.Show(this.mensaje, "Impresión", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Thread.Sleep(1000);
                 reportViewer1.PrintDialog();
                 Close();
+            }
+            else {
+                if (!string.IsNullOrWhiteSpace(mensaje)) {
+                    MessageBox.Show(this.mensaje, "Reporte", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
 
@@ -81,24 +89,27 @@ namespace SISPE_MIGRACION.codigo.herramientas.forms
 
         }
 
-        internal void cargarDatos(string tablaNombre, object[] objeto, bool imprimir = false) {
+        internal void cargarDatos(string tablaNombre, object[] objeto,string mensaje, bool imprimir = false) {
 
             DataTable tabla = tablas.Tables[tablaNombre];
 
-            
+            this.mensaje = mensaje;
 
-            
-            foreach (var item in objeto) {
-                tabla.Rows.Add((object[])item);
+            if (tabla != null) {
+
+                foreach (var item in objeto)
+                {
+                    tabla.Rows.Add((object[])item);
+                }
             }
             
             this.reportViewer1.RefreshReport();
             this.imprimir = imprimir;
         }
 
+        private void frmReporte_Load_1(object sender, EventArgs e)
+        {
 
-
-
-     
+        }
     }
 }

@@ -28,6 +28,8 @@ namespace SISPE_MIGRACION.reportes {
         
         private p_quirogDataTable tablep_quirog;
         
+        private p_quirog_solicitudDataTable tablep_quirog_solicitud;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -61,6 +63,9 @@ namespace SISPE_MIGRACION.reportes {
                 }
                 if ((ds.Tables["p_quirog"] != null)) {
                     base.Tables.Add(new p_quirogDataTable(ds.Tables["p_quirog"]));
+                }
+                if ((ds.Tables["p_quirog_solicitud"] != null)) {
+                    base.Tables.Add(new p_quirog_solicitudDataTable(ds.Tables["p_quirog_solicitud"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -97,6 +102,16 @@ namespace SISPE_MIGRACION.reportes {
         public p_quirogDataTable p_quirog {
             get {
                 return this.tablep_quirog;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public p_quirog_solicitudDataTable p_quirog_solicitud {
+            get {
+                return this.tablep_quirog_solicitud;
             }
         }
         
@@ -173,6 +188,9 @@ namespace SISPE_MIGRACION.reportes {
                 if ((ds.Tables["p_quirog"] != null)) {
                     base.Tables.Add(new p_quirogDataTable(ds.Tables["p_quirog"]));
                 }
+                if ((ds.Tables["p_quirog_solicitud"] != null)) {
+                    base.Tables.Add(new p_quirog_solicitudDataTable(ds.Tables["p_quirog_solicitud"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -218,6 +236,12 @@ namespace SISPE_MIGRACION.reportes {
                     this.tablep_quirog.InitVars();
                 }
             }
+            this.tablep_quirog_solicitud = ((p_quirog_solicitudDataTable)(base.Tables["p_quirog_solicitud"]));
+            if ((initTable == true)) {
+                if ((this.tablep_quirog_solicitud != null)) {
+                    this.tablep_quirog_solicitud.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -232,6 +256,8 @@ namespace SISPE_MIGRACION.reportes {
             base.Tables.Add(this.tableempleados);
             this.tablep_quirog = new p_quirogDataTable();
             base.Tables.Add(this.tablep_quirog);
+            this.tablep_quirog_solicitud = new p_quirog_solicitudDataTable();
+            base.Tables.Add(this.tablep_quirog_solicitud);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -243,6 +269,12 @@ namespace SISPE_MIGRACION.reportes {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializep_quirog() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializep_quirog_solicitud() {
             return false;
         }
         
@@ -306,6 +338,9 @@ namespace SISPE_MIGRACION.reportes {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void p_quirogRowChangeEventHandler(object sender, p_quirogRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void p_quirog_solicitudRowChangeEventHandler(object sender, p_quirog_solicitudRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -1404,6 +1439,824 @@ namespace SISPE_MIGRACION.reportes {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "p_quirogDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class p_quirog_solicitudDataTable : global::System.Data.TypedTableBase<p_quirog_solicitudRow> {
+            
+            private global::System.Data.DataColumn columnfolio;
+            
+            private global::System.Data.DataColumn columnfechaSolicitud;
+            
+            private global::System.Data.DataColumn columnnombre_em;
+            
+            private global::System.Data.DataColumn columnrfc;
+            
+            private global::System.Data.DataColumn columndireccion;
+            
+            private global::System.Data.DataColumn columnproyecto;
+            
+            private global::System.Data.DataColumn columndescripcion;
+            
+            private global::System.Data.DataColumn columntelefono;
+            
+            private global::System.Data.DataColumn columnimporte;
+            
+            private global::System.Data.DataColumn columnplazo;
+            
+            private global::System.Data.DataColumn columntipo_pago;
+            
+            private global::System.Data.DataColumn columnintereses;
+            
+            private global::System.Data.DataColumn columnfondo_g;
+            
+            private global::System.Data.DataColumn columnliquido;
+            
+            private global::System.Data.DataColumn columnpercepciones;
+            
+            private global::System.Data.DataColumn columndeducciones;
+            
+            private global::System.Data.DataColumn columndeduc_rec1;
+            
+            private global::System.Data.DataColumn columnporcentaje1;
+            
+            private global::System.Data.DataColumn columndeduc_rec2;
+            
+            private global::System.Data.DataColumn columnporcentaje2;
+            
+            private global::System.Data.DataColumn columnsueldo_m;
+            
+            private global::System.Data.DataColumn columntxtAntig;
+            
+            private global::System.Data.DataColumn columnnue;
+            
+            private global::System.Data.DataColumn columnnap;
+            
+            private global::System.Data.DataColumn columnf_emischeq;
+            
+            private global::System.Data.DataColumn columnnombre1;
+            
+            private global::System.Data.DataColumn columndireccion1;
+            
+            private global::System.Data.DataColumn columnrfc1;
+            
+            private global::System.Data.DataColumn columnproyecto1;
+            
+            private global::System.Data.DataColumn columnantiguedad1;
+            
+            private global::System.Data.DataColumn columnnue1;
+            
+            private global::System.Data.DataColumn columnnap1;
+            
+            private global::System.Data.DataColumn columnnombre2;
+            
+            private global::System.Data.DataColumn columndomicilio2;
+            
+            private global::System.Data.DataColumn columnrfc2;
+            
+            private global::System.Data.DataColumn columnproyecto2;
+            
+            private global::System.Data.DataColumn columnantiguedad2;
+            
+            private global::System.Data.DataColumn columnnue2;
+            
+            private global::System.Data.DataColumn columnnap2;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public p_quirog_solicitudDataTable() {
+                this.TableName = "p_quirog_solicitud";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal p_quirog_solicitudDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected p_quirog_solicitudDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn folioColumn {
+                get {
+                    return this.columnfolio;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn fechaSolicitudColumn {
+                get {
+                    return this.columnfechaSolicitud;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn nombre_emColumn {
+                get {
+                    return this.columnnombre_em;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn rfcColumn {
+                get {
+                    return this.columnrfc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn direccionColumn {
+                get {
+                    return this.columndireccion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn proyectoColumn {
+                get {
+                    return this.columnproyecto;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn descripcionColumn {
+                get {
+                    return this.columndescripcion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn telefonoColumn {
+                get {
+                    return this.columntelefono;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn importeColumn {
+                get {
+                    return this.columnimporte;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn plazoColumn {
+                get {
+                    return this.columnplazo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn tipo_pagoColumn {
+                get {
+                    return this.columntipo_pago;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn interesesColumn {
+                get {
+                    return this.columnintereses;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn fondo_gColumn {
+                get {
+                    return this.columnfondo_g;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn liquidoColumn {
+                get {
+                    return this.columnliquido;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn percepcionesColumn {
+                get {
+                    return this.columnpercepciones;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn deduccionesColumn {
+                get {
+                    return this.columndeducciones;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn deduc_rec1Column {
+                get {
+                    return this.columndeduc_rec1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn porcentaje1Column {
+                get {
+                    return this.columnporcentaje1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn deduc_rec2Column {
+                get {
+                    return this.columndeduc_rec2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn porcentaje2Column {
+                get {
+                    return this.columnporcentaje2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn sueldo_mColumn {
+                get {
+                    return this.columnsueldo_m;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn txtAntigColumn {
+                get {
+                    return this.columntxtAntig;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn nueColumn {
+                get {
+                    return this.columnnue;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn napColumn {
+                get {
+                    return this.columnnap;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn f_emischeqColumn {
+                get {
+                    return this.columnf_emischeq;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn nombre1Column {
+                get {
+                    return this.columnnombre1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn direccion1Column {
+                get {
+                    return this.columndireccion1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn rfc1Column {
+                get {
+                    return this.columnrfc1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn proyecto1Column {
+                get {
+                    return this.columnproyecto1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn antiguedad1Column {
+                get {
+                    return this.columnantiguedad1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn nue1Column {
+                get {
+                    return this.columnnue1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn nap1Column {
+                get {
+                    return this.columnnap1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn nombre2Column {
+                get {
+                    return this.columnnombre2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn domicilio2Column {
+                get {
+                    return this.columndomicilio2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn rfc2Column {
+                get {
+                    return this.columnrfc2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn proyecto2Column {
+                get {
+                    return this.columnproyecto2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn antiguedad2Column {
+                get {
+                    return this.columnantiguedad2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn nue2Column {
+                get {
+                    return this.columnnue2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn nap2Column {
+                get {
+                    return this.columnnap2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public p_quirog_solicitudRow this[int index] {
+                get {
+                    return ((p_quirog_solicitudRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event p_quirog_solicitudRowChangeEventHandler p_quirog_solicitudRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event p_quirog_solicitudRowChangeEventHandler p_quirog_solicitudRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event p_quirog_solicitudRowChangeEventHandler p_quirog_solicitudRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event p_quirog_solicitudRowChangeEventHandler p_quirog_solicitudRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Addp_quirog_solicitudRow(p_quirog_solicitudRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public p_quirog_solicitudRow Addp_quirog_solicitudRow(
+                        string folio, 
+                        string fechaSolicitud, 
+                        string nombre_em, 
+                        string rfc, 
+                        string direccion, 
+                        string proyecto, 
+                        string descripcion, 
+                        string telefono, 
+                        string importe, 
+                        string plazo, 
+                        string tipo_pago, 
+                        string intereses, 
+                        string fondo_g, 
+                        string liquido, 
+                        string percepciones, 
+                        string deducciones, 
+                        string deduc_rec1, 
+                        string porcentaje1, 
+                        string deduc_rec2, 
+                        string porcentaje2, 
+                        string sueldo_m, 
+                        string txtAntig, 
+                        string nue, 
+                        string nap, 
+                        string f_emischeq, 
+                        string nombre1, 
+                        string direccion1, 
+                        string rfc1, 
+                        string proyecto1, 
+                        string antiguedad1, 
+                        string nue1, 
+                        string nap1, 
+                        string nombre2, 
+                        string domicilio2, 
+                        string rfc2, 
+                        string proyecto2, 
+                        string antiguedad2, 
+                        string nue2, 
+                        string nap2) {
+                p_quirog_solicitudRow rowp_quirog_solicitudRow = ((p_quirog_solicitudRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        folio,
+                        fechaSolicitud,
+                        nombre_em,
+                        rfc,
+                        direccion,
+                        proyecto,
+                        descripcion,
+                        telefono,
+                        importe,
+                        plazo,
+                        tipo_pago,
+                        intereses,
+                        fondo_g,
+                        liquido,
+                        percepciones,
+                        deducciones,
+                        deduc_rec1,
+                        porcentaje1,
+                        deduc_rec2,
+                        porcentaje2,
+                        sueldo_m,
+                        txtAntig,
+                        nue,
+                        nap,
+                        f_emischeq,
+                        nombre1,
+                        direccion1,
+                        rfc1,
+                        proyecto1,
+                        antiguedad1,
+                        nue1,
+                        nap1,
+                        nombre2,
+                        domicilio2,
+                        rfc2,
+                        proyecto2,
+                        antiguedad2,
+                        nue2,
+                        nap2};
+                rowp_quirog_solicitudRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowp_quirog_solicitudRow);
+                return rowp_quirog_solicitudRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                p_quirog_solicitudDataTable cln = ((p_quirog_solicitudDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new p_quirog_solicitudDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnfolio = base.Columns["folio"];
+                this.columnfechaSolicitud = base.Columns["fechaSolicitud"];
+                this.columnnombre_em = base.Columns["nombre_em"];
+                this.columnrfc = base.Columns["rfc"];
+                this.columndireccion = base.Columns["direccion"];
+                this.columnproyecto = base.Columns["proyecto"];
+                this.columndescripcion = base.Columns["descripcion"];
+                this.columntelefono = base.Columns["telefono"];
+                this.columnimporte = base.Columns["importe"];
+                this.columnplazo = base.Columns["plazo"];
+                this.columntipo_pago = base.Columns["tipo_pago"];
+                this.columnintereses = base.Columns["intereses"];
+                this.columnfondo_g = base.Columns["fondo_g"];
+                this.columnliquido = base.Columns["liquido"];
+                this.columnpercepciones = base.Columns["percepciones"];
+                this.columndeducciones = base.Columns["deducciones"];
+                this.columndeduc_rec1 = base.Columns["deduc_rec1"];
+                this.columnporcentaje1 = base.Columns["porcentaje1"];
+                this.columndeduc_rec2 = base.Columns["deduc_rec2"];
+                this.columnporcentaje2 = base.Columns["porcentaje2"];
+                this.columnsueldo_m = base.Columns["sueldo_m"];
+                this.columntxtAntig = base.Columns["txtAntig"];
+                this.columnnue = base.Columns["nue"];
+                this.columnnap = base.Columns["nap"];
+                this.columnf_emischeq = base.Columns["f_emischeq"];
+                this.columnnombre1 = base.Columns["nombre1"];
+                this.columndireccion1 = base.Columns["direccion1"];
+                this.columnrfc1 = base.Columns["rfc1"];
+                this.columnproyecto1 = base.Columns["proyecto1"];
+                this.columnantiguedad1 = base.Columns["antiguedad1"];
+                this.columnnue1 = base.Columns["nue1"];
+                this.columnnap1 = base.Columns["nap1"];
+                this.columnnombre2 = base.Columns["nombre2"];
+                this.columndomicilio2 = base.Columns["domicilio2"];
+                this.columnrfc2 = base.Columns["rfc2"];
+                this.columnproyecto2 = base.Columns["proyecto2"];
+                this.columnantiguedad2 = base.Columns["antiguedad2"];
+                this.columnnue2 = base.Columns["nue2"];
+                this.columnnap2 = base.Columns["nap2"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnfolio = new global::System.Data.DataColumn("folio", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfolio);
+                this.columnfechaSolicitud = new global::System.Data.DataColumn("fechaSolicitud", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfechaSolicitud);
+                this.columnnombre_em = new global::System.Data.DataColumn("nombre_em", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombre_em);
+                this.columnrfc = new global::System.Data.DataColumn("rfc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrfc);
+                this.columndireccion = new global::System.Data.DataColumn("direccion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndireccion);
+                this.columnproyecto = new global::System.Data.DataColumn("proyecto", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnproyecto);
+                this.columndescripcion = new global::System.Data.DataColumn("descripcion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndescripcion);
+                this.columntelefono = new global::System.Data.DataColumn("telefono", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntelefono);
+                this.columnimporte = new global::System.Data.DataColumn("importe", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnimporte);
+                this.columnplazo = new global::System.Data.DataColumn("plazo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnplazo);
+                this.columntipo_pago = new global::System.Data.DataColumn("tipo_pago", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntipo_pago);
+                this.columnintereses = new global::System.Data.DataColumn("intereses", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnintereses);
+                this.columnfondo_g = new global::System.Data.DataColumn("fondo_g", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfondo_g);
+                this.columnliquido = new global::System.Data.DataColumn("liquido", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnliquido);
+                this.columnpercepciones = new global::System.Data.DataColumn("percepciones", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpercepciones);
+                this.columndeducciones = new global::System.Data.DataColumn("deducciones", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndeducciones);
+                this.columndeduc_rec1 = new global::System.Data.DataColumn("deduc_rec1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndeduc_rec1);
+                this.columnporcentaje1 = new global::System.Data.DataColumn("porcentaje1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnporcentaje1);
+                this.columndeduc_rec2 = new global::System.Data.DataColumn("deduc_rec2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndeduc_rec2);
+                this.columnporcentaje2 = new global::System.Data.DataColumn("porcentaje2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnporcentaje2);
+                this.columnsueldo_m = new global::System.Data.DataColumn("sueldo_m", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsueldo_m);
+                this.columntxtAntig = new global::System.Data.DataColumn("txtAntig", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntxtAntig);
+                this.columnnue = new global::System.Data.DataColumn("nue", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnue);
+                this.columnnap = new global::System.Data.DataColumn("nap", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnap);
+                this.columnf_emischeq = new global::System.Data.DataColumn("f_emischeq", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnf_emischeq);
+                this.columnnombre1 = new global::System.Data.DataColumn("nombre1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombre1);
+                this.columndireccion1 = new global::System.Data.DataColumn("direccion1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndireccion1);
+                this.columnrfc1 = new global::System.Data.DataColumn("rfc1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrfc1);
+                this.columnproyecto1 = new global::System.Data.DataColumn("proyecto1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnproyecto1);
+                this.columnantiguedad1 = new global::System.Data.DataColumn("antiguedad1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnantiguedad1);
+                this.columnnue1 = new global::System.Data.DataColumn("nue1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnue1);
+                this.columnnap1 = new global::System.Data.DataColumn("nap1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnap1);
+                this.columnnombre2 = new global::System.Data.DataColumn("nombre2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombre2);
+                this.columndomicilio2 = new global::System.Data.DataColumn("domicilio2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndomicilio2);
+                this.columnrfc2 = new global::System.Data.DataColumn("rfc2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrfc2);
+                this.columnproyecto2 = new global::System.Data.DataColumn("proyecto2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnproyecto2);
+                this.columnantiguedad2 = new global::System.Data.DataColumn("antiguedad2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnantiguedad2);
+                this.columnnue2 = new global::System.Data.DataColumn("nue2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnue2);
+                this.columnnap2 = new global::System.Data.DataColumn("nap2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnap2);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public p_quirog_solicitudRow Newp_quirog_solicitudRow() {
+                return ((p_quirog_solicitudRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new p_quirog_solicitudRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(p_quirog_solicitudRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.p_quirog_solicitudRowChanged != null)) {
+                    this.p_quirog_solicitudRowChanged(this, new p_quirog_solicitudRowChangeEvent(((p_quirog_solicitudRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.p_quirog_solicitudRowChanging != null)) {
+                    this.p_quirog_solicitudRowChanging(this, new p_quirog_solicitudRowChangeEvent(((p_quirog_solicitudRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.p_quirog_solicitudRowDeleted != null)) {
+                    this.p_quirog_solicitudRowDeleted(this, new p_quirog_solicitudRowChangeEvent(((p_quirog_solicitudRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.p_quirog_solicitudRowDeleting != null)) {
+                    this.p_quirog_solicitudRowDeleting(this, new p_quirog_solicitudRowChangeEvent(((p_quirog_solicitudRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Removep_quirog_solicitudRow(p_quirog_solicitudRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                tablas ds = new tablas();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "p_quirog_solicitudDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2662,6 +3515,1113 @@ namespace SISPE_MIGRACION.reportes {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class p_quirog_solicitudRow : global::System.Data.DataRow {
+            
+            private p_quirog_solicitudDataTable tablep_quirog_solicitud;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal p_quirog_solicitudRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablep_quirog_solicitud = ((p_quirog_solicitudDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string folio {
+                get {
+                    try {
+                        return ((string)(this[this.tablep_quirog_solicitud.folioColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'folio\' in table \'p_quirog_solicitud\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablep_quirog_solicitud.folioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string fechaSolicitud {
+                get {
+                    try {
+                        return ((string)(this[this.tablep_quirog_solicitud.fechaSolicitudColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'fechaSolicitud\' in table \'p_quirog_solicitud\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablep_quirog_solicitud.fechaSolicitudColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string nombre_em {
+                get {
+                    try {
+                        return ((string)(this[this.tablep_quirog_solicitud.nombre_emColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'nombre_em\' in table \'p_quirog_solicitud\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablep_quirog_solicitud.nombre_emColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string rfc {
+                get {
+                    try {
+                        return ((string)(this[this.tablep_quirog_solicitud.rfcColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'rfc\' in table \'p_quirog_solicitud\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablep_quirog_solicitud.rfcColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string direccion {
+                get {
+                    try {
+                        return ((string)(this[this.tablep_quirog_solicitud.direccionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'direccion\' in table \'p_quirog_solicitud\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablep_quirog_solicitud.direccionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string proyecto {
+                get {
+                    try {
+                        return ((string)(this[this.tablep_quirog_solicitud.proyectoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'proyecto\' in table \'p_quirog_solicitud\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablep_quirog_solicitud.proyectoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string descripcion {
+                get {
+                    try {
+                        return ((string)(this[this.tablep_quirog_solicitud.descripcionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'descripcion\' in table \'p_quirog_solicitud\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablep_quirog_solicitud.descripcionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string telefono {
+                get {
+                    try {
+                        return ((string)(this[this.tablep_quirog_solicitud.telefonoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'telefono\' in table \'p_quirog_solicitud\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablep_quirog_solicitud.telefonoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string importe {
+                get {
+                    try {
+                        return ((string)(this[this.tablep_quirog_solicitud.importeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'importe\' in table \'p_quirog_solicitud\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablep_quirog_solicitud.importeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string plazo {
+                get {
+                    try {
+                        return ((string)(this[this.tablep_quirog_solicitud.plazoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'plazo\' in table \'p_quirog_solicitud\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablep_quirog_solicitud.plazoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string tipo_pago {
+                get {
+                    try {
+                        return ((string)(this[this.tablep_quirog_solicitud.tipo_pagoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'tipo_pago\' in table \'p_quirog_solicitud\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablep_quirog_solicitud.tipo_pagoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string intereses {
+                get {
+                    try {
+                        return ((string)(this[this.tablep_quirog_solicitud.interesesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'intereses\' in table \'p_quirog_solicitud\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablep_quirog_solicitud.interesesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string fondo_g {
+                get {
+                    try {
+                        return ((string)(this[this.tablep_quirog_solicitud.fondo_gColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'fondo_g\' in table \'p_quirog_solicitud\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablep_quirog_solicitud.fondo_gColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string liquido {
+                get {
+                    try {
+                        return ((string)(this[this.tablep_quirog_solicitud.liquidoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'liquido\' in table \'p_quirog_solicitud\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablep_quirog_solicitud.liquidoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string percepciones {
+                get {
+                    try {
+                        return ((string)(this[this.tablep_quirog_solicitud.percepcionesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'percepciones\' in table \'p_quirog_solicitud\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablep_quirog_solicitud.percepcionesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string deducciones {
+                get {
+                    try {
+                        return ((string)(this[this.tablep_quirog_solicitud.deduccionesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'deducciones\' in table \'p_quirog_solicitud\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablep_quirog_solicitud.deduccionesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string deduc_rec1 {
+                get {
+                    try {
+                        return ((string)(this[this.tablep_quirog_solicitud.deduc_rec1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'deduc_rec1\' in table \'p_quirog_solicitud\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablep_quirog_solicitud.deduc_rec1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string porcentaje1 {
+                get {
+                    try {
+                        return ((string)(this[this.tablep_quirog_solicitud.porcentaje1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'porcentaje1\' in table \'p_quirog_solicitud\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablep_quirog_solicitud.porcentaje1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string deduc_rec2 {
+                get {
+                    try {
+                        return ((string)(this[this.tablep_quirog_solicitud.deduc_rec2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'deduc_rec2\' in table \'p_quirog_solicitud\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablep_quirog_solicitud.deduc_rec2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string porcentaje2 {
+                get {
+                    try {
+                        return ((string)(this[this.tablep_quirog_solicitud.porcentaje2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'porcentaje2\' in table \'p_quirog_solicitud\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablep_quirog_solicitud.porcentaje2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string sueldo_m {
+                get {
+                    try {
+                        return ((string)(this[this.tablep_quirog_solicitud.sueldo_mColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'sueldo_m\' in table \'p_quirog_solicitud\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablep_quirog_solicitud.sueldo_mColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string txtAntig {
+                get {
+                    try {
+                        return ((string)(this[this.tablep_quirog_solicitud.txtAntigColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'txtAntig\' in table \'p_quirog_solicitud\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablep_quirog_solicitud.txtAntigColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string nue {
+                get {
+                    try {
+                        return ((string)(this[this.tablep_quirog_solicitud.nueColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'nue\' in table \'p_quirog_solicitud\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablep_quirog_solicitud.nueColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string nap {
+                get {
+                    try {
+                        return ((string)(this[this.tablep_quirog_solicitud.napColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'nap\' in table \'p_quirog_solicitud\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablep_quirog_solicitud.napColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string f_emischeq {
+                get {
+                    try {
+                        return ((string)(this[this.tablep_quirog_solicitud.f_emischeqColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'f_emischeq\' in table \'p_quirog_solicitud\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablep_quirog_solicitud.f_emischeqColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string nombre1 {
+                get {
+                    try {
+                        return ((string)(this[this.tablep_quirog_solicitud.nombre1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'nombre1\' in table \'p_quirog_solicitud\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablep_quirog_solicitud.nombre1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string direccion1 {
+                get {
+                    try {
+                        return ((string)(this[this.tablep_quirog_solicitud.direccion1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'direccion1\' in table \'p_quirog_solicitud\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablep_quirog_solicitud.direccion1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string rfc1 {
+                get {
+                    try {
+                        return ((string)(this[this.tablep_quirog_solicitud.rfc1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'rfc1\' in table \'p_quirog_solicitud\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablep_quirog_solicitud.rfc1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string proyecto1 {
+                get {
+                    try {
+                        return ((string)(this[this.tablep_quirog_solicitud.proyecto1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'proyecto1\' in table \'p_quirog_solicitud\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablep_quirog_solicitud.proyecto1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string antiguedad1 {
+                get {
+                    try {
+                        return ((string)(this[this.tablep_quirog_solicitud.antiguedad1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'antiguedad1\' in table \'p_quirog_solicitud\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablep_quirog_solicitud.antiguedad1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string nue1 {
+                get {
+                    try {
+                        return ((string)(this[this.tablep_quirog_solicitud.nue1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'nue1\' in table \'p_quirog_solicitud\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablep_quirog_solicitud.nue1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string nap1 {
+                get {
+                    try {
+                        return ((string)(this[this.tablep_quirog_solicitud.nap1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'nap1\' in table \'p_quirog_solicitud\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablep_quirog_solicitud.nap1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string nombre2 {
+                get {
+                    try {
+                        return ((string)(this[this.tablep_quirog_solicitud.nombre2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'nombre2\' in table \'p_quirog_solicitud\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablep_quirog_solicitud.nombre2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string domicilio2 {
+                get {
+                    try {
+                        return ((string)(this[this.tablep_quirog_solicitud.domicilio2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'domicilio2\' in table \'p_quirog_solicitud\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablep_quirog_solicitud.domicilio2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string rfc2 {
+                get {
+                    try {
+                        return ((string)(this[this.tablep_quirog_solicitud.rfc2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'rfc2\' in table \'p_quirog_solicitud\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablep_quirog_solicitud.rfc2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string proyecto2 {
+                get {
+                    try {
+                        return ((string)(this[this.tablep_quirog_solicitud.proyecto2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'proyecto2\' in table \'p_quirog_solicitud\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablep_quirog_solicitud.proyecto2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string antiguedad2 {
+                get {
+                    try {
+                        return ((string)(this[this.tablep_quirog_solicitud.antiguedad2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'antiguedad2\' in table \'p_quirog_solicitud\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablep_quirog_solicitud.antiguedad2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string nue2 {
+                get {
+                    try {
+                        return ((string)(this[this.tablep_quirog_solicitud.nue2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'nue2\' in table \'p_quirog_solicitud\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablep_quirog_solicitud.nue2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string nap2 {
+                get {
+                    try {
+                        return ((string)(this[this.tablep_quirog_solicitud.nap2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'nap2\' in table \'p_quirog_solicitud\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablep_quirog_solicitud.nap2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsfolioNull() {
+                return this.IsNull(this.tablep_quirog_solicitud.folioColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetfolioNull() {
+                this[this.tablep_quirog_solicitud.folioColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsfechaSolicitudNull() {
+                return this.IsNull(this.tablep_quirog_solicitud.fechaSolicitudColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetfechaSolicitudNull() {
+                this[this.tablep_quirog_solicitud.fechaSolicitudColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isnombre_emNull() {
+                return this.IsNull(this.tablep_quirog_solicitud.nombre_emColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setnombre_emNull() {
+                this[this.tablep_quirog_solicitud.nombre_emColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsrfcNull() {
+                return this.IsNull(this.tablep_quirog_solicitud.rfcColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetrfcNull() {
+                this[this.tablep_quirog_solicitud.rfcColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsdireccionNull() {
+                return this.IsNull(this.tablep_quirog_solicitud.direccionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetdireccionNull() {
+                this[this.tablep_quirog_solicitud.direccionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsproyectoNull() {
+                return this.IsNull(this.tablep_quirog_solicitud.proyectoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetproyectoNull() {
+                this[this.tablep_quirog_solicitud.proyectoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsdescripcionNull() {
+                return this.IsNull(this.tablep_quirog_solicitud.descripcionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetdescripcionNull() {
+                this[this.tablep_quirog_solicitud.descripcionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IstelefonoNull() {
+                return this.IsNull(this.tablep_quirog_solicitud.telefonoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SettelefonoNull() {
+                this[this.tablep_quirog_solicitud.telefonoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsimporteNull() {
+                return this.IsNull(this.tablep_quirog_solicitud.importeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetimporteNull() {
+                this[this.tablep_quirog_solicitud.importeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsplazoNull() {
+                return this.IsNull(this.tablep_quirog_solicitud.plazoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetplazoNull() {
+                this[this.tablep_quirog_solicitud.plazoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Istipo_pagoNull() {
+                return this.IsNull(this.tablep_quirog_solicitud.tipo_pagoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Settipo_pagoNull() {
+                this[this.tablep_quirog_solicitud.tipo_pagoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsinteresesNull() {
+                return this.IsNull(this.tablep_quirog_solicitud.interesesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetinteresesNull() {
+                this[this.tablep_quirog_solicitud.interesesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isfondo_gNull() {
+                return this.IsNull(this.tablep_quirog_solicitud.fondo_gColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setfondo_gNull() {
+                this[this.tablep_quirog_solicitud.fondo_gColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsliquidoNull() {
+                return this.IsNull(this.tablep_quirog_solicitud.liquidoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetliquidoNull() {
+                this[this.tablep_quirog_solicitud.liquidoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IspercepcionesNull() {
+                return this.IsNull(this.tablep_quirog_solicitud.percepcionesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetpercepcionesNull() {
+                this[this.tablep_quirog_solicitud.percepcionesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsdeduccionesNull() {
+                return this.IsNull(this.tablep_quirog_solicitud.deduccionesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetdeduccionesNull() {
+                this[this.tablep_quirog_solicitud.deduccionesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isdeduc_rec1Null() {
+                return this.IsNull(this.tablep_quirog_solicitud.deduc_rec1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setdeduc_rec1Null() {
+                this[this.tablep_quirog_solicitud.deduc_rec1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isporcentaje1Null() {
+                return this.IsNull(this.tablep_quirog_solicitud.porcentaje1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setporcentaje1Null() {
+                this[this.tablep_quirog_solicitud.porcentaje1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isdeduc_rec2Null() {
+                return this.IsNull(this.tablep_quirog_solicitud.deduc_rec2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setdeduc_rec2Null() {
+                this[this.tablep_quirog_solicitud.deduc_rec2Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isporcentaje2Null() {
+                return this.IsNull(this.tablep_quirog_solicitud.porcentaje2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setporcentaje2Null() {
+                this[this.tablep_quirog_solicitud.porcentaje2Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Issueldo_mNull() {
+                return this.IsNull(this.tablep_quirog_solicitud.sueldo_mColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setsueldo_mNull() {
+                this[this.tablep_quirog_solicitud.sueldo_mColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IstxtAntigNull() {
+                return this.IsNull(this.tablep_quirog_solicitud.txtAntigColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SettxtAntigNull() {
+                this[this.tablep_quirog_solicitud.txtAntigColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsnueNull() {
+                return this.IsNull(this.tablep_quirog_solicitud.nueColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetnueNull() {
+                this[this.tablep_quirog_solicitud.nueColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsnapNull() {
+                return this.IsNull(this.tablep_quirog_solicitud.napColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetnapNull() {
+                this[this.tablep_quirog_solicitud.napColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isf_emischeqNull() {
+                return this.IsNull(this.tablep_quirog_solicitud.f_emischeqColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setf_emischeqNull() {
+                this[this.tablep_quirog_solicitud.f_emischeqColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isnombre1Null() {
+                return this.IsNull(this.tablep_quirog_solicitud.nombre1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setnombre1Null() {
+                this[this.tablep_quirog_solicitud.nombre1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isdireccion1Null() {
+                return this.IsNull(this.tablep_quirog_solicitud.direccion1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setdireccion1Null() {
+                this[this.tablep_quirog_solicitud.direccion1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isrfc1Null() {
+                return this.IsNull(this.tablep_quirog_solicitud.rfc1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setrfc1Null() {
+                this[this.tablep_quirog_solicitud.rfc1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isproyecto1Null() {
+                return this.IsNull(this.tablep_quirog_solicitud.proyecto1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setproyecto1Null() {
+                this[this.tablep_quirog_solicitud.proyecto1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isantiguedad1Null() {
+                return this.IsNull(this.tablep_quirog_solicitud.antiguedad1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setantiguedad1Null() {
+                this[this.tablep_quirog_solicitud.antiguedad1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isnue1Null() {
+                return this.IsNull(this.tablep_quirog_solicitud.nue1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setnue1Null() {
+                this[this.tablep_quirog_solicitud.nue1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isnap1Null() {
+                return this.IsNull(this.tablep_quirog_solicitud.nap1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setnap1Null() {
+                this[this.tablep_quirog_solicitud.nap1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isnombre2Null() {
+                return this.IsNull(this.tablep_quirog_solicitud.nombre2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setnombre2Null() {
+                this[this.tablep_quirog_solicitud.nombre2Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isdomicilio2Null() {
+                return this.IsNull(this.tablep_quirog_solicitud.domicilio2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setdomicilio2Null() {
+                this[this.tablep_quirog_solicitud.domicilio2Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isrfc2Null() {
+                return this.IsNull(this.tablep_quirog_solicitud.rfc2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setrfc2Null() {
+                this[this.tablep_quirog_solicitud.rfc2Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isproyecto2Null() {
+                return this.IsNull(this.tablep_quirog_solicitud.proyecto2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setproyecto2Null() {
+                this[this.tablep_quirog_solicitud.proyecto2Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isantiguedad2Null() {
+                return this.IsNull(this.tablep_quirog_solicitud.antiguedad2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setantiguedad2Null() {
+                this[this.tablep_quirog_solicitud.antiguedad2Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isnue2Null() {
+                return this.IsNull(this.tablep_quirog_solicitud.nue2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setnue2Null() {
+                this[this.tablep_quirog_solicitud.nue2Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isnap2Null() {
+                return this.IsNull(this.tablep_quirog_solicitud.nap2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setnap2Null() {
+                this[this.tablep_quirog_solicitud.nap2Column] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -2715,6 +4675,40 @@ namespace SISPE_MIGRACION.reportes {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public p_quirogRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class p_quirog_solicitudRowChangeEvent : global::System.EventArgs {
+            
+            private p_quirog_solicitudRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public p_quirog_solicitudRowChangeEvent(p_quirog_solicitudRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public p_quirog_solicitudRow Row {
                 get {
                     return this.eventRow;
                 }

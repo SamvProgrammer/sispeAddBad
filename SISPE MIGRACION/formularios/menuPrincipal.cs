@@ -1,8 +1,7 @@
 ﻿
 using SISPE_MIGRACION.formularios.CATÁLOGOS;
 using SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ;
-
-
+using SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.reportes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -105,6 +104,16 @@ namespace SISPE_MIGRACION.formularios
         private void menuPrincipal_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void alfabéticoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.reportes.frmAlfabet().ShowDialog();
+        }
+
+        private void pagaresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.reportes.frmPagares().ShowDialog();
         }
     }
 }

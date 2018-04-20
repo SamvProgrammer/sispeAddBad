@@ -96,5 +96,10 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
 
             }
         }
+
+        private void Boxmeses_Enter(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

@@ -37,10 +37,10 @@ namespace SISPE_MIGRACION.codigo.herramientas
             return tiempo;
         }
 
-        internal static void reportes(string nombreReporte, string tablaDataSet, object[] objeto, bool imprimir = false)
+        internal static void reportes(string nombreReporte, string tablaDataSet, object[] objeto,string mensaje, bool imprimir = false)
         {
             frmReporte reporte = new frmReporte(nombreReporte,tablaDataSet);
-            reporte.cargarDatos(tablaDataSet, objeto, imprimir);
+            reporte.cargarDatos(tablaDataSet, objeto,mensaje, imprimir);
             reporte.ShowDialog();
         }
 

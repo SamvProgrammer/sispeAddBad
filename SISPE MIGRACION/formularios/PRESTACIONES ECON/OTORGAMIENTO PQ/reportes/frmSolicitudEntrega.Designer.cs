@@ -34,12 +34,15 @@
             this.fecha2 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.fecha1 = new System.Windows.Forms.DateTimePicker();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.fecha2);
@@ -48,12 +51,12 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(433, 218);
+            this.panel1.Size = new System.Drawing.Size(459, 286);
             this.panel1.TabIndex = 0;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(162, 163);
+            this.button1.Location = new System.Drawing.Point(171, 225);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(110, 23);
             this.button1.TabIndex = 8;
@@ -64,7 +67,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(87, 111);
+            this.label2.Location = new System.Drawing.Point(96, 173);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 13);
             this.label2.TabIndex = 7;
@@ -73,7 +76,7 @@
             // 
             // fecha2
             // 
-            this.fecha2.Location = new System.Drawing.Point(90, 127);
+            this.fecha2.Location = new System.Drawing.Point(99, 189);
             this.fecha2.Name = "fecha2";
             this.fecha2.Size = new System.Drawing.Size(277, 20);
             this.fecha2.TabIndex = 6;
@@ -81,7 +84,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(87, 53);
+            this.label1.Location = new System.Drawing.Point(96, 115);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 13);
             this.label1.TabIndex = 5;
@@ -89,16 +92,26 @@
             // 
             // fecha1
             // 
-            this.fecha1.Location = new System.Drawing.Point(90, 69);
+            this.fecha1.Location = new System.Drawing.Point(99, 131);
             this.fecha1.Name = "fecha1";
             this.fecha1.Size = new System.Drawing.Size(277, 20);
             this.fecha1.TabIndex = 4;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SISPE_MIGRACION.Properties.Resources.logo_pensiones;
+            this.pictureBox1.Location = new System.Drawing.Point(87, 21);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(299, 72);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
             // frmSolicitudEntrega
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(433, 218);
+            this.ClientSize = new System.Drawing.Size(459, 286);
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -108,6 +121,7 @@
             this.Load += new System.EventHandler(this.frmSolicitudEntrega_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -120,5 +134,6 @@
         private System.Windows.Forms.DateTimePicker fecha2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker fecha1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
