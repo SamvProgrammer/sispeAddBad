@@ -23,7 +23,7 @@
         <rd:DefaultName>Textbox1</rd:DefaultName>
         <Left>0.68656cm</Left>
         <Height>0.6cm</Height>
-        <Width>14.594cm</Width>
+        <Width>16.1258cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -948,7 +948,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Importe liquido:  $</Value>
+                    <Value>Importe líquido:  $</Value>
                     <Style>
                       <FontSize>6pt</FontSize>
                     </Style>
@@ -1305,7 +1305,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>(N.A.P.):</Value>
+                    <Value>(N.A.P.):   OP:</Value>
                     <Style>
                       <FontSize>6pt</FontSize>
                     </Style>
@@ -1320,7 +1320,7 @@
             <Top>1.32447cm</Top>
             <Left>12.98649cm</Left>
             <Height>0.35011cm</Height>
-            <Width>2.87287cm</Width>
+            <Width>3.3958cm</Width>
             <ZIndex>14</ZIndex>
             <Style>
               <Border>
@@ -2594,7 +2594,7 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>3.57825cm</Width>
+                  <Width>2.93002cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -2648,9 +2648,9 @@
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
             <Top>1.35975cm</Top>
-            <Left>15.89464cm</Left>
+            <Left>16.54287cm</Left>
             <Height>0.35011cm</Height>
-            <Width>3.57825cm</Width>
+            <Width>2.93002cm</Width>
             <ZIndex>37</ZIndex>
             <Style>
               <Border>
@@ -2696,6 +2696,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -2758,7 +2759,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Vicsto bueno del JEFE INMEDIATO</Value>
+                    <Value>Visto bueno del JEFE INMEDIATO</Value>
                     <Style>
                       <FontSize>6pt</FontSize>
                     </Style>
@@ -2792,7 +2793,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>__________________________________________________</Value>
+                    <Value>________________________________</Value>
                     <Style>
                       <FontSize>6pt</FontSize>
                     </Style>
@@ -2839,7 +2840,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Vicsto bueno del JEFE de la UNIDAD ADMINISTRATIVA</Value>
+                    <Value>Visto bueno del JEFE de la UNIDAD ADMINISTRATIVA</Value>
                     <Style>
                       <FontSize>6pt</FontSize>
                     </Style>
@@ -2886,7 +2887,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>__________________________________________________</Value>
+                    <Value>_______________________________</Value>
                     <Style>
                       <FontSize>6pt</FontSize>
                     </Style>
@@ -2983,6 +2984,7 @@
               <Border>
                 <Style>Solid</Style>
               </Border>
+              <BackgroundColor>Silver</BackgroundColor>
             </Style>
           </Rectangle>
           <Textbox Name="Textbox54">
@@ -3026,7 +3028,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>__________________________________________________</Value>
+                    <Value>_____________________________________</Value>
                     <Style>
                       <FontSize>6pt</FontSize>
                     </Style>
@@ -3337,6 +3339,7 @@
           <Border>
             <Style>Solid</Style>
           </Border>
+          <BackgroundColor>Silver</BackgroundColor>
         </Style>
       </Rectangle>
       <Tablix Name="Tablix4">
@@ -3438,20 +3441,21 @@
                   </TextRun>
                 </TextRuns>
                 <Style>
-                  <TextAlign>Right</TextAlign>
+                  <TextAlign>Center</TextAlign>
                 </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox4</rd:DefaultName>
             <Top>0.00104cm</Top>
-            <Left>6.66499cm</Left>
+            <Left>0.66818cm</Left>
             <Height>0.44198cm</Height>
-            <Width>2.87287cm</Width>
+            <Width>8.37062cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
+              <BackgroundColor>Silver</BackgroundColor>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -4492,20 +4496,21 @@
                   </TextRun>
                 </TextRuns>
                 <Style>
-                  <TextAlign>Right</TextAlign>
+                  <TextAlign>Center</TextAlign>
                 </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox4</rd:DefaultName>
             <Top>0.00104cm</Top>
-            <Left>16.57295cm</Left>
+            <Left>10.25752cm</Left>
             <Height>0.44198cm</Height>
-            <Width>2.87287cm</Width>
+            <Width>8.91773cm</Width>
             <ZIndex>25</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
+              <BackgroundColor>Silver</BackgroundColor>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>

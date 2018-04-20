@@ -4,10 +4,6 @@
 
     partial class tablas
     {
-        partial class DataTable1DataTable
-        {
-        }
-
         partial class p_quirog_solicitudDataTable
         {
         }

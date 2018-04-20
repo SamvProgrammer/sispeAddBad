@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Reporting.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -72,7 +73,7 @@ namespace SISPE_MIGRACION.codigo.herramientas.forms
             if (imprimir)
             {
                 MessageBox.Show(this.mensaje, "Impresión", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Thread.Sleep(1000);
+                
                 reportViewer1.PrintDialog();
                 Close();
             }
@@ -89,7 +90,7 @@ namespace SISPE_MIGRACION.codigo.herramientas.forms
 
         }
 
-        internal void cargarDatos(string tablaNombre, object[] objeto,string mensaje, bool imprimir = false) {
+        internal void cargarDatos(string tablaNombre, object[] objeto,string mensaje, bool imprimir = false,object[]parametros = null) {
 
             DataTable tabla = tablas.Tables[tablaNombre];
 
@@ -102,7 +103,16 @@ namespace SISPE_MIGRACION.codigo.herramientas.forms
                     tabla.Rows.Add((object[])item);
                 }
             }
-            
+
+            if (parametros != null) {
+                object[][] elemento = (object[][]) parametros;
+                ReportParameter[] auxParametros = new ReportParameter[elemento[0].Length];
+                for (int x = 0; x < elemento[0].Length;x++) {
+                    ReportParameter p1 = new ReportParameter((string)elemento[0][x],(string)elemento[1][x]);
+                    auxParametros[x] = p1;
+                }
+                reportViewer1.LocalReport.SetParameters(auxParametros);
+            }            
             this.reportViewer1.RefreshReport();
             this.imprimir = imprimir;
         }

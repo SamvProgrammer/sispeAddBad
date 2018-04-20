@@ -137,6 +137,7 @@
             this.btnCalculo = new System.Windows.Forms.Button();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.btnImprimir = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -202,6 +203,7 @@
             // group
             // 
             this.group.BackColor = System.Drawing.SystemColors.Menu;
+            this.group.Controls.Add(this.btnImprimir);
             this.group.Controls.Add(this.btnsalir);
             this.group.Controls.Add(this.btnGuardar);
             this.group.Controls.Add(this.btnModifica);
@@ -221,9 +223,9 @@
             this.btnsalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnsalir.Image = ((System.Drawing.Image)(resources.GetObject("btnsalir.Image")));
             this.btnsalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnsalir.Location = new System.Drawing.Point(6, 176);
+            this.btnsalir.Location = new System.Drawing.Point(6, 260);
             this.btnsalir.Name = "btnsalir";
-            this.btnsalir.Size = new System.Drawing.Size(172, 39);
+            this.btnsalir.Size = new System.Drawing.Size(184, 39);
             this.btnsalir.TabIndex = 3;
             this.btnsalir.Text = "SALIR ";
             this.btnsalir.UseVisualStyleBackColor = false;
@@ -237,9 +239,9 @@
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGuardar.Location = new System.Drawing.Point(6, 106);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(172, 39);
+            this.btnGuardar.Size = new System.Drawing.Size(184, 39);
             this.btnGuardar.TabIndex = 2;
-            this.btnGuardar.Text = "GUARDAR CAMBIOS ";
+            this.btnGuardar.Text = "GUARDAR ";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Visible = false;
             this.btnGuardar.Click += new System.EventHandler(this.button3_Click);
@@ -252,9 +254,9 @@
             this.btnModifica.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnModifica.Location = new System.Drawing.Point(6, 106);
             this.btnModifica.Name = "btnModifica";
-            this.btnModifica.Size = new System.Drawing.Size(172, 39);
+            this.btnModifica.Size = new System.Drawing.Size(184, 39);
             this.btnModifica.TabIndex = 1;
-            this.btnModifica.Text = "ACTUALIZAR    SOLICITUD";
+            this.btnModifica.Text = "    ACTUALIZAR       SOLICITUD";
             this.btnModifica.UseVisualStyleBackColor = false;
             this.btnModifica.Click += new System.EventHandler(this.btnModifica_Click);
             // 
@@ -266,7 +268,7 @@
             this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNuevo.Location = new System.Drawing.Point(6, 34);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(172, 39);
+            this.btnNuevo.Size = new System.Drawing.Size(184, 39);
             this.btnNuevo.TabIndex = 0;
             this.btnNuevo.Text = "NUEVA SOLICITUD";
             this.btnNuevo.UseVisualStyleBackColor = false;
@@ -1085,9 +1087,9 @@
             this.label45.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label45.Location = new System.Drawing.Point(12, 115);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(111, 20);
+            this.label45.Size = new System.Drawing.Size(104, 20);
             this.label45.TabIndex = 9;
-            this.label45.Text = "[F3] solicitud";
+            this.label45.Text = "SOLICITUD";
             // 
             // panel5
             // 
@@ -1282,9 +1284,9 @@
             this.label46.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label46.Location = new System.Drawing.Point(12, 383);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(111, 20);
+            this.label46.Size = new System.Drawing.Size(79, 20);
             this.label46.TabIndex = 11;
-            this.label46.Text = "[F4] solicitud";
+            this.label46.Text = "AVALES";
             // 
             // btnCalculo
             // 
@@ -1307,6 +1309,20 @@
             // printDocument1
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage_1);
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnImprimir.Image = ((System.Drawing.Image)(resources.GetObject("btnImprimir.Image")));
+            this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnImprimir.Location = new System.Drawing.Point(6, 183);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(184, 43);
+            this.btnImprimir.TabIndex = 4;
+            this.btnImprimir.Text = "IMPRIMIR";
+            this.btnImprimir.UseVisualStyleBackColor = false;
+            this.btnImprimir.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // frmAltas
             // 
@@ -1462,5 +1478,6 @@
         private System.Windows.Forms.Button btnCalculo;
         private System.Windows.Forms.PrintDialog printDialog1;
         private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.Button btnImprimir;
     }
 }

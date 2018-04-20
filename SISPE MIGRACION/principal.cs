@@ -17,6 +17,12 @@ namespace SISPE_MIGRACION
         [STAThread]
         static void Main()
         {
+
+            //**********************************************************
+            //**       ICONOS PARA EL SISTEMAS PÁGINA                 **
+            //**   https://icons8.com/icon/new-icons/office           **
+            //**********************************************************
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             string host = SISPE_MIGRACION.Properties.Resources.servidor;
