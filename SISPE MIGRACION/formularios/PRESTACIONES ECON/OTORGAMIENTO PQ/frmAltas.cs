@@ -10,6 +10,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -24,6 +25,7 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
         private Dictionary<string, string> modalidades;
         private frmEmpleados frmEmpleados;
         private frmdependencias frmdependencias;
+        private p_quirog quiro;
         private double Ant_A = 0;
         private double Ant_M = 0;
         private double Ant_Q = 0;
@@ -150,6 +152,14 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
             txtTelefono.Text = "";
             txtExtencion.Text = "";
             txtdesc.Text = "0.00";
+
+
+            Ant_Q = 0;
+            Ant_M = 0;
+            Ant_A = 0;
+            carta = " ";
+            aceptado = " ";
+            Secuen = 0;
         }
 
         private void limpiarAvales()
@@ -229,7 +239,8 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
                         MessageBox.Show("La categoría es mayor a 16", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                 }
-                catch {
+                catch
+                {
                     MessageBox.Show("El empleado no contiene categoría..Favor de verificar", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
 
@@ -308,8 +319,9 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
             }
 
             int movimientos = Convert.ToInt32(this.txtmeses_corres.Text);
-            if (movimientos != 0) {
-                DialogResult d = MessageBox.Show("Los mov. serás recalculados","Atención",MessageBoxButtons.YesNo,MessageBoxIcon.Information);
+            if (movimientos != 0)
+            {
+                DialogResult d = MessageBox.Show("Los mov. serás recalculados", "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (d == DialogResult.No)
                     return;
             }
@@ -666,77 +678,23 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
                 }
             }
 
-            p_quirog obj = new p_quirog();
-            obj.rfc = txtRfc.Text;
-            obj.nombre_em = txtnombre_em.Text;
-            obj.proyecto = txtProyecto.Text;
-            obj.secretaria = txtSecretaria.Text;
-            obj.antig_q = (string.IsNullOrWhiteSpace(txtAntQ.Text)) ? 0 : Convert.ToInt32(txtAntQ.Text);
-            obj.sueldo_base = (string.IsNullOrWhiteSpace(txtSueldoBase.Text)) ? 0 : Convert.ToDouble(txtSueldoBase.Text);
-            obj.descripcion = txtAdscripcion.Text;
-            obj.telefono = txtTelefono.Text;
-            obj.extencion = txtExtencion.Text;
-            obj.direccion = txtDomicilio.Text;
-            obj.nue = txtNue.Text;
-            obj.nap = (string.IsNullOrWhiteSpace(txtNap.Text)) ? 0 : Convert.ToDouble(txtNap.Text);
-            obj.sueldo_m = (string.IsNullOrWhiteSpace(txtSueldo_m.Text)) ? 0 : Convert.ToDouble(txtSueldo_m.Text);
-            obj.ant_q = Convert.ToInt32(Ant_Q);
-            obj.ant_m = Convert.ToInt32(Ant_M);
-            obj.ant_a = Convert.ToInt32(Ant_A);
-            obj.meses_corres = (string.IsNullOrWhiteSpace(txtmeses_corres.Text)) ? 0 : Convert.ToDouble(txtmeses_corres.Text);
-            obj.otros_desc = (string.IsNullOrWhiteSpace(txtdesc.Text)) ? 0 : Convert.ToDouble(txtdesc.Text);
-            obj.porc = (string.IsNullOrWhiteSpace(txtPorc.Text)) ? 0 : Convert.ToDouble(txtPorc.Text);
-            obj.plazo = (string.IsNullOrWhiteSpace(txtplazo.Text)) ? 0 : Convert.ToDouble(txtplazo.Text);
-            obj.tipo_pago = Convert.ToChar(txtTipoPago.Text);
-            obj.trel = Convert.ToChar(txtTrl.Text);
-            obj.f_emischeq = (string.IsNullOrWhiteSpace(txtEmisionCheque.Text)) ? "null" : txtEmisionCheque.Text;
-            obj.f_primdesc = (string.IsNullOrWhiteSpace(txtF_primerdesc.Text)) ? "null" : txtF_primerdesc.Text;
-            obj.f_ultmode = string.IsNullOrWhiteSpace(txtultpago.Text) ? "null" : txtultpago.Text;
-            obj.imp_unit = (string.IsNullOrWhiteSpace(txtImpUnit.Text)) ? 0 : Convert.ToDouble(txtImpUnit.Text);
-            obj.importe = (string.IsNullOrWhiteSpace(txtImporte.Text)) ? 0 : Convert.ToDouble(txtImporte.Text);
-            obj.interes = (string.IsNullOrWhiteSpace(txtintereses.Text)) ? 0 : Convert.ToDouble(txtintereses.Text);
-            obj.fondo_g = (string.IsNullOrWhiteSpace(txtFondo_g.Text)) ? 0 : Convert.ToDouble(txtFondo_g.Text);
-            obj.liquido = (string.IsNullOrWhiteSpace(txtliquido.Text)) ? 0 : Convert.ToDouble(txtliquido.Text);
-            obj.carta = (string.IsNullOrWhiteSpace(this.carta)) ? Convert.ToChar(" ") : Convert.ToChar(this.carta);
-            obj.f_solicitud = string.Format("{0}-{1}-{2}", DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
-            obj.aceptado = (string.IsNullOrWhiteSpace(this.aceptado)) ? Convert.ToChar(" ") : Convert.ToChar(this.aceptado);
-            obj.secuen = this.Secuen;
-
-            if (obj.f_emischeq != "null")
-            {
-                string[] aux2 = obj.f_emischeq.Split('/');
-                obj.f_emischeq = string.Format("'{0}-{1}-{2}'", aux2[2], aux2[1], aux2[0]);
-            }
-            if (obj.f_primdesc != "null")
-            {
-                string[] aux2 = obj.f_primdesc.Split('/');
-                obj.f_primdesc = string.Format("'{0}-{1}-{2}'", aux2[2], aux2[1], aux2[0]);
-            }
-
-            if (obj.f_ultmode != "null")
-            {
-                string[] aux2 = obj.f_ultmode.Split('/');
-                obj.f_ultmode = string.Format("'{0}-{1}-{2}'", aux2[2], aux2[1], aux2[0]);
-            }
+            p_quirog obj = verificarObjeto();
 
             if (!guardar)
             {
-                MessageBox.Show("Se modificara");
-            }
-            else if (guardar)
-            {
-                if (insertarRegistro(obj))
+                if (modificar(obj))
                 {
-                    MessageBox.Show("Registro guardado exitosamente!!", "Registro guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    DialogResult resultado = MessageBox.Show("¿Desea impirmir la presente solicitud?", "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    MessageBox.Show("Registro actualizado exitosamente!!", "Registro actualizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DialogResult resultado = MessageBox.Show("¿Desea imprimir la presente solicitud?", "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (resultado == DialogResult.No)
                     {
                         MessageBox.Show("Puede impirmir más adelante!!", "Impresión", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                    else {
+                    else
+                    {
                         this.Cursor = Cursors.WaitCursor;
                         imprimir(obj);
-                        
+
                     }
                     MessageBox.Show("Proceso terminado..", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     limpiarTodosCampos();
@@ -747,6 +705,37 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
                     btnGuardar.Enabled = false;
                     btnGuardar.Visible = false;
                     btnImprimir.Enabled = true;
+                    btnCalculo.Enabled = false;
+                }
+                else
+                    MessageBox.Show("Error al actualizar el registro, contactar al equipo de sistemas!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (guardar)
+            {
+                if (insertarRegistro(obj))
+                {
+                    MessageBox.Show("Registro guardado exitosamente!!", "Registro guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DialogResult resultado = MessageBox.Show("¿Desea imprimir la presente solicitud?", "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (resultado == DialogResult.No)
+                    {
+                        MessageBox.Show("Puede impirmir más adelante!!", "Impresión", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        this.Cursor = Cursors.WaitCursor;
+                        imprimir(obj);
+
+                    }
+                    MessageBox.Show("Proceso terminado..", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    limpiarTodosCampos();
+                    btnNuevo.Enabled = true;
+                    btnsalir.Text = "SALIR";
+                    btnModifica.Enabled = true;
+                    btnModifica.Visible = true;
+                    btnGuardar.Enabled = false;
+                    btnGuardar.Visible = false;
+                    btnImprimir.Enabled = true;
+                    btnCalculo.Enabled = false;
                 }
                 else
                     MessageBox.Show("Error al guardar el registor, contactar al equipo de sistemas!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -756,6 +745,33 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
         }
 
 
+        private bool modificar(p_quirog obj) {
+            bool registro = false;
+
+            try
+            {
+                obj.folio = Convert.ToInt32(txtFolio.Text);
+                obj.f_emischeq = Regex.Replace(obj.f_emischeq, @"\s+", "");
+                obj.f_primdesc = Regex.Replace(obj.f_primdesc, @"\s+", "");
+                obj.f_ultmode = Regex.Replace(obj.f_ultmode, @"\s+", "");
+                string query = "update  datos.p_quirog set rfc = '{0}',nombre_em = '{1}',proyecto = '{2}',secretaria = '{3}',antig_q = {4},sueldo_base = {5},descripcion = '{6}',telefono = '{7}',extension = '{8}',direccion='{9}',nue = '{10}',nap = {11}," +
+                   "sueldo_m = {12},ant_a = {13},ant_m = {14},ant_q = {15},meses_corres = {16},otros_desc = {17},trel = '{18}',porc = {19},plazo = {20},tipo_pago = '{21}',f_emischeq = {22},f_primdesc = {23},f_ultimode = {24},imp_unit = {25},importe = {26},interes = {27},fondo_g = {28},liquido = {29},carta = '{30}',f_solicitud = '{31}',secuen = {32},aceptado = '{33}' where folio = {34} ";
+
+                query = string.Format(query, obj.rfc, obj.nombre_em, obj.proyecto, obj.secretaria, obj.antig_q, obj.sueldo_base, obj.descripcion, obj.telefono, obj.extencion, obj.direccion, obj.nue, obj.nap,
+                   obj.sueldo_m, obj.ant_a, obj.ant_m, obj.ant_q, obj.meses_corres, obj.otros_desc, obj.trel, obj.porc, obj.plazo, obj.tipo_pago, obj.f_emischeq, obj.f_primdesc, obj.f_ultmode, obj.imp_unit, obj.importe, obj.interes, obj.fondo_g, obj.liquido,
+                   obj.carta, obj.f_solicitud, obj.secuen, obj.aceptado, obj.folio);
+
+
+                obj.lista = new List<d_quirog>();
+                registro = true;
+
+            }
+            catch {
+                registro = false;
+            }
+
+            return registro;
+        }
 
         private bool insertarRegistro(p_quirog obj)
         {
@@ -773,7 +789,7 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
                     "'{10}','{11}',{12},{13},{14},{15},{16},{17},{18},'{19}',{20},{21},'{22}',{23},{24},{25},{26},{27},{28},{29},{30},'{31}','{32}',{33},'{34}')";
                 query = string.Format(query, obj.folio, obj.rfc, obj.nombre_em, obj.proyecto, obj.secretaria, obj.antig_q, obj.sueldo_base, obj.descripcion, obj.telefono, obj.extencion, obj.direccion, obj.nue, obj.nap,
                     obj.sueldo_m, obj.ant_a, obj.ant_m, obj.ant_q, obj.meses_corres, obj.otros_desc, obj.trel, obj.porc, obj.plazo, obj.tipo_pago, obj.f_emischeq, obj.f_primdesc, obj.f_ultmode, obj.imp_unit, obj.importe, obj.interes, obj.fondo_g, obj.liquido,
-                    obj.carta, obj.f_solicitud,obj.secuen,obj.aceptado);
+                    obj.carta, obj.f_solicitud, obj.secuen, obj.aceptado);
 
                 obj.lista = new List<d_quirog>();
                 if (globales.consulta(query, true))
@@ -782,9 +798,9 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
                     //Parte que se agregar para las insercciones de la tabla de deducciones....
                     string status = (this.boolDeducciones) ? "S" : "N";
                     query = string.Format("insert into datos.d_perded values({0},'{1}',{2},'{3}','{4}',{5},{6},{7},{8},{9},{10},{11},{12},{13},{14},{15},{16},{17},{18},{19},{20},{21},{22},{23},{24})"
-                        , obj.folio,status,1,obj.rfc,obj.nombre_em,this.PER2,this.DED1,this.RES,this.RES1,this.IMP,this.IM,this.RES3,this.RES2,this.PER3,this.PER4,this.PER5,this.PER6,this.DED3, this.DED4, this.DED5, this.DED6, this.DED7, this.DED8, this.DED9, this.DED10);
+                        , obj.folio, status, 1, obj.rfc, obj.nombre_em, this.PER2, this.DED1, this.RES, this.RES1, this.IMP, this.IM, this.RES3, this.RES2, this.PER3, this.PER4, this.PER5, this.PER6, this.DED3, this.DED4, this.DED5, this.DED6, this.DED7, this.DED8, this.DED9, this.DED10);
 
-                    globales.consulta(query,true);
+                    globales.consulta(query, true);
 
                     if (!string.IsNullOrWhiteSpace(txtRfc1.Text))
                     {
@@ -839,9 +855,9 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
 
         private void btnnuevo_Click(object sender, EventArgs e)
         {
-
+            limpiarTodosCampos();
             activarControlesBasicos();
-
+            txtEmisionCheque.Text = txtFecha;
 
             btnNuevo.Enabled = false;
             btnGuardar.Visible = true;
@@ -855,6 +871,7 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
             btnImprimir.Enabled = false;
 
             btnsalir.Text = "Cancelar";
+            txtFolio.Text = "AUTOGENERADO";
 
             frmEmpleados = new frmEmpleados();
             frmEmpleados.enviar = rellenarCamposdeRFC;
@@ -941,10 +958,6 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
         }
         private void rellenarModificarFolios(Dictionary<string, object> quirografario, List<Dictionary<string, object>> avales, bool externo = false)
         {
-
-
-
-
             txtFolio.Text = Convert.ToString(quirografario["folio"]);
             txtRfc.Text = Convert.ToString(quirografario["rfc"]);
             txtnombre_em.Text = Convert.ToString(quirografario["nombre_em"]);
@@ -1026,18 +1039,18 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
             double auxSueldoM = Convert.ToDouble(txtSueldo_m.Text);
             txtImpUnit.Text = Convert.ToString((auxSueldoM * meses_corres) / plazo);
 
-             TOPE = 0.00;
-             RES = 0.00;
-             RESL = 0.00;
-             RES3 = 0.00;
-             RES1 = 0.00;
-             Por = 0.00;
-             RESD = 0.00;
-             RES2 = 0.00;
+            TOPE = 0.00;
+            RES = 0.00;
+            RESL = 0.00;
+            RES3 = 0.00;
+            RES1 = 0.00;
+            Por = 0.00;
+            RESD = 0.00;
+            RES2 = 0.00;
             string RO = string.Empty;
             string NOM = string.Empty;
-             IMP = 0.00;
-             IM = 0.00;
+            IMP = 0.00;
+            IM = 0.00;
 
             if (!this.D.Equals("N"))
             {
@@ -1235,7 +1248,7 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
             txtSueldoBase.Text = texto;
         }
 
-        private void imprimir(p_quirog obj)
+        private void imprimir(p_quirog obj, int checador = 4)
         {
             //Se necesita para sacar los meses de acuerdo al DataTime.............
             string[] meses = {
@@ -1304,23 +1317,34 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
             string t1 = string.Format("OAXACA DE JUÁREZ, OAX., {0} de {1} del {2}", DateTime.Now.Day, meses[DateTime.Now.Month], DateTime.Now.Year);
             string terminosYCondiciones = string.Format("Debo(emos) y Pagaré(mos) incondicionalmente por este pagaré mercantil, en esta plaza ( o en cualquier otro lugar a elección del" +
                 " acreedor), a la orden de la \"OFICINA DE PENSIONES DEL ESTADO DE OAXACA\", él día: {0} la cantidad de ${1} {2} 00/100 M.N), valor recibido a mi entera sastifacción.", ar_fecharsve[Convert.ToInt32(obj.plazo) - 1], obj.importe, globales.numerosLetras(Convert.ToInt32(obj.importe)));
-            
+
 
             object quir = null;
             object quir2 = null;
 
-            string query = string.Format("select * from datos.d_perded where folio = {0}",obj.folio);
+            string query = string.Format("select * from datos.d_perded where folio = {0}", obj.folio);
 
             List<Dictionary<string, object>> resultado = globales.consulta(query);
 
-            string percepciones = Convert.ToDouble((resultado[0]["percepciones"])).ToString("#.##");
-            string deducciones = Convert.ToDouble(resultado[0]["deducciones"]).ToString("#.##");
+            string percepciones = string.Empty;
+            string deducciones = string.Empty;
 
-            string reduc1 = Convert.ToDouble(resultado[0]["deduc_rec1"]).ToString("#.##");
-            string porcentaje1 = Convert.ToDouble(resultado[0]["porcentaje1"]).ToString("#.##");
+            string reduc1 = string.Empty; ;
+            string porcentaje1 = string.Empty; ;
 
-            string reduc2 = Convert.ToDouble(resultado[0]["deduc_rec2"]).ToString("#.##");
-            string porcentaje2 = Convert.ToDouble(resultado[0]["porcentaje2"]).ToString("#.##");
+            string reduc2 = string.Empty; ;
+            string porcentaje2 = string.Empty;
+
+            if (resultado.Count != 0) {
+                 percepciones = Convert.ToDouble((resultado[0]["percepciones"])).ToString("#.##");
+                 deducciones = Convert.ToDouble(resultado[0]["deducciones"]).ToString("#.##");
+
+                 reduc1 = Convert.ToDouble(resultado[0]["deduc_rec1"]).ToString("#.##");
+                 porcentaje1 = Convert.ToDouble(resultado[0]["porcentaje1"]).ToString("#.##");
+
+                 reduc2 = Convert.ToDouble(resultado[0]["deduc_rec2"]).ToString("#.##");
+                 porcentaje2 = Convert.ToDouble(resultado[0]["porcentaje2"]).ToString("#.##");
+            }
 
             percepciones = (string.IsNullOrWhiteSpace(percepciones)) ? "0" : percepciones;
             deducciones = (string.IsNullOrWhiteSpace(deducciones)) ? "0" : deducciones;
@@ -1331,7 +1355,7 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
             reduc2 = (string.IsNullOrWhiteSpace(reduc2)) ? "0" : reduc2;
             porcentaje2 = (string.IsNullOrWhiteSpace(porcentaje2)) ? "0" : porcentaje2;
 
-            obj.f_emischeq = obj.f_emischeq.Replace("'","");
+            obj.f_emischeq = obj.f_emischeq.Replace("'", "");
 
             if (obj.lista.Count == 1)
             {
@@ -1384,17 +1408,31 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
             object[] objeto = { quir };
             object[] objeto2 = { quir2 };
 
-            if (obj.porc > 50) {
-                if (MessageBox.Show(string.Format("Esta solicitud excede con {0}% ¿Desea imprimir?",""),"Atención",MessageBoxButtons.YesNo,MessageBoxIcon.Information) == DialogResult.No) {
+            if (obj.porc > 50)
+            {
+                if (MessageBox.Show(string.Format("Esta solicitud excede con {0}% ¿Desea imprimir?", ""), "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
+                {
                     return;
                 }
             }
 
-            globales.reportes("p_quirogSolicitud", "p_quirog_solicitud", objeto, "Se imprimira solicitud de QUIROGRAFARIO");
-            globales.reportes("reportePagareQuiro", "pagare_quirog", objeto2, "Se imprimira el pagare de QUIROGRAFARIO");
+            if (checador == 4)
+            {
+                globales.reportes("p_quirogSolicitud", "p_quirog_solicitud", objeto, "Se imprimira solicitud de QUIROGRAFARIO");
+                globales.reportes("reportePagareQuiro", "pagare_quirog", objeto2, "Se imprimira el pagare de QUIROGRAFARIO");
+            }
+
+            if (checador == 1)
+            {
+                globales.reportes("p_quirogSolicitud", "p_quirog_solicitud", objeto, "Se imprimira solicitud de QUIROGRAFARIO");
+            }
+            if (checador == 3)
+            {
+                globales.reportes("reportePagareQuiro", "pagare_quirog", objeto2, "Se imprimira el pagare de QUIROGRAFARIO");
+            }
 
 
-            MessageBox.Show("Termino el proceso de impresión de Quirografarío","Aviso",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            MessageBox.Show("Termino el proceso de impresión de Quirografarío", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             #endregion
 
 
@@ -1412,7 +1450,106 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            frmCatalogoP_quirog p_quirog = new frmCatalogoP_quirog();
+            p_quirog.enviar = rellenarModificarFolios;
+            p_quirog.ShowDialog();
 
+            frmImpresionQuirografario imp = new frmImpresionQuirografario();
+            imp.ShowDialog();
+            int checador = imp.checador;
+            tiposDeImpresion(checador);
+        }
+        private p_quirog verificarObjeto()
+        {
+            p_quirog obj = new p_quirog();
+            obj.rfc = txtRfc.Text;
+            obj.nombre_em = txtnombre_em.Text;
+            obj.proyecto = txtProyecto.Text;
+            obj.secretaria = txtSecretaria.Text;
+            obj.antig_q = (string.IsNullOrWhiteSpace(txtAntQ.Text)) ? 0 : Convert.ToInt32(txtAntQ.Text);
+            obj.sueldo_base = (string.IsNullOrWhiteSpace(txtSueldoBase.Text)) ? 0 : Convert.ToDouble(txtSueldoBase.Text);
+            obj.descripcion = txtAdscripcion.Text;
+            obj.telefono = txtTelefono.Text;
+            obj.extencion = txtExtencion.Text;
+            obj.direccion = txtDomicilio.Text;
+            obj.nue = txtNue.Text;
+            obj.nap = (string.IsNullOrWhiteSpace(txtNap.Text)) ? 0 : Convert.ToDouble(txtNap.Text);
+            obj.sueldo_m = (string.IsNullOrWhiteSpace(txtSueldo_m.Text)) ? 0 : Convert.ToDouble(txtSueldo_m.Text);
+            obj.ant_q = Convert.ToInt32(Ant_Q);
+            obj.ant_m = Convert.ToInt32(Ant_M);
+            obj.ant_a = Convert.ToInt32(Ant_A);
+            obj.meses_corres = (string.IsNullOrWhiteSpace(txtmeses_corres.Text)) ? 0 : Convert.ToDouble(txtmeses_corres.Text);
+            obj.otros_desc = (string.IsNullOrWhiteSpace(txtdesc.Text)) ? 0 : Convert.ToDouble(txtdesc.Text);
+            obj.porc = (string.IsNullOrWhiteSpace(txtPorc.Text)) ? 0 : Convert.ToDouble(txtPorc.Text);
+            obj.plazo = (string.IsNullOrWhiteSpace(txtplazo.Text)) ? 0 : Convert.ToDouble(txtplazo.Text);
+            obj.tipo_pago = Convert.ToChar(txtTipoPago.Text);
+            obj.trel = Convert.ToChar((string.IsNullOrWhiteSpace(txtTrl.Text)?" ": txtTrl.Text));
+            obj.f_emischeq = (string.IsNullOrWhiteSpace(txtEmisionCheque.Text)) ? "null" : txtEmisionCheque.Text;
+            obj.f_primdesc = (string.IsNullOrWhiteSpace(txtF_primerdesc.Text)) ? "null" : txtF_primerdesc.Text;
+            obj.f_ultmode = string.IsNullOrWhiteSpace(txtultpago.Text) ? "null" : txtultpago.Text;
+            obj.imp_unit = (string.IsNullOrWhiteSpace(txtImpUnit.Text)) ? 0 : Convert.ToDouble(txtImpUnit.Text);
+            obj.importe = (string.IsNullOrWhiteSpace(txtImporte.Text)) ? 0 : Convert.ToDouble(txtImporte.Text);
+            obj.interes = (string.IsNullOrWhiteSpace(txtintereses.Text)) ? 0 : Convert.ToDouble(txtintereses.Text);
+            obj.fondo_g = (string.IsNullOrWhiteSpace(txtFondo_g.Text)) ? 0 : Convert.ToDouble(txtFondo_g.Text);
+            obj.liquido = (string.IsNullOrWhiteSpace(txtliquido.Text)) ? 0 : Convert.ToDouble(txtliquido.Text);
+            obj.carta = (string.IsNullOrWhiteSpace(this.carta)) ? Convert.ToChar(" ") : Convert.ToChar(this.carta);
+            obj.f_solicitud = string.Format("{0}-{1}-{2}", DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+            obj.aceptado = (string.IsNullOrWhiteSpace(this.aceptado)) ? Convert.ToChar(" ") : Convert.ToChar(this.aceptado);
+            obj.secuen = this.Secuen;
+
+            if (obj.f_emischeq != "null")
+            {
+                string[] aux2 = obj.f_emischeq.Split('/');
+                obj.f_emischeq = string.Format("'{0}-{1}-{2}'", aux2[2], aux2[1], aux2[0]);
+            }
+            if (obj.f_primdesc != "null")
+            {
+                string[] aux2 = obj.f_primdesc.Split('/');
+                obj.f_primdesc = string.Format("'{0}-{1}-{2}'", aux2[2], aux2[1], aux2[0]);
+            }
+
+            if (obj.f_ultmode != "null")
+            {
+                string[] aux2 = obj.f_ultmode.Split('/');
+                obj.f_ultmode = string.Format("'{0}-{1}-{2}'", aux2[2], aux2[1], aux2[0]);
+            }
+            return obj;
+        }
+        private void tiposDeImpresion(int checador)
+        {
+            p_quirog obj = verificarObjeto();
+            obj.folio = Convert.ToInt32(txtFolio.Text);
+            obj.lista = new List<d_quirog>();
+
+            if (!string.IsNullOrWhiteSpace(txtRfc1.Text))
+            {
+                d_quirog detalleQuirog = new d_quirog();
+                detalleQuirog.folio = obj.folio;
+                detalleQuirog.rfc = txtRfc1.Text;
+                detalleQuirog.nombre_em = txtNombre1.Text;
+                detalleQuirog.direccion = txtdomicilio1.Text;
+                detalleQuirog.proyecto = txtProyect1.Text;
+                detalleQuirog.nap = (string.IsNullOrWhiteSpace(txtNap1.Text)) ? 0 : Convert.ToDouble(txtNap1.Text);
+                detalleQuirog.nue = txtNue1.Text;
+                detalleQuirog.antig = (string.IsNullOrWhiteSpace(txtAnti1.Text)) ? 0 : Convert.ToInt32(txtAnti1.Text);
+                obj.lista.Add(detalleQuirog);
+            }
+
+            if (!string.IsNullOrWhiteSpace(txtrfc2.Text))
+            {
+                d_quirog detalleQuirog = new d_quirog();
+                detalleQuirog.folio = obj.folio;
+                detalleQuirog.rfc = txtrfc2.Text;
+                detalleQuirog.nombre_em = txtnombre2.Text;
+                detalleQuirog.direccion = txtdomicilio2.Text;
+                detalleQuirog.proyecto = txtproy2.Text;
+                detalleQuirog.nap = (string.IsNullOrWhiteSpace(txtnap2.Text)) ? 0 : Convert.ToDouble(txtnap2.Text);
+                detalleQuirog.nue = txtnue2.Text;
+                detalleQuirog.antig = (string.IsNullOrWhiteSpace(txtantg2.Text)) ? 0 : Convert.ToInt32(txtantg2.Text);
+                obj.lista.Add(detalleQuirog);
+            }
+
+            imprimir(obj, checador);
         }
     }
 }

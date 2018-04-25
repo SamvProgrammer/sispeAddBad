@@ -250,28 +250,28 @@
             // solicEntregaToolStripMenuItem
             // 
             this.solicEntregaToolStripMenuItem.Name = "solicEntregaToolStripMenuItem";
-            this.solicEntregaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.solicEntregaToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.solicEntregaToolStripMenuItem.Text = "Solic/Entrega";
             this.solicEntregaToolStripMenuItem.Click += new System.EventHandler(this.solicEntregaToolStripMenuItem_Click);
             // 
             // pagaresToolStripMenuItem
             // 
             this.pagaresToolStripMenuItem.Name = "pagaresToolStripMenuItem";
-            this.pagaresToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pagaresToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.pagaresToolStripMenuItem.Text = "Pagares";
             this.pagaresToolStripMenuItem.Click += new System.EventHandler(this.pagaresToolStripMenuItem_Click);
             // 
             // alfabéticoToolStripMenuItem
             // 
             this.alfabéticoToolStripMenuItem.Name = "alfabéticoToolStripMenuItem";
-            this.alfabéticoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.alfabéticoToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.alfabéticoToolStripMenuItem.Text = "Alfabético";
             this.alfabéticoToolStripMenuItem.Click += new System.EventHandler(this.alfabéticoToolStripMenuItem_Click);
             // 
             // montosToolStripMenuItem
             // 
             this.montosToolStripMenuItem.Name = "montosToolStripMenuItem";
-            this.montosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.montosToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.montosToolStripMenuItem.Text = "Montos";
             // 
             // tasasToolStripMenuItem
@@ -287,19 +287,19 @@
             // actualizarToolStripMenuItem
             // 
             this.actualizarToolStripMenuItem.Name = "actualizarToolStripMenuItem";
-            this.actualizarToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.actualizarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.actualizarToolStripMenuItem.Text = "Actualizar";
             // 
             // consultarToolStripMenuItem
             // 
             this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
-            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.consultarToolStripMenuItem.Text = "Consultar";
             // 
             // reportesToolStripMenuItem1
             // 
             this.reportesToolStripMenuItem1.Name = "reportesToolStripMenuItem1";
-            this.reportesToolStripMenuItem1.Size = new System.Drawing.Size(126, 22);
+            this.reportesToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.reportesToolStripMenuItem1.Text = "Reportes";
             // 
             // eToolStripMenuItem
@@ -370,13 +370,13 @@
             // quirografariosToolStripMenuItem
             // 
             this.quirografariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.altasCambiosToolStripMenuItem,
             this.generarPorFechaToolStripMenuItem,
+            this.altasCambiosToolStripMenuItem,
             this.actualizarRelLaboralToolStripMenuItem,
             this.validarSituaciónLaboralToolStripMenuItem,
             this.fondoDeGarantíaToolStripMenuItem});
             this.quirografariosToolStripMenuItem.Name = "quirografariosToolStripMenuItem";
-            this.quirografariosToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.quirografariosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.quirografariosToolStripMenuItem.Text = "Quirografarios";
             // 
             // altasCambiosToolStripMenuItem
@@ -390,6 +390,7 @@
             this.generarPorFechaToolStripMenuItem.Name = "generarPorFechaToolStripMenuItem";
             this.generarPorFechaToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
             this.generarPorFechaToolStripMenuItem.Text = "Generar por fecha ";
+            this.generarPorFechaToolStripMenuItem.Click += new System.EventHandler(this.generarPorFechaToolStripMenuItem_Click);
             // 
             // actualizarRelLaboralToolStripMenuItem
             // 
