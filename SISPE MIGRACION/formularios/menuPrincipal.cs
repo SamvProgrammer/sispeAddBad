@@ -121,5 +121,10 @@ namespace SISPE_MIGRACION.formularios
         {
             new frmGenerarPorFecha().ShowDialog();
         }
+
+        private void tasasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frmTasas().ShowDialog();
+        }
     }
 }

@@ -54,9 +54,6 @@
             this.alfabéticoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.montosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tasasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.actualizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.eToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaPdevToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,8 +64,8 @@
             this.registrosManualesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.controlYRegistroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quirografariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.altasCambiosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.generarPorFechaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.altasCambiosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizarRelLaboralToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.validarSituaciónLaboralToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fondoDeGarantíaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -250,57 +247,36 @@
             // solicEntregaToolStripMenuItem
             // 
             this.solicEntregaToolStripMenuItem.Name = "solicEntregaToolStripMenuItem";
-            this.solicEntregaToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.solicEntregaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.solicEntregaToolStripMenuItem.Text = "Solic/Entrega";
             this.solicEntregaToolStripMenuItem.Click += new System.EventHandler(this.solicEntregaToolStripMenuItem_Click);
             // 
             // pagaresToolStripMenuItem
             // 
             this.pagaresToolStripMenuItem.Name = "pagaresToolStripMenuItem";
-            this.pagaresToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.pagaresToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.pagaresToolStripMenuItem.Text = "Pagares";
             this.pagaresToolStripMenuItem.Click += new System.EventHandler(this.pagaresToolStripMenuItem_Click);
             // 
             // alfabéticoToolStripMenuItem
             // 
             this.alfabéticoToolStripMenuItem.Name = "alfabéticoToolStripMenuItem";
-            this.alfabéticoToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.alfabéticoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.alfabéticoToolStripMenuItem.Text = "Alfabético";
             this.alfabéticoToolStripMenuItem.Click += new System.EventHandler(this.alfabéticoToolStripMenuItem_Click);
             // 
             // montosToolStripMenuItem
             // 
             this.montosToolStripMenuItem.Name = "montosToolStripMenuItem";
-            this.montosToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.montosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.montosToolStripMenuItem.Text = "Montos";
             // 
             // tasasToolStripMenuItem
             // 
-            this.tasasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.actualizarToolStripMenuItem,
-            this.consultarToolStripMenuItem,
-            this.reportesToolStripMenuItem1});
             this.tasasToolStripMenuItem.Name = "tasasToolStripMenuItem";
             this.tasasToolStripMenuItem.Size = new System.Drawing.Size(245, 22);
             this.tasasToolStripMenuItem.Text = "Tasas";
-            // 
-            // actualizarToolStripMenuItem
-            // 
-            this.actualizarToolStripMenuItem.Name = "actualizarToolStripMenuItem";
-            this.actualizarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.actualizarToolStripMenuItem.Text = "Actualizar";
-            // 
-            // consultarToolStripMenuItem
-            // 
-            this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
-            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.consultarToolStripMenuItem.Text = "Consultar";
-            // 
-            // reportesToolStripMenuItem1
-            // 
-            this.reportesToolStripMenuItem1.Name = "reportesToolStripMenuItem1";
-            this.reportesToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.reportesToolStripMenuItem1.Text = "Reportes";
+            this.tasasToolStripMenuItem.Click += new System.EventHandler(this.tasasToolStripMenuItem_Click);
             // 
             // eToolStripMenuItem
             // 
@@ -376,14 +352,8 @@
             this.validarSituaciónLaboralToolStripMenuItem,
             this.fondoDeGarantíaToolStripMenuItem});
             this.quirografariosToolStripMenuItem.Name = "quirografariosToolStripMenuItem";
-            this.quirografariosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.quirografariosToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.quirografariosToolStripMenuItem.Text = "Quirografarios";
-            // 
-            // altasCambiosToolStripMenuItem
-            // 
-            this.altasCambiosToolStripMenuItem.Name = "altasCambiosToolStripMenuItem";
-            this.altasCambiosToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.altasCambiosToolStripMenuItem.Text = "Altas/Cambios";
             // 
             // generarPorFechaToolStripMenuItem
             // 
@@ -391,6 +361,12 @@
             this.generarPorFechaToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
             this.generarPorFechaToolStripMenuItem.Text = "Generar por fecha ";
             this.generarPorFechaToolStripMenuItem.Click += new System.EventHandler(this.generarPorFechaToolStripMenuItem_Click);
+            // 
+            // altasCambiosToolStripMenuItem
+            // 
+            this.altasCambiosToolStripMenuItem.Name = "altasCambiosToolStripMenuItem";
+            this.altasCambiosToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.altasCambiosToolStripMenuItem.Text = "Altas/Cambios";
             // 
             // actualizarRelLaboralToolStripMenuItem
             // 
@@ -472,9 +448,6 @@
         private System.Windows.Forms.ToolStripMenuItem alfabéticoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem montosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tasasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem actualizarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem eToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultaPdevToolStripMenuItem;
