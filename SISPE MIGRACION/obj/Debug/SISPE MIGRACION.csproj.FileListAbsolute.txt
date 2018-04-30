@@ -190,3 +190,104 @@ G:\sispemigracion\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.formularios.PRESTACI
 C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\SISPE MIGRACION.exe.config
 C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE MIGRACION.exe
 C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE MIGRACION.pdb
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\SISPE MIGRACION.exe
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\SISPE MIGRACION.pdb
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\Microsoft.ReportViewer.WebForms.DLL
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\Npgsql.dll
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\Npgsql.xml
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE MIGRACION.csprojResolveAssemblyReference.cache
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE MIGRACION.csproj.SISPE MIGRACION.exe.config
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.codigo.herramientas.forms.frmDescuentosDePensiones.resources
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.codigo.herramientas.forms.frmReporte.resources
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.codigo.herramientas.forms.frmTasaDeInteresescs.resources
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.formularios.CATÁLOGOS.frmCatalogoP_quirog.resources
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.formularios.CATÁLOGOS.frmCatemplea.resources
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.formularios.CATÁLOGOS.frmdependencias.resources
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.formularios.CATÁLOGOS.frmEmpleados.resources
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.formularios.CATÁLOGOS.frmFirmas.resources
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.formularios.CATÁLOGOS.frmMovimientos.resources
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.formularios.CATÁLOGOS.frmCategorias.resources
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.formularios.CATÁLOGOS.frmProyecto.resources
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.formularios.login.resources
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.formularios.menuPrincipal.resources
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.frmAltas.resources
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.frmdiacheque.resources
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.frmprogchq.resources
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.reportes.frmAlfabet.resources
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.reportes.frmPagares.resources
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.reportes.frmSolicitudEntrega.resources
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.Properties.Resources.resources
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE MIGRACION.csproj.GenerateResource.Cache
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\RdlCompile.cache
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\RdlCompile.compiled
+G:\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\SISPE MIGRACION.exe.config
+G:\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE MIGRACION.exe
+G:\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE MIGRACION.pdb
+G:\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE MIGRACION.csprojResolveAssemblyReference.cache
+G:\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE MIGRACION.csproj.SISPE MIGRACION.exe.config
+G:\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.codigo.herramientas.forms.frmDescuentosDePensiones.resources
+G:\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.codigo.herramientas.forms.frmReporte.resources
+G:\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.codigo.herramientas.forms.frmTasaDeInteresescs.resources
+G:\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.formularios.CATÁLOGOS.frmCatalogoP_quirog.resources
+G:\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.formularios.CATÁLOGOS.frmCatemplea.resources
+G:\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.formularios.CATÁLOGOS.frmdependencias.resources
+G:\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.formularios.CATÁLOGOS.frmEmpleados.resources
+G:\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.formularios.CATÁLOGOS.frmFirmas.resources
+G:\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.formularios.CATÁLOGOS.frmMovimientos.resources
+G:\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.formularios.CATÁLOGOS.frmCategorias.resources
+G:\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.formularios.CATÁLOGOS.frmProyecto.resources
+G:\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.formularios.login.resources
+G:\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.formularios.menuPrincipal.resources
+G:\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.frmAltas.resources
+G:\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.frmdiacheque.resources
+G:\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.frmprogchq.resources
+G:\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.reportes.frmAlfabet.resources
+G:\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.reportes.frmliquidos.resources
+G:\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.reportes.frmMontos.resources
+G:\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.reportes.frmPagares.resources
+G:\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.reportes.frmSolicitudEntrega.resources
+G:\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.Properties.Resources.resources
+G:\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE MIGRACION.csproj.GenerateResource.Cache
+G:\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\RdlCompile.cache
+G:\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\RdlCompile.compiled
+G:\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\SISPE MIGRACION.exe
+G:\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\SISPE MIGRACION.pdb
+G:\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\Microsoft.ReportViewer.Common.dll
+G:\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+G:\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\Microsoft.ReportViewer.WebForms.DLL
+G:\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+G:\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\Npgsql.dll
+G:\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\System.Threading.Tasks.Extensions.dll
+G:\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\Microsoft.SqlServer.Types.dll
+G:\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\Npgsql.xml
+G:\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\System.Threading.Tasks.Extensions.xml
+G:\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+G:\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+G:\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+G:\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+G:\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+G:\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+G:\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+G:\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+G:\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+G:\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+F:\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\SISPE MIGRACION.exe.config
+F:\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE MIGRACION.exe
+F:\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE MIGRACION.pdb
+G:\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.Edo_cuenta.frmconsulta.resources

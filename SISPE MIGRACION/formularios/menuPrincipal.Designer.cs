@@ -74,6 +74,8 @@
             this.fondoDeGarantíaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.conceptoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quirografariosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.hipotecariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -250,29 +252,30 @@
             // solicEntregaToolStripMenuItem
             // 
             this.solicEntregaToolStripMenuItem.Name = "solicEntregaToolStripMenuItem";
-            this.solicEntregaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.solicEntregaToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.solicEntregaToolStripMenuItem.Text = "Solic/Entrega";
             this.solicEntregaToolStripMenuItem.Click += new System.EventHandler(this.solicEntregaToolStripMenuItem_Click);
             // 
             // pagaresToolStripMenuItem
             // 
             this.pagaresToolStripMenuItem.Name = "pagaresToolStripMenuItem";
-            this.pagaresToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pagaresToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.pagaresToolStripMenuItem.Text = "Pagares";
             this.pagaresToolStripMenuItem.Click += new System.EventHandler(this.pagaresToolStripMenuItem_Click);
             // 
             // alfabéticoToolStripMenuItem
             // 
             this.alfabéticoToolStripMenuItem.Name = "alfabéticoToolStripMenuItem";
-            this.alfabéticoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.alfabéticoToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.alfabéticoToolStripMenuItem.Text = "Alfabético";
             this.alfabéticoToolStripMenuItem.Click += new System.EventHandler(this.alfabéticoToolStripMenuItem_Click);
             // 
             // montosToolStripMenuItem
             // 
             this.montosToolStripMenuItem.Name = "montosToolStripMenuItem";
-            this.montosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.montosToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.montosToolStripMenuItem.Text = "Montos";
+            this.montosToolStripMenuItem.Click += new System.EventHandler(this.montosToolStripMenuItem_Click);
             // 
             // tasasToolStripMenuItem
             // 
@@ -315,6 +318,9 @@
             // 
             // consultaToolStripMenuItem
             // 
+            this.consultaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.quirografariosToolStripMenuItem1,
+            this.hipotecariosToolStripMenuItem});
             this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
             this.consultaToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.consultaToolStripMenuItem.Text = "Consulta ";
@@ -424,6 +430,18 @@
             this.conceptoToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.conceptoToolStripMenuItem.Text = "Concepto";
             // 
+            // quirografariosToolStripMenuItem1
+            // 
+            this.quirografariosToolStripMenuItem1.Name = "quirografariosToolStripMenuItem1";
+            this.quirografariosToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.quirografariosToolStripMenuItem1.Text = "Quirografarios";
+            // 
+            // hipotecariosToolStripMenuItem
+            // 
+            this.hipotecariosToolStripMenuItem.Name = "hipotecariosToolStripMenuItem";
+            this.hipotecariosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.hipotecariosToolStripMenuItem.Text = "Hipotecarios";
+            // 
             // menuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -491,5 +509,7 @@
         private System.Windows.Forms.ToolStripMenuItem fondoDeGarantíaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem conceptoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quirografariosToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem hipotecariosToolStripMenuItem;
     }
 }

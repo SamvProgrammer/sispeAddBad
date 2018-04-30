@@ -315,6 +315,19 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="p_montos" msprop:Generator_TableClassName="p_montosDataTable" msprop:Generator_TableVarName="tablep_montos" msprop:Generator_RowChangedName="p_montosRowChanged" msprop:Generator_TablePropName="p_montos" msprop:Generator_RowDeletingName="p_montosRowDeleting" msprop:Generator_RowChangingName="p_montosRowChanging" msprop:Generator_RowEvHandlerName="p_montosRowChangeEventHandler" msprop:Generator_RowDeletedName="p_montosRowDeleted" msprop:Generator_RowClassName="p_montosRow" msprop:Generator_UserTableName="p_montos" msprop:Generator_RowEvArgName="p_montosRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="folio" msprop:Generator_ColumnVarNameInTable="columnfolio" msprop:Generator_ColumnPropNameInRow="folio" msprop:Generator_ColumnPropNameInTable="folioColumn" msprop:Generator_UserColumnName="folio" type="xs:string" minOccurs="0" />
+              <xs:element name="rfc" msprop:Generator_ColumnVarNameInTable="columnrfc" msprop:Generator_ColumnPropNameInRow="rfc" msprop:Generator_ColumnPropNameInTable="rfcColumn" msprop:Generator_UserColumnName="rfc" type="xs:string" minOccurs="0" />
+              <xs:element name="nombre_em" msprop:Generator_ColumnVarNameInTable="columnnombre_em" msprop:Generator_ColumnPropNameInRow="nombre_em" msprop:Generator_ColumnPropNameInTable="nombre_emColumn" msprop:Generator_UserColumnName="nombre_em" type="xs:string" minOccurs="0" />
+              <xs:element name="tipo_rel" msprop:Generator_ColumnVarNameInTable="columntipo_rel" msprop:Generator_ColumnPropNameInRow="tipo_rel" msprop:Generator_ColumnPropNameInTable="tipo_relColumn" msprop:Generator_UserColumnName="tipo_rel" type="xs:string" minOccurs="0" />
+              <xs:element name="proyecto" msprop:Generator_ColumnVarNameInTable="columnproyecto" msprop:Generator_ColumnPropNameInRow="proyecto" msprop:Generator_ColumnPropNameInTable="proyectoColumn" msprop:Generator_UserColumnName="proyecto" type="xs:string" minOccurs="0" />
+              <xs:element name="importe" msprop:Generator_ColumnVarNameInTable="columnimporte" msprop:Generator_ColumnPropNameInRow="importe" msprop:Generator_ColumnPropNameInTable="importeColumn" msprop:Generator_UserColumnName="importe" type="xs:string" minOccurs="0" />
+              <xs:element name="liquido" msprop:Generator_ColumnVarNameInTable="columnliquido" msprop:Generator_ColumnPropNameInRow="liquido" msprop:Generator_ColumnPropNameInTable="liquidoColumn" msprop:Generator_UserColumnName="liquido" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">

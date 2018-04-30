@@ -167,6 +167,12 @@
     <Compile Include="formularios\menuPrincipal.Designer.cs">
       <DependentUpon>menuPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\Edo cuenta\frmconsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\Edo cuenta\frmconsulta.Designer.cs">
+      <DependentUpon>frmconsulta.cs</DependentUpon>
+    </Compile>
     <Compile Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\frmAltas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +196,18 @@
     </Compile>
     <Compile Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\reportes\frmAlfabet.Designer.cs">
       <DependentUpon>frmAlfabet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\reportes\frmliquidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\reportes\frmliquidos.Designer.cs">
+      <DependentUpon>frmliquidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\reportes\frmMontos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\reportes\frmMontos.Designer.cs">
+      <DependentUpon>frmMontos.cs</DependentUpon>
     </Compile>
     <Compile Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\reportes\frmPagares.cs">
       <SubType>Form</SubType>
@@ -252,6 +270,9 @@
     <EmbeddedResource Include="formularios\menuPrincipal.resx">
       <DependentUpon>menuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\Edo cuenta\frmconsulta.resx">
+      <DependentUpon>frmconsulta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\frmAltas.resx">
       <DependentUpon>frmAltas.cs</DependentUpon>
     </EmbeddedResource>
@@ -263,6 +284,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\reportes\frmAlfabet.resx">
       <DependentUpon>frmAlfabet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\reportes\frmliquidos.resx">
+      <DependentUpon>frmliquidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\reportes\frmMontos.resx">
+      <DependentUpon>frmMontos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\reportes\frmPagares.resx">
       <DependentUpon>frmPagares.cs</DependentUpon>
@@ -284,6 +311,7 @@
     <EmbeddedResource Include="reportes\reportePagareQuiro.rdlc" />
     <EmbeddedResource Include="reportes\reporteAlfa.rdlc" />
     <EmbeddedResource Include="reportes\reporteSolicitudEntrega.rdlc" />
+    <EmbeddedResource Include="reportes\reportMonto.rdlc" />
     <EmbeddedResource Include="reportes\Reportpagare.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

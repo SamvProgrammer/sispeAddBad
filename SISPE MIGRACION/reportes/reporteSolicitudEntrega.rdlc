@@ -6,28 +6,28 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>4.32854cm</Width>
+              <Width>2.24399cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>5.65147cm</Width>
+              <Width>7.43441cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>5.25458cm</Width>
+              <Width>3.04488cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.13791cm</Width>
+              <Width>3.91314cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.9052cm</Width>
+              <Width>2.74898cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.40249cm</Width>
+              <Width>3.06647cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.95812cm</Width>
+              <Width>2.0346cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.68812cm</Width>
+              <Width>3.22523cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -44,7 +44,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>FOLIO</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -74,7 +76,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>NOMBRE</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -83,7 +87,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -113,7 +119,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>F. SOLICITUD</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -122,7 +130,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -152,7 +162,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>F. RECIB.</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -182,7 +194,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>F. ENTREGA</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -212,7 +226,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>IMPORTE</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -221,7 +237,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -251,7 +269,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>PLAZO</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -281,7 +301,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>PROYECTO</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -573,8 +595,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
+        <Top>0.17639cm</Top>
+        <Left>0.29996cm</Left>
         <Height>2.36416cm</Height>
-        <Width>32.32643cm</Width>
+        <Width>27.7117cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -585,10 +609,10 @@
     <Height>2in</Height>
     <Style />
   </Body>
-  <Width>12.72694in</Width>
+  <Width>12.73151in</Width>
   <Page>
     <PageHeader>
-      <Height>2.54cm</Height>
+      <Height>2.99861cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -596,9 +620,9 @@
           <Source>Embedded</Source>
           <Value>logo_pensiones</Value>
           <Sizing>FitProportional</Sizing>
-          <Top>0.25541cm</Top>
-          <Left>21.67741cm</Left>
-          <Height>2.02917cm</Height>
+          <Top>0.3436cm</Top>
+          <Left>18.49748cm</Left>
+          <Height>1.80806cm</Height>
           <Width>9.22583cm</Width>
           <Style>
             <Border>
@@ -620,7 +644,20 @@
                   </Style>
                 </TextRun>
                 <TextRun>
-                  <Value xml:space="preserve">      </Value>
+                  <Value xml:space="preserve">  </Value>
+                  <Style>
+                    <FontSize>12pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value xml:space="preserve">     </Value>
                   <Style>
                     <FontSize>12pt</FontSize>
                   </Style>
@@ -632,10 +669,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox4</rd:DefaultName>
-          <Top>0.25541cm</Top>
-          <Left>1.05277cm</Left>
-          <Height>2.02917cm</Height>
-          <Width>19.67146cm</Width>
+          <Top>0.3436cm</Top>
+          <Left>0.01161cm</Left>
+          <Height>1.80806cm</Height>
+          <Width>16.92477cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -676,8 +713,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox11</rd:DefaultName>
-          <Top>1.03146cm</Top>
-          <Left>12.11451cm</Left>
+          <Top>0.55521cm</Top>
+          <Left>12.09966cm</Left>
           <Height>0.6cm</Height>
           <Width>7.9088cm</Width>
           <Style>
@@ -705,8 +742,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox10</rd:DefaultName>
-          <Top>1.63145cm</Top>
-          <Left>12.73144cm</Left>
+          <Top>1.1552cm</Top>
+          <Left>12.71659cm</Left>
           <Height>0.6cm</Height>
           <Width>6.01896cm</Width>
           <ZIndex>1</ZIndex>
@@ -736,10 +773,130 @@
           </Paragraphs>
           <rd:DefaultName>Textbox14</rd:DefaultName>
           <Top>0.30855cm</Top>
-          <Left>29.02138cm</Left>
+          <Left>24.92742cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
           <ZIndex>2</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox7">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Parameters!fecha1.Value</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox7</rd:DefaultName>
+          <Top>0.12347cm</Top>
+          <Left>2.04139cm</Left>
+          <Height>0.86458cm</Height>
+          <Width>4.56204cm</Width>
+          <ZIndex>3</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox15">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>al</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox15</rd:DefaultName>
+          <Top>0.17639cm</Top>
+          <Left>6.60343cm</Left>
+          <Height>0.6cm</Height>
+          <Width>0.54208cm</Width>
+          <ZIndex>4</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox9">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Parameters!fecha2.Value</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox9</rd:DefaultName>
+          <Top>0.12347cm</Top>
+          <Left>7.28662cm</Left>
+          <Height>0.86458cm</Height>
+          <Width>7.9088cm</Width>
+          <ZIndex>5</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox16">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Periodo:</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox16</rd:DefaultName>
+          <Top>0.14111cm</Top>
+          <Left>0.41451cm</Left>
+          <Height>0.6cm</Height>
+          <Width>1.33583cm</Width>
+          <ZIndex>6</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -826,6 +983,16 @@
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
+  <ReportParameters>
+    <ReportParameter Name="fecha1">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="fecha2">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+  </ReportParameters>
   <EmbeddedImages>
     <EmbeddedImage Name="logo_pensiones">
       <MIMEType>image/jpeg</MIMEType>

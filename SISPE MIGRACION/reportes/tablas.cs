@@ -4,6 +4,10 @@
 
     partial class tablas
     {
+        partial class p_montosDataTable
+        {
+        }
+
         partial class p_quirog_solicitudDataTable
         {
         }

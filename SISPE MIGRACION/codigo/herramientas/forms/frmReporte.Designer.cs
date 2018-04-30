@@ -32,8 +32,10 @@
             // 
             // frmReporte
             // 
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(622, 549);
             this.Name = "frmReporte";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmReporte_Load_1);
             this.ResumeLayout(false);
 

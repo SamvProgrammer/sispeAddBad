@@ -66,6 +66,7 @@ namespace SISPE_MIGRACION.codigo.herramientas.forms
             ((System.ComponentModel.ISupportInitialize)(this.p_quirogBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablas)).EndInit();
             this.ResumeLayout(false);
+            WindowState = FormWindowState.Maximized;
         }
 
         private void reportViewer1_Load(object sender, EventArgs e)

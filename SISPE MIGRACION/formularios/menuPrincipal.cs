@@ -115,5 +115,10 @@ namespace SISPE_MIGRACION.formularios
         {
             new SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.reportes.frmPagares().ShowDialog();
         }
+
+        private void montosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.reportes.frmMontos().ShowDialog();
+        }
     }
 }

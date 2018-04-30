@@ -71,7 +71,14 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.reportes
                 aux2[contador] = tt1;
                 contador++;
             }
-            globales.reportes("reporteAlfa", "p_quirog", aux2);
+            object[] parametros = { "fech1", "fech2" };
+            object[] valor = { fecha1.Text, fecha2.Text };
+            object[][] enviarParametros = new object[2][];
+
+            enviarParametros[0] = parametros;
+            enviarParametros[1] = valor;
+
+            globales.reportes("reporteAlfa", "p_quirog", aux2, "", false, enviarParametros);
         }
     }
 }
