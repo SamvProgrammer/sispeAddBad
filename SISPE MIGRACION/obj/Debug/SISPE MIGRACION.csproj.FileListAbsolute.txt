@@ -291,3 +291,6 @@ F:\sispe VSTUDIO\SISPE MIGRACION\bin\Debug\SISPE MIGRACION.exe.config
 F:\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE MIGRACION.exe
 F:\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE MIGRACION.pdb
 G:\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.Edo_cuenta.frmconsulta.resources
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.Edo_cuenta.frmconsulta.resources
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.reportes.frmliquidos.resources
+C:\Users\x3&u&\Documents\REPOSITORIO\sispe VSTUDIO\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.reportes.frmMontos.resources
