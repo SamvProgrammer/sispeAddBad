@@ -1,5 +1,6 @@
 ﻿
 using SISPE_MIGRACION.formularios.CATÁLOGOS;
+using SISPE_MIGRACION.formularios.PRESTACIONES_ECON.CONTROL_Y_REGISTRO.QUIROGRAFARIO;
 using SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ;
 using SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.reportes;
 using System;
@@ -114,6 +115,16 @@ namespace SISPE_MIGRACION.formularios
         private void pagaresToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.reportes.frmPagares().ShowDialog();
+        }
+
+        private void generarPorFechaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frmGenerarPorFecha().ShowDialog();
+        }
+
+        private void tasasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frmTasas().ShowDialog();
         }
 
         private void montosToolStripMenuItem_Click(object sender, EventArgs e)

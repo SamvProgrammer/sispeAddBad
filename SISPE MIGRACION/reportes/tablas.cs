@@ -4,7 +4,7 @@
 
     partial class tablas
     {
-        partial class p_montosDataTable
+        partial class tasaTablaDataTable
         {
         }
 

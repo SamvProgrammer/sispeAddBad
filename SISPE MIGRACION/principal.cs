@@ -30,8 +30,7 @@ namespace SISPE_MIGRACION
             string password = SISPE_MIGRACION.Properties.Resources.password;
             string database = SISPE_MIGRACION.Properties.Resources.baseDatos;
             
-            string queryConexion = string.Format("Host={0};Username={1};Password={2};Database={3}",host,usuario,password,database);          
-
+            string queryConexion = string.Format("Host={0};Username={1};Password={2};Database={3}",host,usuario,password,database);
             if (baseDatos.realizarConexion(queryConexion))
             {
                 Application.Run(new login());///
