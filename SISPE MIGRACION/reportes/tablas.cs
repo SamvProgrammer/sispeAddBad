@@ -4,6 +4,10 @@
 
     partial class tablas
     {
+        partial class tasaTablaDataTable
+        {
+        }
+
         partial class p_quirog_solicitudDataTable
         {
         }

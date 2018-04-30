@@ -84,5 +84,9 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
             }
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            new frmImprimirReporteTasas().ShowDialog();
+        }
     }
 }

@@ -824,22 +824,17 @@
   <metadata name="Column6.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Column2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Column3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Column4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Column5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Column6.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
+  <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADdcAAA3XAUIom3gAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
+        AAABhUlEQVRIS2MYdKCie85/amCoccQDkCZKwajFRIEBsTitsh+siVIAMgNkFtRYwoBuFqdXT/LNqp30
+        EqQIhkGaqIGRzcysnfwys6rfG2otA0NmzeQ389Yf/r/h4BWa4jnrDv3PrJn0GmotJGixKaQFBtkFtXaQ
+        WAxi0wKPWsyQUTXhHboiWuP06gnvGXLqp5yevfYg3EW0xqBsm103+RIwD0+c1Dt/C1ZFtMCTluz4Dyys
+        FjKkVvUn1E5Y+g+bIlrg5qmr/qdW9eUzpFX1G+U3z/iKTREtcFnnvC9pFX1uDAkNDRzABPZr/f7LWBVS
+        G2fXTvmSVd0rC07ZWbWTnyzZegKrQmriNXsv/M+omviDgeE/I9jinLrJ26av2INVMTXxwk1HgQlr8i2w
+        pSAAdEVt5+z1v7EppiaesmwXMCtNWQe1FlhyASO7sHnmF1BQYNNADbxu/6X/1b2Lv6VV9xdArWVgaGho
+        YAK6ZEE6MJFhK2mogyf8za6btCe2pJsbau0oGNaAgQEAzfrC8tv1WPAAAAAASUVORK5CYII=
+</value>
+  </data>
 </root>
