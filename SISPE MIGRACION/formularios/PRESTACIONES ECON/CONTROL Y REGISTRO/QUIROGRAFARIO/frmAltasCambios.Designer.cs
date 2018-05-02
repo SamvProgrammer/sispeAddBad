@@ -30,6 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAltasCambios));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.group = new System.Windows.Forms.GroupBox();
+            this.btnImprimir = new System.Windows.Forms.Button();
+            this.btnsalir = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnModifica = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -84,7 +90,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtF_primdesc = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtTipo_pago = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtProyecto = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -101,13 +106,9 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.group = new System.Windows.Forms.GroupBox();
-            this.btnImprimir = new System.Windows.Forms.Button();
-            this.btnsalir = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnModifica = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
+            this.txtTipo_pago = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
+            this.group.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -116,7 +117,6 @@
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.group.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -134,6 +134,89 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1233, 647);
             this.panel1.TabIndex = 0;
+            // 
+            // group
+            // 
+            this.group.BackColor = System.Drawing.SystemColors.Menu;
+            this.group.Controls.Add(this.btnImprimir);
+            this.group.Controls.Add(this.btnsalir);
+            this.group.Controls.Add(this.btnGuardar);
+            this.group.Controls.Add(this.btnModifica);
+            this.group.Controls.Add(this.btnNuevo);
+            this.group.Dock = System.Windows.Forms.DockStyle.Right;
+            this.group.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.group.Location = new System.Drawing.Point(1037, 75);
+            this.group.Name = "group";
+            this.group.Size = new System.Drawing.Size(196, 572);
+            this.group.TabIndex = 54;
+            this.group.TabStop = false;
+            this.group.Text = "Opciones";
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnImprimir.Image = ((System.Drawing.Image)(resources.GetObject("btnImprimir.Image")));
+            this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnImprimir.Location = new System.Drawing.Point(6, 183);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(184, 43);
+            this.btnImprimir.TabIndex = 4;
+            this.btnImprimir.Text = "IMPRIMIR";
+            this.btnImprimir.UseVisualStyleBackColor = false;
+            // 
+            // btnsalir
+            // 
+            this.btnsalir.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnsalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnsalir.Image = ((System.Drawing.Image)(resources.GetObject("btnsalir.Image")));
+            this.btnsalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnsalir.Location = new System.Drawing.Point(6, 260);
+            this.btnsalir.Name = "btnsalir";
+            this.btnsalir.Size = new System.Drawing.Size(184, 39);
+            this.btnsalir.TabIndex = 3;
+            this.btnsalir.Text = "SALIR ";
+            this.btnsalir.UseVisualStyleBackColor = false;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardar.Location = new System.Drawing.Point(6, 106);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(184, 39);
+            this.btnGuardar.TabIndex = 2;
+            this.btnGuardar.Text = "GUARDAR ";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Visible = false;
+            // 
+            // btnModifica
+            // 
+            this.btnModifica.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnModifica.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnModifica.Image = ((System.Drawing.Image)(resources.GetObject("btnModifica.Image")));
+            this.btnModifica.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModifica.Location = new System.Drawing.Point(6, 106);
+            this.btnModifica.Name = "btnModifica";
+            this.btnModifica.Size = new System.Drawing.Size(184, 39);
+            this.btnModifica.TabIndex = 1;
+            this.btnModifica.Text = "    ACTUALIZAR       SOLICITUD";
+            this.btnModifica.UseVisualStyleBackColor = false;
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
+            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevo.Location = new System.Drawing.Point(6, 34);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(184, 39);
+            this.btnNuevo.TabIndex = 0;
+            this.btnNuevo.Text = "NUEVA SOLICITUD";
+            this.btnNuevo.UseVisualStyleBackColor = false;
             // 
             // label16
             // 
@@ -528,6 +611,7 @@
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.Menu;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel5.Controls.Add(this.txtTipo_pago);
             this.panel5.Controls.Add(this.txtUbic_pagare);
             this.panel5.Controls.Add(this.label15);
             this.panel5.Controls.Add(this.txtF_emischeq);
@@ -544,7 +628,6 @@
             this.panel5.Controls.Add(this.label9);
             this.panel5.Controls.Add(this.txtF_primdesc);
             this.panel5.Controls.Add(this.label8);
-            this.panel5.Controls.Add(this.txtTipo_pago);
             this.panel5.Controls.Add(this.label7);
             this.panel5.Controls.Add(this.txtProyecto);
             this.panel5.Controls.Add(this.label6);
@@ -713,17 +796,6 @@
             this.label8.TabIndex = 37;
             this.label8.Text = "PRIMER PAGO (EDO. CTA.):";
             // 
-            // txtTipo_pago
-            // 
-            this.txtTipo_pago.FormattingEnabled = true;
-            this.txtTipo_pago.Items.AddRange(new object[] {
-            "MENSUAL",
-            "QUINCENAL"});
-            this.txtTipo_pago.Location = new System.Drawing.Point(288, 113);
-            this.txtTipo_pago.Name = "txtTipo_pago";
-            this.txtTipo_pago.Size = new System.Drawing.Size(101, 21);
-            this.txtTipo_pago.TabIndex = 36;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -817,6 +889,7 @@
             this.txtFolio.Name = "txtFolio";
             this.txtFolio.Size = new System.Drawing.Size(178, 20);
             this.txtFolio.TabIndex = 0;
+            this.txtFolio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFolio_KeyPress);
             // 
             // label2
             // 
@@ -877,88 +950,14 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // group
+            // txtTipo_pago
             // 
-            this.group.BackColor = System.Drawing.SystemColors.Menu;
-            this.group.Controls.Add(this.btnImprimir);
-            this.group.Controls.Add(this.btnsalir);
-            this.group.Controls.Add(this.btnGuardar);
-            this.group.Controls.Add(this.btnModifica);
-            this.group.Controls.Add(this.btnNuevo);
-            this.group.Dock = System.Windows.Forms.DockStyle.Right;
-            this.group.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.group.Location = new System.Drawing.Point(1037, 75);
-            this.group.Name = "group";
-            this.group.Size = new System.Drawing.Size(196, 572);
-            this.group.TabIndex = 54;
-            this.group.TabStop = false;
-            this.group.Text = "Opciones";
-            // 
-            // btnImprimir
-            // 
-            this.btnImprimir.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnImprimir.Image = ((System.Drawing.Image)(resources.GetObject("btnImprimir.Image")));
-            this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimir.Location = new System.Drawing.Point(6, 183);
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(184, 43);
-            this.btnImprimir.TabIndex = 4;
-            this.btnImprimir.Text = "IMPRIMIR";
-            this.btnImprimir.UseVisualStyleBackColor = false;
-            // 
-            // btnsalir
-            // 
-            this.btnsalir.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnsalir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnsalir.Image = ((System.Drawing.Image)(resources.GetObject("btnsalir.Image")));
-            this.btnsalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnsalir.Location = new System.Drawing.Point(6, 260);
-            this.btnsalir.Name = "btnsalir";
-            this.btnsalir.Size = new System.Drawing.Size(184, 39);
-            this.btnsalir.TabIndex = 3;
-            this.btnsalir.Text = "SALIR ";
-            this.btnsalir.UseVisualStyleBackColor = false;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
-            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(6, 106);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(184, 39);
-            this.btnGuardar.TabIndex = 2;
-            this.btnGuardar.Text = "GUARDAR ";
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Visible = false;
-            // 
-            // btnModifica
-            // 
-            this.btnModifica.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnModifica.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModifica.Image = ((System.Drawing.Image)(resources.GetObject("btnModifica.Image")));
-            this.btnModifica.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModifica.Location = new System.Drawing.Point(6, 106);
-            this.btnModifica.Name = "btnModifica";
-            this.btnModifica.Size = new System.Drawing.Size(184, 39);
-            this.btnModifica.TabIndex = 1;
-            this.btnModifica.Text = "    ACTUALIZAR       SOLICITUD";
-            this.btnModifica.UseVisualStyleBackColor = false;
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
-            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.Location = new System.Drawing.Point(6, 34);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(184, 39);
-            this.btnNuevo.TabIndex = 0;
-            this.btnNuevo.Text = "NUEVA SOLICITUD";
-            this.btnNuevo.UseVisualStyleBackColor = false;
+            this.txtTipo_pago.Cursor = System.Windows.Forms.Cursors.No;
+            this.txtTipo_pago.Location = new System.Drawing.Point(288, 113);
+            this.txtTipo_pago.Name = "txtTipo_pago";
+            this.txtTipo_pago.ReadOnly = true;
+            this.txtTipo_pago.Size = new System.Drawing.Size(101, 20);
+            this.txtTipo_pago.TabIndex = 53;
             // 
             // frmAltasCambios
             // 
@@ -971,8 +970,10 @@
             this.Name = "frmAltasCambios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Altas de solicitudes";
+            this.Load += new System.EventHandler(this.frmAltasCambios_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.group.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel8.ResumeLayout(false);
@@ -986,7 +987,6 @@
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.group.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1017,7 +1017,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtF_primdesc;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox txtTipo_pago;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtProyecto;
         private System.Windows.Forms.Label label6;
@@ -1071,5 +1070,6 @@
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnModifica;
         private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.TextBox txtTipo_pago;
     }
 }
