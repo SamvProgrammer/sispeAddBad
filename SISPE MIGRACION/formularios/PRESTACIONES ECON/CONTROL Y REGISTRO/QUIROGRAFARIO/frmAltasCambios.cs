@@ -18,6 +18,40 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.CONTROL_Y_REGISTRO.QUIRO
         public frmAltasCambios()
         {
             InitializeComponent();
+            txtTipo_mov1.KeyPress += new KeyPressEventHandler(rellenarDatosGenerales);
+            txtSec1.KeyPress += new KeyPressEventHandler(rellenarDatosGenerales);
+            txtF_descuento1.KeyPress += new KeyPressEventHandler(rellenarDatosGenerales);
+            txtProyecto1.KeyPress += new KeyPressEventHandler(rellenarDatosGenerales);
+            txtNombre_em1.KeyPress += new KeyPressEventHandler(rellenarDatosGenerales);
+            txtTipo_rel1.KeyPress += new KeyPressEventHandler(rellenarDatosGenerales);
+            txtNumdesc1.KeyPress += new KeyPressEventHandler(rellenarDatosGenerales);
+            txtTotdesc1.KeyPress += new KeyPressEventHandler(rellenarDatosGenerales);
+            txtImp_unit1.KeyPress += new KeyPressEventHandler(rellenarDatosGenerales);
+            txtFolio_.KeyPress += new KeyPressEventHandler(rellenarDatosGenerales);
+            txtNumdesc_.KeyPress += new KeyPressEventHandler(rellenarDatosGenerales);
+            txtTotdesc_.KeyPress += new KeyPressEventHandler(rellenarDatosGenerales);
+            txtImp_unit_.KeyPress += new KeyPressEventHandler(rellenarDatosGenerales);
+
+        }
+
+        private void rellenarDatosGenerales(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 3)
+            {
+                if (string.IsNullOrWhiteSpace(txtImp_unit1.Text)) {
+                    txtProyecto1.Text = txtProyecto.Text;
+                    txtRfc1.Text = txtRfc.Text;
+                    txtNombre_em1.Text = txtNombre_em.Text;
+                    txtNumdesc1.Text = "1";
+                    txtTotdesc1.Text = txtPlazo.Text;
+                    txtImp_unit1.Text = txtImp_unit.Text;
+                }
+                else
+                {
+                    MessageBox.Show("No es posible copiar valores en este registro", "No se puede copiar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
+            
         }
 
         private void frmAltasCambios_Load(object sender, EventArgs e)
@@ -36,13 +70,35 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.CONTROL_Y_REGISTRO.QUIRO
                 txtNombre_em.Text = Convert.ToString(resultado["nombre_em"]);
                 txtTipo_pago.Text = Convert.ToString(resultado["tipo_pago"]);
                 txtProyecto.Text = Convert.ToString(resultado["proyecto"]);
-                txtF_primdesc.Text = Convert.ToString(resultado["f_primdesc"]);
+                txtF_primdesc.Text = Convert.ToString(resultado["f_primdesc"]).Replace(" 12:00:00 a. m.", ""); ;
                 txtPlazo.Text = Convert.ToString(resultado["plazo"]);
                 txtImp_unit.Text = Convert.ToString(resultado["imp_unit"]);
                 txtImporte.Text = Convert.ToString(resultado["importe"]);
                 txtDireccion.Text = Convert.ToString(resultado["direccion"]);
-                txtF_solicitud.Text = Convert.ToString(resultado["f_solicitud"]);
-                txtF_emischeq.Text = Convert.ToString(resultado["f_emischeq"]);
+                txtF_solicitud.Text = Convert.ToString(resultado["f_solicitud"]).Replace(" 12:00:00 a. m.", ""); ;
+                txtF_emischeq.Text = Convert.ToString(resultado["f_emischeq"]).Replace(" 12:00:00 a. m.", ""); ;
+
+                string query = string.Format("select * from datos.d_ecqdep where folio = {0}",txtFolio.Text);
+                List<Dictionary<string, object>> result = globales.consulta(query);
+
+                Dictionary<string, object> diccionario = result[0];
+
+                txtTipo_mov1.Text = Convert.ToString(diccionario["tipo_mov"]);
+                txtSec1.Text = Convert.ToString(diccionario["sec"]);
+                txtF_descuento1.Text = Convert.ToString(diccionario["f_descuento"]).Replace(" 12:00:00 a. m.","");
+                txtProyecto1.Text = Convert.ToString(diccionario["proyecto"]);
+                txtRfc1.Text = Convert.ToString(diccionario["rfc"]);
+                txtNombre_em1.Text = Convert.ToString(diccionario["nombre_em"]);
+                txtTipo_rel1.Text = Convert.ToString(diccionario["tipo_rel"]);
+
+                txtNumdesc1.Text = Convert.ToString(diccionario["numdesc"]);
+                txtTotdesc1.Text = Convert.ToString(diccionario["totdesc"]);
+                txtImp_unit1.Text = Convert.ToString(diccionario["imp_unit"]);
+                txtFolio_.Text = Convert.ToString(diccionario["folio_"]);
+                txtNumdesc_.Text = Convert.ToString(diccionario["numdesc_"]);
+                txtTotdesc_.Text = Convert.ToString(diccionario["totdesc_"]);
+                txtImp_unit_.Text = Convert.ToString(diccionario["imp_unit_"]);
+
 
             }
             catch(Exception e) {
@@ -53,10 +109,87 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.CONTROL_Y_REGISTRO.QUIRO
         private void txtFolio_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
+            limpiarSolicitudesDependencias();
+            limpiaredoCuenta();
             if (e.KeyChar == 8) {
-                //Sección de eliominark
+                return;
             }
             frmFolios.ShowDialog();
+        }
+
+        private void limpiaredoCuenta()
+        {
+            txtFolio.Text = "";
+            txtSecretaria.Text = "";
+            txtRfc.Text = "";
+            txtNombre_em.Text = "";
+            txtProyecto.Text = "";
+            txtTipo_pago.Text = "";
+            txtF_primdesc.Text = "";
+            txtPlazo.Text = "";
+            txtImp_unit.Text = "";
+            txtImporte.Text = "";
+            txtDireccion.Text = "";
+            txtF_solicitud.Text = "";
+            txtF_emischeq.Text = "";
+            txtUbic_pagare.Text = "";
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                
+                string ubicacionPagare = txtUbic_pagare.Text;
+                string query = string.Format("update datos.p_edocta set ubic_pagare = '{0}' where folio = {1}",ubicacionPagare,txtFolio.Text);
+                if (globales.consulta(query,true))
+                {
+
+                }
+            }
+            catch {
+                MessageBox.Show("Error, contactar a los de sistemas","Error en sistemas",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnsalir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void txtTipo_mov1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 8) {
+                limpiarSolicitudesDependencias();
+            }
+        }
+
+        private void limpiarSolicitudesDependencias() {
+            txtTipo_mov1.Text = "";
+            txtSec1.Text = "";
+            txtF_descuento1.Text = "";
+            txtProyecto1.Text = "";
+            txtRfc1.Text = "";
+            txtNombre_em1.Text = "";
+            txtTipo_rel1.Text = "";
+            txtNumdesc1.Text = "";
+            txtTotdesc1.Text = "";
+            txtImp_unit1.Text = "";
+
+            txtFolio_.Text = "";
+            txtNumdesc_.Text = "";
+            txtTotdesc_.Text = "";
+            txtImp_unit_.Text = "";
+        }
+
+        private void panel6_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            
+        }
+
+        private void frmAltasCambios_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
         }
     }
 }

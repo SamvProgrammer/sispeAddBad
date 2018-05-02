@@ -31,49 +31,44 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAltasCambios));
             this.panel1 = new System.Windows.Forms.Panel();
             this.group = new System.Windows.Forms.GroupBox();
-            this.btnImprimir = new System.Windows.Forms.Button();
             this.btnsalir = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnModifica = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.txtImp_unit_ = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
-            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.txtTotdesc_ = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
-            this.textBox26 = new System.Windows.Forms.TextBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
+            this.txtFolio_ = new System.Windows.Forms.TextBox();
+            this.txtNumdesc_ = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.txtImp_unit1 = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.txtTotdesc1 = new System.Windows.Forms.TextBox();
+            this.txtNumdesc1 = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.txtNombre_em1 = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.txtRfc1 = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.txtF_descuento1 = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.txtSec1 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.txtProyecto1 = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
-            this.textBox25 = new System.Windows.Forms.TextBox();
+            this.txtTipo_mov1 = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.txtTipo_pago = new System.Windows.Forms.TextBox();
             this.txtUbic_pagare = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txtF_emischeq = new System.Windows.Forms.TextBox();
@@ -106,7 +101,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtTipo_pago = new System.Windows.Forms.TextBox();
+            this.txtTipo_rel1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.group.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -138,11 +133,8 @@
             // group
             // 
             this.group.BackColor = System.Drawing.SystemColors.Menu;
-            this.group.Controls.Add(this.btnImprimir);
             this.group.Controls.Add(this.btnsalir);
             this.group.Controls.Add(this.btnGuardar);
-            this.group.Controls.Add(this.btnModifica);
-            this.group.Controls.Add(this.btnNuevo);
             this.group.Dock = System.Windows.Forms.DockStyle.Right;
             this.group.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.group.Location = new System.Drawing.Point(1037, 75);
@@ -152,31 +144,19 @@
             this.group.TabStop = false;
             this.group.Text = "Opciones";
             // 
-            // btnImprimir
-            // 
-            this.btnImprimir.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnImprimir.Image = ((System.Drawing.Image)(resources.GetObject("btnImprimir.Image")));
-            this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimir.Location = new System.Drawing.Point(6, 183);
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(184, 43);
-            this.btnImprimir.TabIndex = 4;
-            this.btnImprimir.Text = "IMPRIMIR";
-            this.btnImprimir.UseVisualStyleBackColor = false;
-            // 
             // btnsalir
             // 
             this.btnsalir.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnsalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnsalir.Image = ((System.Drawing.Image)(resources.GetObject("btnsalir.Image")));
             this.btnsalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnsalir.Location = new System.Drawing.Point(6, 260);
+            this.btnsalir.Location = new System.Drawing.Point(6, 96);
             this.btnsalir.Name = "btnsalir";
             this.btnsalir.Size = new System.Drawing.Size(184, 39);
-            this.btnsalir.TabIndex = 3;
+            this.btnsalir.TabIndex = 30;
             this.btnsalir.Text = "SALIR ";
             this.btnsalir.UseVisualStyleBackColor = false;
+            this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
             // 
             // btnGuardar
             // 
@@ -184,39 +164,13 @@
             this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(6, 106);
+            this.btnGuardar.Location = new System.Drawing.Point(6, 37);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(184, 39);
-            this.btnGuardar.TabIndex = 2;
+            this.btnGuardar.TabIndex = 29;
             this.btnGuardar.Text = "GUARDAR ";
             this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Visible = false;
-            // 
-            // btnModifica
-            // 
-            this.btnModifica.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnModifica.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModifica.Image = ((System.Drawing.Image)(resources.GetObject("btnModifica.Image")));
-            this.btnModifica.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModifica.Location = new System.Drawing.Point(6, 106);
-            this.btnModifica.Name = "btnModifica";
-            this.btnModifica.Size = new System.Drawing.Size(184, 39);
-            this.btnModifica.TabIndex = 1;
-            this.btnModifica.Text = "    ACTUALIZAR       SOLICITUD";
-            this.btnModifica.UseVisualStyleBackColor = false;
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
-            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.Location = new System.Drawing.Point(6, 34);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(184, 39);
-            this.btnNuevo.TabIndex = 0;
-            this.btnNuevo.Text = "NUEVA SOLICITUD";
-            this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // label16
             // 
@@ -234,52 +188,52 @@
             // 
             this.panel6.BackColor = System.Drawing.SystemColors.Menu;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel6.Controls.Add(this.txtTipo_rel1);
             this.panel6.Controls.Add(this.panel8);
             this.panel6.Controls.Add(this.panel7);
-            this.panel6.Controls.Add(this.comboBox2);
             this.panel6.Controls.Add(this.label21);
-            this.panel6.Controls.Add(this.textBox16);
+            this.panel6.Controls.Add(this.txtNombre_em1);
             this.panel6.Controls.Add(this.label20);
-            this.panel6.Controls.Add(this.textBox15);
+            this.panel6.Controls.Add(this.txtRfc1);
             this.panel6.Controls.Add(this.label19);
-            this.panel6.Controls.Add(this.textBox14);
+            this.panel6.Controls.Add(this.txtF_descuento1);
             this.panel6.Controls.Add(this.label18);
-            this.panel6.Controls.Add(this.textBox13);
+            this.panel6.Controls.Add(this.txtSec1);
             this.panel6.Controls.Add(this.label17);
-            this.panel6.Controls.Add(this.textBox24);
+            this.panel6.Controls.Add(this.txtProyecto1);
             this.panel6.Controls.Add(this.label29);
-            this.panel6.Controls.Add(this.textBox25);
+            this.panel6.Controls.Add(this.txtTipo_mov1);
             this.panel6.Controls.Add(this.label30);
             this.panel6.Location = new System.Drawing.Point(12, 418);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(997, 198);
             this.panel6.TabIndex = 53;
+            this.panel6.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.panel6_PreviewKeyDown);
             // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.IndianRed;
-            this.panel8.Controls.Add(this.textBox21);
+            this.panel8.Controls.Add(this.txtImp_unit_);
             this.panel8.Controls.Add(this.label23);
             this.panel8.Controls.Add(this.label28);
-            this.panel8.Controls.Add(this.textBox22);
+            this.panel8.Controls.Add(this.txtTotdesc_);
             this.panel8.Controls.Add(this.label31);
             this.panel8.Controls.Add(this.label33);
-            this.panel8.Controls.Add(this.textBox26);
-            this.panel8.Controls.Add(this.textBox23);
+            this.panel8.Controls.Add(this.txtFolio_);
+            this.panel8.Controls.Add(this.txtNumdesc_);
             this.panel8.Controls.Add(this.label32);
             this.panel8.Location = new System.Drawing.Point(10, 129);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(911, 51);
             this.panel8.TabIndex = 40;
             // 
-            // textBox21
+            // txtImp_unit_
             // 
-            this.textBox21.Cursor = System.Windows.Forms.Cursors.No;
-            this.textBox21.Location = new System.Drawing.Point(684, 14);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.ReadOnly = true;
-            this.textBox21.Size = new System.Drawing.Size(199, 20);
-            this.textBox21.TabIndex = 67;
+            this.txtImp_unit_.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtImp_unit_.Location = new System.Drawing.Point(684, 14);
+            this.txtImp_unit_.Name = "txtImp_unit_";
+            this.txtImp_unit_.Size = new System.Drawing.Size(199, 20);
+            this.txtImp_unit_.TabIndex = 28;
             // 
             // label23
             // 
@@ -302,14 +256,13 @@
             this.label28.TabIndex = 66;
             this.label28.Text = "IMPORTE UNITARIO:";
             // 
-            // textBox22
+            // txtTotdesc_
             // 
-            this.textBox22.Cursor = System.Windows.Forms.Cursors.No;
-            this.textBox22.Location = new System.Drawing.Point(435, 14);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.ReadOnly = true;
-            this.textBox22.Size = new System.Drawing.Size(85, 20);
-            this.textBox22.TabIndex = 64;
+            this.txtTotdesc_.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTotdesc_.Location = new System.Drawing.Point(435, 14);
+            this.txtTotdesc_.Name = "txtTotdesc_";
+            this.txtTotdesc_.Size = new System.Drawing.Size(85, 20);
+            this.txtTotdesc_.TabIndex = 27;
             // 
             // label31
             // 
@@ -331,23 +284,21 @@
             this.label33.TabIndex = 61;
             this.label33.Text = "FOLIO:";
             // 
-            // textBox26
+            // txtFolio_
             // 
-            this.textBox26.Cursor = System.Windows.Forms.Cursors.No;
-            this.textBox26.Location = new System.Drawing.Point(159, 14);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.ReadOnly = true;
-            this.textBox26.Size = new System.Drawing.Size(85, 20);
-            this.textBox26.TabIndex = 60;
+            this.txtFolio_.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFolio_.Location = new System.Drawing.Point(159, 14);
+            this.txtFolio_.Name = "txtFolio_";
+            this.txtFolio_.Size = new System.Drawing.Size(85, 20);
+            this.txtFolio_.TabIndex = 25;
             // 
-            // textBox23
+            // txtNumdesc_
             // 
-            this.textBox23.Cursor = System.Windows.Forms.Cursors.No;
-            this.textBox23.Location = new System.Drawing.Point(325, 14);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.ReadOnly = true;
-            this.textBox23.Size = new System.Drawing.Size(85, 20);
-            this.textBox23.TabIndex = 62;
+            this.txtNumdesc_.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNumdesc_.Location = new System.Drawing.Point(325, 14);
+            this.txtNumdesc_.Name = "txtNumdesc_";
+            this.txtNumdesc_.Size = new System.Drawing.Size(85, 20);
+            this.txtNumdesc_.TabIndex = 26;
             // 
             // label32
             // 
@@ -362,28 +313,25 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel7.Controls.Add(this.textBox20);
+            this.panel7.Controls.Add(this.txtImp_unit1);
             this.panel7.Controls.Add(this.label27);
             this.panel7.Controls.Add(this.label26);
-            this.panel7.Controls.Add(this.textBox19);
-            this.panel7.Controls.Add(this.textBox18);
+            this.panel7.Controls.Add(this.txtTotdesc1);
+            this.panel7.Controls.Add(this.txtNumdesc1);
             this.panel7.Controls.Add(this.label25);
-            this.panel7.Controls.Add(this.textBox17);
-            this.panel7.Controls.Add(this.label24);
             this.panel7.Controls.Add(this.label22);
             this.panel7.Location = new System.Drawing.Point(10, 75);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(911, 48);
             this.panel7.TabIndex = 39;
             // 
-            // textBox20
+            // txtImp_unit1
             // 
-            this.textBox20.Cursor = System.Windows.Forms.Cursors.No;
-            this.textBox20.Location = new System.Drawing.Point(684, 14);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.ReadOnly = true;
-            this.textBox20.Size = new System.Drawing.Size(199, 20);
-            this.textBox20.TabIndex = 59;
+            this.txtImp_unit1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtImp_unit1.Location = new System.Drawing.Point(684, 14);
+            this.txtImp_unit1.Name = "txtImp_unit1";
+            this.txtImp_unit1.Size = new System.Drawing.Size(199, 20);
+            this.txtImp_unit1.TabIndex = 24;
             // 
             // label27
             // 
@@ -405,23 +353,21 @@
             this.label26.TabIndex = 57;
             this.label26.Text = "/";
             // 
-            // textBox19
+            // txtTotdesc1
             // 
-            this.textBox19.Cursor = System.Windows.Forms.Cursors.No;
-            this.textBox19.Location = new System.Drawing.Point(435, 14);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.ReadOnly = true;
-            this.textBox19.Size = new System.Drawing.Size(85, 20);
-            this.textBox19.TabIndex = 56;
+            this.txtTotdesc1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTotdesc1.Location = new System.Drawing.Point(435, 14);
+            this.txtTotdesc1.Name = "txtTotdesc1";
+            this.txtTotdesc1.Size = new System.Drawing.Size(85, 20);
+            this.txtTotdesc1.TabIndex = 23;
             // 
-            // textBox18
+            // txtNumdesc1
             // 
-            this.textBox18.Cursor = System.Windows.Forms.Cursors.No;
-            this.textBox18.Location = new System.Drawing.Point(325, 14);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.ReadOnly = true;
-            this.textBox18.Size = new System.Drawing.Size(85, 20);
-            this.textBox18.TabIndex = 54;
+            this.txtNumdesc1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNumdesc1.Location = new System.Drawing.Point(325, 14);
+            this.txtNumdesc1.Name = "txtNumdesc1";
+            this.txtNumdesc1.Size = new System.Drawing.Size(85, 20);
+            this.txtNumdesc1.TabIndex = 22;
             // 
             // label25
             // 
@@ -432,25 +378,6 @@
             this.label25.Size = new System.Drawing.Size(56, 13);
             this.label25.TabIndex = 55;
             this.label25.Text = "SERIES:";
-            // 
-            // textBox17
-            // 
-            this.textBox17.Cursor = System.Windows.Forms.Cursors.No;
-            this.textBox17.Location = new System.Drawing.Point(159, 14);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.ReadOnly = true;
-            this.textBox17.Size = new System.Drawing.Size(85, 20);
-            this.textBox17.TabIndex = 41;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(106, 17);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(47, 13);
-            this.label24.TabIndex = 42;
-            this.label24.Text = "FOLIO:";
             // 
             // label22
             // 
@@ -463,51 +390,45 @@
             this.label22.TabIndex = 53;
             this.label22.Text = "CORRECTO";
             // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(691, 38);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(199, 21);
-            this.comboBox2.TabIndex = 38;
-            // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(641, 42);
+            this.label21.Location = new System.Drawing.Point(734, 45);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(43, 13);
             this.label21.TabIndex = 37;
             this.label21.Text = "TREL:";
             // 
-            // textBox16
+            // txtNombre_em1
             // 
-            this.textBox16.Cursor = System.Windows.Forms.Cursors.No;
-            this.textBox16.Location = new System.Drawing.Point(317, 39);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.ReadOnly = true;
-            this.textBox16.Size = new System.Drawing.Size(319, 20);
-            this.textBox16.TabIndex = 36;
+            this.txtNombre_em1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtNombre_em1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNombre_em1.Location = new System.Drawing.Point(409, 42);
+            this.txtNombre_em1.MaxLength = 40;
+            this.txtNombre_em1.Name = "txtNombre_em1";
+            this.txtNombre_em1.Size = new System.Drawing.Size(319, 20);
+            this.txtNombre_em1.TabIndex = 20;
             // 
             // label20
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(146, 42);
+            this.label20.Location = new System.Drawing.Point(240, 45);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(163, 13);
             this.label20.TabIndex = 35;
             this.label20.Text = "NOMBRE DEL EMPLEADO:";
             // 
-            // textBox15
+            // txtRfc1
             // 
-            this.textBox15.Cursor = System.Windows.Forms.Cursors.No;
-            this.textBox15.Location = new System.Drawing.Point(65, 39);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.ReadOnly = true;
-            this.textBox15.Size = new System.Drawing.Size(67, 20);
-            this.textBox15.TabIndex = 33;
+            this.txtRfc1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtRfc1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtRfc1.Location = new System.Drawing.Point(65, 39);
+            this.txtRfc1.MaxLength = 13;
+            this.txtRfc1.Name = "txtRfc1";
+            this.txtRfc1.Size = new System.Drawing.Size(155, 20);
+            this.txtRfc1.TabIndex = 19;
             // 
             // label19
             // 
@@ -519,14 +440,15 @@
             this.label19.TabIndex = 34;
             this.label19.Text = "RFC:";
             // 
-            // textBox14
+            // txtF_descuento1
             // 
-            this.textBox14.Cursor = System.Windows.Forms.Cursors.No;
-            this.textBox14.Location = new System.Drawing.Point(344, 9);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.ReadOnly = true;
-            this.textBox14.Size = new System.Drawing.Size(67, 20);
-            this.textBox14.TabIndex = 32;
+            this.txtF_descuento1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtF_descuento1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtF_descuento1.Location = new System.Drawing.Point(333, 9);
+            this.txtF_descuento1.MaxLength = 20;
+            this.txtF_descuento1.Name = "txtF_descuento1";
+            this.txtF_descuento1.Size = new System.Drawing.Size(164, 20);
+            this.txtF_descuento1.TabIndex = 17;
             // 
             // label18
             // 
@@ -538,14 +460,15 @@
             this.label18.TabIndex = 31;
             this.label18.Text = "APLICAR:";
             // 
-            // textBox13
+            // txtSec1
             // 
-            this.textBox13.Cursor = System.Windows.Forms.Cursors.No;
-            this.textBox13.Location = new System.Drawing.Point(184, 7);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.ReadOnly = true;
-            this.textBox13.Size = new System.Drawing.Size(67, 20);
-            this.textBox13.TabIndex = 30;
+            this.txtSec1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtSec1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSec1.Location = new System.Drawing.Point(184, 7);
+            this.txtSec1.MaxLength = 1;
+            this.txtSec1.Name = "txtSec1";
+            this.txtSec1.Size = new System.Drawing.Size(67, 20);
+            this.txtSec1.TabIndex = 16;
             // 
             // label17
             // 
@@ -557,33 +480,36 @@
             this.label17.TabIndex = 29;
             this.label17.Text = "SEC:";
             // 
-            // textBox24
+            // txtProyecto1
             // 
-            this.textBox24.Cursor = System.Windows.Forms.Cursors.No;
-            this.textBox24.Location = new System.Drawing.Point(513, 11);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.ReadOnly = true;
-            this.textBox24.Size = new System.Drawing.Size(377, 20);
-            this.textBox24.TabIndex = 28;
+            this.txtProyecto1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtProyecto1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtProyecto1.Location = new System.Drawing.Point(587, 11);
+            this.txtProyecto1.MaxLength = 30;
+            this.txtProyecto1.Name = "txtProyecto1";
+            this.txtProyecto1.Size = new System.Drawing.Size(303, 20);
+            this.txtProyecto1.TabIndex = 18;
             // 
             // label29
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(429, 14);
+            this.label29.Location = new System.Drawing.Point(503, 14);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(78, 13);
             this.label29.TabIndex = 27;
             this.label29.Text = "PROYECTO:";
             // 
-            // textBox25
+            // txtTipo_mov1
             // 
-            this.textBox25.Cursor = System.Windows.Forms.Cursors.No;
-            this.textBox25.Location = new System.Drawing.Point(65, 6);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.ReadOnly = true;
-            this.textBox25.Size = new System.Drawing.Size(67, 20);
-            this.textBox25.TabIndex = 0;
+            this.txtTipo_mov1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtTipo_mov1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTipo_mov1.Location = new System.Drawing.Point(65, 6);
+            this.txtTipo_mov1.MaxLength = 2;
+            this.txtTipo_mov1.Name = "txtTipo_mov1";
+            this.txtTipo_mov1.Size = new System.Drawing.Size(67, 20);
+            this.txtTipo_mov1.TabIndex = 15;
+            this.txtTipo_mov1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTipo_mov1_KeyPress);
             // 
             // label30
             // 
@@ -644,14 +570,24 @@
             this.panel5.Size = new System.Drawing.Size(997, 282);
             this.panel5.TabIndex = 10;
             // 
+            // txtTipo_pago
+            // 
+            this.txtTipo_pago.Cursor = System.Windows.Forms.Cursors.No;
+            this.txtTipo_pago.Location = new System.Drawing.Point(288, 113);
+            this.txtTipo_pago.Name = "txtTipo_pago";
+            this.txtTipo_pago.ReadOnly = true;
+            this.txtTipo_pago.Size = new System.Drawing.Size(101, 20);
+            this.txtTipo_pago.TabIndex = 6;
+            // 
             // txtUbic_pagare
             // 
-            this.txtUbic_pagare.Cursor = System.Windows.Forms.Cursors.No;
+            this.txtUbic_pagare.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtUbic_pagare.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUbic_pagare.Location = new System.Drawing.Point(810, 241);
+            this.txtUbic_pagare.MaxLength = 1;
             this.txtUbic_pagare.Name = "txtUbic_pagare";
-            this.txtUbic_pagare.ReadOnly = true;
             this.txtUbic_pagare.Size = new System.Drawing.Size(80, 20);
-            this.txtUbic_pagare.TabIndex = 52;
+            this.txtUbic_pagare.TabIndex = 14;
             // 
             // label15
             // 
@@ -670,7 +606,7 @@
             this.txtF_emischeq.Name = "txtF_emischeq";
             this.txtF_emischeq.ReadOnly = true;
             this.txtF_emischeq.Size = new System.Drawing.Size(557, 20);
-            this.txtF_emischeq.TabIndex = 49;
+            this.txtF_emischeq.TabIndex = 13;
             // 
             // label14
             // 
@@ -689,7 +625,7 @@
             this.txtF_solicitud.Name = "txtF_solicitud";
             this.txtF_solicitud.ReadOnly = true;
             this.txtF_solicitud.Size = new System.Drawing.Size(557, 20);
-            this.txtF_solicitud.TabIndex = 47;
+            this.txtF_solicitud.TabIndex = 12;
             // 
             // label13
             // 
@@ -708,7 +644,7 @@
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.ReadOnly = true;
             this.txtDireccion.Size = new System.Drawing.Size(557, 20);
-            this.txtDireccion.TabIndex = 45;
+            this.txtDireccion.TabIndex = 11;
             // 
             // label12
             // 
@@ -727,7 +663,7 @@
             this.txtImporte.Name = "txtImporte";
             this.txtImporte.ReadOnly = true;
             this.txtImporte.Size = new System.Drawing.Size(113, 20);
-            this.txtImporte.TabIndex = 44;
+            this.txtImporte.TabIndex = 10;
             // 
             // label11
             // 
@@ -746,7 +682,7 @@
             this.txtImp_unit.Name = "txtImp_unit";
             this.txtImp_unit.ReadOnly = true;
             this.txtImp_unit.Size = new System.Drawing.Size(122, 20);
-            this.txtImp_unit.TabIndex = 42;
+            this.txtImp_unit.TabIndex = 9;
             // 
             // label10
             // 
@@ -765,7 +701,7 @@
             this.txtPlazo.Name = "txtPlazo";
             this.txtPlazo.ReadOnly = true;
             this.txtPlazo.Size = new System.Drawing.Size(70, 20);
-            this.txtPlazo.TabIndex = 40;
+            this.txtPlazo.TabIndex = 8;
             // 
             // label9
             // 
@@ -784,7 +720,7 @@
             this.txtF_primdesc.Name = "txtF_primdesc";
             this.txtF_primdesc.ReadOnly = true;
             this.txtF_primdesc.Size = new System.Drawing.Size(303, 20);
-            this.txtF_primdesc.TabIndex = 38;
+            this.txtF_primdesc.TabIndex = 7;
             // 
             // label8
             // 
@@ -813,7 +749,7 @@
             this.txtProyecto.Name = "txtProyecto";
             this.txtProyecto.ReadOnly = true;
             this.txtProyecto.Size = new System.Drawing.Size(178, 20);
-            this.txtProyecto.TabIndex = 34;
+            this.txtProyecto.TabIndex = 5;
             // 
             // label6
             // 
@@ -832,7 +768,7 @@
             this.txtNombre_em.Name = "txtNombre_em";
             this.txtNombre_em.ReadOnly = true;
             this.txtNombre_em.Size = new System.Drawing.Size(506, 20);
-            this.txtNombre_em.TabIndex = 32;
+            this.txtNombre_em.TabIndex = 4;
             // 
             // label5
             // 
@@ -851,7 +787,7 @@
             this.txtRfc.Name = "txtRfc";
             this.txtRfc.ReadOnly = true;
             this.txtRfc.Size = new System.Drawing.Size(178, 20);
-            this.txtRfc.TabIndex = 30;
+            this.txtRfc.TabIndex = 3;
             // 
             // label4
             // 
@@ -870,7 +806,7 @@
             this.txtSecretaria.Name = "txtSecretaria";
             this.txtSecretaria.ReadOnly = true;
             this.txtSecretaria.Size = new System.Drawing.Size(506, 20);
-            this.txtSecretaria.TabIndex = 28;
+            this.txtSecretaria.TabIndex = 2;
             // 
             // label3
             // 
@@ -888,7 +824,7 @@
             this.txtFolio.Location = new System.Drawing.Point(105, 13);
             this.txtFolio.Name = "txtFolio";
             this.txtFolio.Size = new System.Drawing.Size(178, 20);
-            this.txtFolio.TabIndex = 0;
+            this.txtFolio.TabIndex = 1;
             this.txtFolio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFolio_KeyPress);
             // 
             // label2
@@ -950,14 +886,14 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // txtTipo_pago
+            // txtTipo_rel1
             // 
-            this.txtTipo_pago.Cursor = System.Windows.Forms.Cursors.No;
-            this.txtTipo_pago.Location = new System.Drawing.Point(288, 113);
-            this.txtTipo_pago.Name = "txtTipo_pago";
-            this.txtTipo_pago.ReadOnly = true;
-            this.txtTipo_pago.Size = new System.Drawing.Size(101, 20);
-            this.txtTipo_pago.TabIndex = 53;
+            this.txtTipo_rel1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtTipo_rel1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTipo_rel1.Location = new System.Drawing.Point(783, 42);
+            this.txtTipo_rel1.Name = "txtTipo_rel1";
+            this.txtTipo_rel1.Size = new System.Drawing.Size(107, 20);
+            this.txtTipo_rel1.TabIndex = 21;
             // 
             // frmAltasCambios
             // 
@@ -971,6 +907,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Altas de solicitudes";
             this.Load += new System.EventHandler(this.frmAltasCambios_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmAltasCambios_KeyPress);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.group.ResumeLayout(false);
@@ -1030,46 +967,41 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox txtNombre_em1;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox txtRfc1;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox txtF_descuento1;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox txtSec1;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox24;
+        private System.Windows.Forms.TextBox txtProyecto1;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.TextBox textBox25;
+        private System.Windows.Forms.TextBox txtTipo_mov1;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.TextBox txtImp_unit_;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.TextBox textBox22;
+        private System.Windows.Forms.TextBox txtTotdesc_;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.TextBox textBox26;
-        private System.Windows.Forms.TextBox textBox23;
+        private System.Windows.Forms.TextBox txtFolio_;
+        private System.Windows.Forms.TextBox txtNumdesc_;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.TextBox txtImp_unit1;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox txtTotdesc1;
+        private System.Windows.Forms.TextBox txtNumdesc1;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.GroupBox group;
-        private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.Button btnsalir;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Button btnModifica;
-        private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.TextBox txtTipo_pago;
+        private System.Windows.Forms.TextBox txtTipo_rel1;
     }
 }
