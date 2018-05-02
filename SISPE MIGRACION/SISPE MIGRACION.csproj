@@ -86,11 +86,29 @@
     <Compile Include="codigo\baseDatos\baseDatos.cs" />
     <Compile Include="codigo\baseDatos\repositorios\repositorios.cs" />
     <Compile Include="codigo\globales.cs" />
+    <Compile Include="codigo\herramientas\forms\frmAgregarTasaInteres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="codigo\herramientas\forms\frmAgregarTasaInteres.Designer.cs">
+      <DependentUpon>frmAgregarTasaInteres.cs</DependentUpon>
+    </Compile>
     <Compile Include="codigo\herramientas\forms\frmDescuentosDePensiones.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="codigo\herramientas\forms\frmDescuentosDePensiones.Designer.cs">
       <DependentUpon>frmDescuentosDePensiones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="codigo\herramientas\forms\frmImpresionQuirografario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="codigo\herramientas\forms\frmImpresionQuirografario.Designer.cs">
+      <DependentUpon>frmImpresionQuirografario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="codigo\herramientas\forms\frmImprimirReporteTasas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="codigo\herramientas\forms\frmImprimirReporteTasas.Designer.cs">
+      <DependentUpon>frmImprimirReporteTasas.cs</DependentUpon>
     </Compile>
     <Compile Include="codigo\herramientas\forms\frmReporte.cs">
       <SubType>Form</SubType>
@@ -167,10 +185,16 @@
     <Compile Include="formularios\menuPrincipal.Designer.cs">
       <DependentUpon>menuPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\Edo cuenta\frmconsulta.cs">
+    <Compile Include="formularios\PRESTACIONES ECON\CONTROL Y REGISTRO\QUIROGRAFARIO\frmGenerarPorFecha.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\Edo cuenta\frmconsulta.Designer.cs">
+    <Compile Include="formularios\PRESTACIONES ECON\CONTROL Y REGISTRO\QUIROGRAFARIO\frmGenerarPorFecha.Designer.cs">
+      <DependentUpon>frmGenerarPorFecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\PRESTACIONES ECON\ESTADOS DE CUENTA\frmconsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\PRESTACIONES ECON\ESTADOS DE CUENTA\frmconsulta.Designer.cs">
       <DependentUpon>frmconsulta.cs</DependentUpon>
     </Compile>
     <Compile Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\frmAltas.cs">
@@ -190,6 +214,12 @@
     </Compile>
     <Compile Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\frmprogchq.Designer.cs">
       <DependentUpon>frmprogchq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\frmTasas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\frmTasas.Designer.cs">
+      <DependentUpon>frmTasas.cs</DependentUpon>
     </Compile>
     <Compile Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\reportes\frmAlfabet.cs">
       <SubType>Form</SubType>
@@ -231,8 +261,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>tablas.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="codigo\herramientas\forms\frmAgregarTasaInteres.resx">
+      <DependentUpon>frmAgregarTasaInteres.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="codigo\herramientas\forms\frmDescuentosDePensiones.resx">
       <DependentUpon>frmDescuentosDePensiones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="codigo\herramientas\forms\frmImpresionQuirografario.resx">
+      <DependentUpon>frmImpresionQuirografario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="codigo\herramientas\forms\frmImprimirReporteTasas.resx">
+      <DependentUpon>frmImprimirReporteTasas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="codigo\herramientas\forms\frmReporte.resx">
       <DependentUpon>frmReporte.cs</DependentUpon>
@@ -270,7 +309,10 @@
     <EmbeddedResource Include="formularios\menuPrincipal.resx">
       <DependentUpon>menuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\Edo cuenta\frmconsulta.resx">
+    <EmbeddedResource Include="formularios\PRESTACIONES ECON\CONTROL Y REGISTRO\QUIROGRAFARIO\frmGenerarPorFecha.resx">
+      <DependentUpon>frmGenerarPorFecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\PRESTACIONES ECON\ESTADOS DE CUENTA\frmconsulta.resx">
       <DependentUpon>frmconsulta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\frmAltas.resx">
@@ -281,6 +323,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\frmprogchq.resx">
       <DependentUpon>frmprogchq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\frmTasas.resx">
+      <DependentUpon>frmTasas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\reportes\frmAlfabet.resx">
       <DependentUpon>frmAlfabet.cs</DependentUpon>
@@ -311,6 +356,7 @@
     <EmbeddedResource Include="reportes\reportePagareQuiro.rdlc" />
     <EmbeddedResource Include="reportes\reporteAlfa.rdlc" />
     <EmbeddedResource Include="reportes\reporteSolicitudEntrega.rdlc" />
+    <EmbeddedResource Include="reportes\reporteTasasDeInteresQ.rdlc" />
     <EmbeddedResource Include="reportes\reportMonto.rdlc" />
     <EmbeddedResource Include="reportes\Reportpagare.rdlc" />
     <None Include="packages.config" />

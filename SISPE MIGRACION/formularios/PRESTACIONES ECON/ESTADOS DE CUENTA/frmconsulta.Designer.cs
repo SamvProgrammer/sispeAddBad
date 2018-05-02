@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmconsulta));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.group = new System.Windows.Forms.GroupBox();
+            this.btnsalir = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.txtcheque = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -62,16 +65,13 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.group = new System.Windows.Forms.GroupBox();
-            this.btnsalir = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.group.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            this.group.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -84,6 +84,48 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1291, 584);
             this.panel1.TabIndex = 0;
+            // 
+            // group
+            // 
+            this.group.BackColor = System.Drawing.SystemColors.Menu;
+            this.group.Controls.Add(this.btnsalir);
+            this.group.Controls.Add(this.btnNuevo);
+            this.group.Dock = System.Windows.Forms.DockStyle.Right;
+            this.group.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.group.Location = new System.Drawing.Point(1089, 104);
+            this.group.Name = "group";
+            this.group.Size = new System.Drawing.Size(202, 480);
+            this.group.TabIndex = 5;
+            this.group.TabStop = false;
+            this.group.Text = "Opciones";
+            // 
+            // btnsalir
+            // 
+            this.btnsalir.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnsalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnsalir.Image = ((System.Drawing.Image)(resources.GetObject("btnsalir.Image")));
+            this.btnsalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnsalir.Location = new System.Drawing.Point(0, 115);
+            this.btnsalir.Name = "btnsalir";
+            this.btnsalir.Size = new System.Drawing.Size(184, 39);
+            this.btnsalir.TabIndex = 3;
+            this.btnsalir.Text = "SALIR ";
+            this.btnsalir.UseVisualStyleBackColor = false;
+            this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
+            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevo.Location = new System.Drawing.Point(6, 34);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(184, 39);
+            this.btnNuevo.TabIndex = 0;
+            this.btnNuevo.Text = "BUSCAR  ";
+            this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // panel5
             // 
@@ -381,47 +423,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "PRESTACIONES ECONÓMICAS / ESTADOS DE CUENTA /CONSULTAS";
             // 
-            // group
-            // 
-            this.group.BackColor = System.Drawing.SystemColors.Menu;
-            this.group.Controls.Add(this.btnsalir);
-            this.group.Controls.Add(this.btnNuevo);
-            this.group.Dock = System.Windows.Forms.DockStyle.Right;
-            this.group.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.group.Location = new System.Drawing.Point(1089, 104);
-            this.group.Name = "group";
-            this.group.Size = new System.Drawing.Size(202, 480);
-            this.group.TabIndex = 5;
-            this.group.TabStop = false;
-            this.group.Text = "Opciones";
-            // 
-            // btnsalir
-            // 
-            this.btnsalir.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnsalir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnsalir.Image = ((System.Drawing.Image)(resources.GetObject("btnsalir.Image")));
-            this.btnsalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnsalir.Location = new System.Drawing.Point(0, 115);
-            this.btnsalir.Name = "btnsalir";
-            this.btnsalir.Size = new System.Drawing.Size(184, 39);
-            this.btnsalir.TabIndex = 3;
-            this.btnsalir.Text = "SALIR ";
-            this.btnsalir.UseVisualStyleBackColor = false;
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
-            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.Location = new System.Drawing.Point(6, 34);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(184, 39);
-            this.btnNuevo.TabIndex = 0;
-            this.btnNuevo.Text = "BUSCAR  ";
-            this.btnNuevo.UseVisualStyleBackColor = false;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-            // 
             // frmconsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -431,6 +432,7 @@
             this.Name = "frmconsulta";
             this.Text = "frmconsulta";
             this.panel1.ResumeLayout(false);
+            this.group.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -438,7 +440,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.group.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
