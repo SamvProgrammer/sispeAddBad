@@ -1,4 +1,5 @@
-﻿using SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ;
+﻿using SISPE_MIGRACION.formularios.PRESTACIONES_ECON.CONTROL_Y_REGISTRO.QUIROGRAFARIO;
+using SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,9 @@ namespace SISPE_MIGRACION.formularios.CATÁLOGOS
         private int numeroMaximo = 0;
         private List<Dictionary<string, object>> resultado;
         private string folio = string.Empty;
+        internal string tablaConsultar = string.Empty;
+        internal rellenar enviar2;
+
         public frmCatalogoP_quirog()
         {
             InitializeComponent();
@@ -52,13 +56,13 @@ namespace SISPE_MIGRACION.formularios.CATÁLOGOS
 
         private void frmCatalogoP_quirog_Load(object sender, EventArgs e)
         {
-            string query = string.Format("select MAX(FOLIO) from datos.p_quirog");
+            string query = string.Format("select MAX(FOLIO) from datos.{0}",this.tablaConsultar);
 
             List<Dictionary<string, object>> resultado2 = globales.consulta(query);
             string maximo = Convert.ToString(resultado2[0]["max"]);
             numeroMaximo = maximo.Length;
 
-            string query2 = string.Format("select * from datos.p_quirog order by folio asc limit 100");
+            string query2 = string.Format("select * from datos.{0} order by folio asc limit 100",tablaConsultar);
 
             resultado = globales.consulta(query2);
             resultado.ForEach(o => datos.Rows.Add(o["folio"], o["rfc"], o["nombre_em"]));
@@ -66,7 +70,7 @@ namespace SISPE_MIGRACION.formularios.CATÁLOGOS
 
         private void txtBusqueda_TextChanged(object sender, EventArgs e)
         {
-            string query = string.Format("select * from datos.p_quirog");
+            string query = string.Format("select * from datos.{0}",tablaConsultar);
             if (!string.IsNullOrWhiteSpace(txtBusqueda.Text))
             {
                 query += " where ";
@@ -105,18 +109,24 @@ namespace SISPE_MIGRACION.formularios.CATÁLOGOS
         {
             Close();
             Dictionary<string, object> aux = null;
-            foreach (var item in resultado) {
-                if (Convert.ToString(item["folio"]) == this.folio) {
+            foreach (var item in resultado)
+            {
+                if (Convert.ToString(item["folio"]) == this.folio)
+                {
                     aux = item;
                     break;
                 }
             }
+            if (this.tablaConsultar == "p_quirog") {
 
-            string query = string.Format("select * from datos.D_QUIROG where FOLIO = '{0}'",this.folio);
-            List<Dictionary<string, object>> aux2 = null;
-            aux2 = globales.consulta(query);
+                string query = string.Format("select * from datos.D_QUIROG where FOLIO = '{0}'", this.folio);
+                List<Dictionary<string, object>> aux2 = null;
+                aux2 = globales.consulta(query);
 
-            enviar(aux,aux2);
+                enviar(aux, aux2);
+                return;
+            }
+            enviar2(aux);
         }
 
         private void datos_CellStateChanged(object sender, DataGridViewCellStateChangedEventArgs e)

@@ -137,5 +137,10 @@ namespace SISPE_MIGRACION.formularios
         {
             new frmconsulta().ShowDialog();
         }
+
+        private void altasCambiosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frmAltasCambios().ShowDialog();
+        }
     }
 }

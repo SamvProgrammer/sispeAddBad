@@ -304,6 +304,18 @@
             // quirografariosToolStripMenuItem1
             // 
             this.quirografariosToolStripMenuItem1.Name = "quirografariosToolStripMenuItem1";
+            this.quirografariosToolStripMenuItem1.Size = new System.Drawing.Size(150, 22);
+            this.quirografariosToolStripMenuItem1.Text = "Quirografarios";
+            // 
+            // hipotecariosToolStripMenuItem
+            // 
+            this.hipotecariosToolStripMenuItem.Name = "hipotecariosToolStripMenuItem";
+            this.hipotecariosToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.hipotecariosToolStripMenuItem.Text = "Hipotecarios";
+            // 
+            // quirografariosToolStripMenuItem1
+            // 
+            this.quirografariosToolStripMenuItem1.Name = "quirografariosToolStripMenuItem1";
             this.quirografariosToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.quirografariosToolStripMenuItem1.Text = "Quirografarios";
             this.quirografariosToolStripMenuItem1.Click += new System.EventHandler(this.quirografariosToolStripMenuItem1_Click);
@@ -371,7 +383,7 @@
             this.validarSituaciónLaboralToolStripMenuItem,
             this.fondoDeGarantíaToolStripMenuItem});
             this.quirografariosToolStripMenuItem.Name = "quirografariosToolStripMenuItem";
-            this.quirografariosToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.quirografariosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.quirografariosToolStripMenuItem.Text = "Quirografarios";
             // 
             // generarPorFechaToolStripMenuItem
@@ -386,6 +398,7 @@
             this.altasCambiosToolStripMenuItem.Name = "altasCambiosToolStripMenuItem";
             this.altasCambiosToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
             this.altasCambiosToolStripMenuItem.Text = "Altas/Cambios";
+            this.altasCambiosToolStripMenuItem.Click += new System.EventHandler(this.altasCambiosToolStripMenuItem_Click);
             // 
             // actualizarRelLaboralToolStripMenuItem
             // 

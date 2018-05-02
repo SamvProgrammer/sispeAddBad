@@ -85,5 +85,10 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.CONTROL_Y_REGISTRO.QUIRO
                 MessageBox.Show("Error en el sistema, porfavor contactar al departamento de sistemas","Error en el sistema",MessageBoxButtons.OK);
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
