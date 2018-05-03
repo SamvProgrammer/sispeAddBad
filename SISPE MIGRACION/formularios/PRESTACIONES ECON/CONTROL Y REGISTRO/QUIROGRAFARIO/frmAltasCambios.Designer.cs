@@ -35,6 +35,7 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.txtTipo_rel1 = new System.Windows.Forms.TextBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.txtImp_unit_ = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
@@ -101,7 +102,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtTipo_rel1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.group.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -209,6 +209,15 @@
             this.panel6.Size = new System.Drawing.Size(997, 198);
             this.panel6.TabIndex = 53;
             this.panel6.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.panel6_PreviewKeyDown);
+            // 
+            // txtTipo_rel1
+            // 
+            this.txtTipo_rel1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtTipo_rel1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTipo_rel1.Location = new System.Drawing.Point(783, 42);
+            this.txtTipo_rel1.Name = "txtTipo_rel1";
+            this.txtTipo_rel1.Size = new System.Drawing.Size(107, 20);
+            this.txtTipo_rel1.TabIndex = 21;
             // 
             // panel8
             // 
@@ -463,10 +472,11 @@
             // txtSec1
             // 
             this.txtSec1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtSec1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSec1.Cursor = System.Windows.Forms.Cursors.No;
             this.txtSec1.Location = new System.Drawing.Point(184, 7);
             this.txtSec1.MaxLength = 1;
             this.txtSec1.Name = "txtSec1";
+            this.txtSec1.ReadOnly = true;
             this.txtSec1.Size = new System.Drawing.Size(67, 20);
             this.txtSec1.TabIndex = 16;
             // 
@@ -885,15 +895,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // txtTipo_rel1
-            // 
-            this.txtTipo_rel1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtTipo_rel1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTipo_rel1.Location = new System.Drawing.Point(783, 42);
-            this.txtTipo_rel1.Name = "txtTipo_rel1";
-            this.txtTipo_rel1.Size = new System.Drawing.Size(107, 20);
-            this.txtTipo_rel1.TabIndex = 21;
             // 
             // frmAltasCambios
             // 
