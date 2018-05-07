@@ -399,6 +399,7 @@
             this.validarSituaciónLaboralToolStripMenuItem.Name = "validarSituaciónLaboralToolStripMenuItem";
             this.validarSituaciónLaboralToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
             this.validarSituaciónLaboralToolStripMenuItem.Text = "Validar Situación Laboral";
+            this.validarSituaciónLaboralToolStripMenuItem.Click += new System.EventHandler(this.validarSituaciónLaboralToolStripMenuItem_Click);
             // 
             // fondoDeGarantíaToolStripMenuItem
             // 

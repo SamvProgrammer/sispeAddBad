@@ -141,5 +141,10 @@ namespace SISPE_MIGRACION.formularios
         {
             new frmActualizarRelLaboral().ShowDialog();
         }
+
+        private void validarSituaciónLaboralToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new validarSituacionLaboral().ShowDialog();
+        }
     }
 }
