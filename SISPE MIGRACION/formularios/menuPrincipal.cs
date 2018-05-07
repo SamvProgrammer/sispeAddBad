@@ -136,5 +136,10 @@ namespace SISPE_MIGRACION.formularios
         {
             new frmAltasCambios().ShowDialog();
         }
+
+        private void actualizarRelLaboralToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frmActualizarRelLaboral().ShowDialog();
+        }
     }
 }

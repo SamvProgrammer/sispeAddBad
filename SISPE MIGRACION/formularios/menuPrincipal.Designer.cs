@@ -392,6 +392,7 @@
             this.actualizarRelLaboralToolStripMenuItem.Name = "actualizarRelLaboralToolStripMenuItem";
             this.actualizarRelLaboralToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
             this.actualizarRelLaboralToolStripMenuItem.Text = "Actualizar Rel. Laboral";
+            this.actualizarRelLaboralToolStripMenuItem.Click += new System.EventHandler(this.actualizarRelLaboralToolStripMenuItem_Click);
             // 
             // validarSituaciónLaboralToolStripMenuItem
             // 
