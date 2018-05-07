@@ -30,6 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmconsulta));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.datosgb = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.group = new System.Windows.Forms.GroupBox();
             this.btnsalir = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
@@ -66,6 +75,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datosgb)).BeginInit();
             this.group.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -76,14 +86,74 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.datosgb);
             this.panel1.Controls.Add(this.group);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1291, 584);
+            this.panel1.Size = new System.Drawing.Size(1484, 758);
             this.panel1.TabIndex = 0;
+            // 
+            // datosgb
+            // 
+            this.datosgb.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.datosgb.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.datosgb.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datosgb.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column8});
+            this.datosgb.Location = new System.Drawing.Point(13, 334);
+            this.datosgb.Name = "datosgb";
+            this.datosgb.Size = new System.Drawing.Size(1263, 412);
+            this.datosgb.TabIndex = 6;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "FECHA DE PAGO";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "PAGO";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "DE";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "IMPORTE";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "RFC";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "DEPENDENCIA";
+            this.Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "PROYECTO";
+            this.Column7.Name = "Column7";
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "T.R.L";
+            this.Column8.Name = "Column8";
             // 
             // group
             // 
@@ -92,9 +162,9 @@
             this.group.Controls.Add(this.btnNuevo);
             this.group.Dock = System.Windows.Forms.DockStyle.Right;
             this.group.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.group.Location = new System.Drawing.Point(1089, 104);
+            this.group.Location = new System.Drawing.Point(1282, 104);
             this.group.Name = "group";
-            this.group.Size = new System.Drawing.Size(202, 480);
+            this.group.Size = new System.Drawing.Size(202, 654);
             this.group.TabIndex = 5;
             this.group.TabStop = false;
             this.group.Text = "Opciones";
@@ -158,7 +228,7 @@
             this.panel5.Controls.Add(this.label2);
             this.panel5.Location = new System.Drawing.Point(13, 124);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1051, 192);
+            this.panel5.Size = new System.Drawing.Size(1263, 192);
             this.panel5.TabIndex = 4;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
@@ -381,14 +451,14 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1291, 104);
+            this.panel3.Size = new System.Drawing.Size(1484, 104);
             this.panel3.TabIndex = 3;
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.pictureBox1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(1016, 0);
+            this.panel4.Location = new System.Drawing.Point(1209, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(275, 104);
             this.panel4.TabIndex = 0;
@@ -427,11 +497,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1291, 584);
+            this.ClientSize = new System.Drawing.Size(1484, 758);
             this.Controls.Add(this.panel1);
             this.Name = "frmconsulta";
             this.Text = "frmconsulta";
+            this.Load += new System.EventHandler(this.frmconsulta_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.datosgb)).EndInit();
             this.group.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
@@ -482,5 +554,14 @@
         private System.Windows.Forms.GroupBox group;
         private System.Windows.Forms.Button btnsalir;
         private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.DataGridView datosgb;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
     }
 }

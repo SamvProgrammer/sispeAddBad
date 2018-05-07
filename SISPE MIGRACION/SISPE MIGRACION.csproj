@@ -185,6 +185,12 @@
     <Compile Include="formularios\menuPrincipal.Designer.cs">
       <DependentUpon>menuPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="formularios\PRESTACIONES ECON\CONTROL Y REGISTRO\QUIROGRAFARIO\frmAltasCambios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\PRESTACIONES ECON\CONTROL Y REGISTRO\QUIROGRAFARIO\frmAltasCambios.Designer.cs">
+      <DependentUpon>frmAltasCambios.cs</DependentUpon>
+    </Compile>
     <Compile Include="formularios\PRESTACIONES ECON\CONTROL Y REGISTRO\QUIROGRAFARIO\frmGenerarPorFecha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +202,12 @@
     </Compile>
     <Compile Include="formularios\PRESTACIONES ECON\ESTADOS DE CUENTA\frmconsulta.Designer.cs">
       <DependentUpon>frmconsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\PRESTACIONES ECON\ESTADOS DE CUENTA\frmdevol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\PRESTACIONES ECON\ESTADOS DE CUENTA\frmdevol.Designer.cs">
+      <DependentUpon>frmdevol.cs</DependentUpon>
     </Compile>
     <Compile Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\frmAltas.cs">
       <SubType>Form</SubType>
@@ -250,6 +262,12 @@
     </Compile>
     <Compile Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\reportes\frmSolicitudEntrega.Designer.cs">
       <DependentUpon>frmSolicitudEntrega.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\PRESTACIONES ECON\PAGO DE MARCHA\frmpagomarcha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\PRESTACIONES ECON\PAGO DE MARCHA\frmpagomarcha.Designer.cs">
+      <DependentUpon>frmpagomarcha.cs</DependentUpon>
     </Compile>
     <Compile Include="principal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -309,11 +327,17 @@
     <EmbeddedResource Include="formularios\menuPrincipal.resx">
       <DependentUpon>menuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formularios\PRESTACIONES ECON\CONTROL Y REGISTRO\QUIROGRAFARIO\frmAltasCambios.resx">
+      <DependentUpon>frmAltasCambios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formularios\PRESTACIONES ECON\CONTROL Y REGISTRO\QUIROGRAFARIO\frmGenerarPorFecha.resx">
       <DependentUpon>frmGenerarPorFecha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\PRESTACIONES ECON\ESTADOS DE CUENTA\frmconsulta.resx">
       <DependentUpon>frmconsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\PRESTACIONES ECON\ESTADOS DE CUENTA\frmdevol.resx">
+      <DependentUpon>frmdevol.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\frmAltas.resx">
       <DependentUpon>frmAltas.cs</DependentUpon>
@@ -341,6 +365,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\reportes\frmSolicitudEntrega.resx">
       <DependentUpon>frmSolicitudEntrega.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\PRESTACIONES ECON\PAGO DE MARCHA\frmpagomarcha.resx">
+      <DependentUpon>frmpagomarcha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

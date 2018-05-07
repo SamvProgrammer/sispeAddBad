@@ -321,5 +321,13 @@ namespace SISPE_MIGRACION.formularios.CATÁLOGOS
             activarControles(false);
             btnModificar.Text = "MODIFICAR";
         }
+
+        private void frmCatemplea_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F2)
+            {
+                Close();
+            }
+        }
     }
 }

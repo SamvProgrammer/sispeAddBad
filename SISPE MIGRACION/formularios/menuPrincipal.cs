@@ -1,9 +1,11 @@
 ﻿
 using SISPE_MIGRACION.formularios.CATÁLOGOS;
 using SISPE_MIGRACION.formularios.PRESTACIONES_ECON.CONTROL_Y_REGISTRO.QUIROGRAFARIO;
+using SISPE_MIGRACION.formularios.PRESTACIONES_ECON.ESTADOS_DE_CUENTA;
 using SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ;
 using SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.Edo_cuenta;
 using SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.reportes;
+using SISPE_MIGRACION.formularios.PRESTACIONES_ECON.PAGO_DE_MARCHA;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -141,6 +143,21 @@ namespace SISPE_MIGRACION.formularios
         private void altasCambiosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new frmAltasCambios().ShowDialog();
+        }
+
+        private void otorgamientoPQToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void consultaPdevToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frmdevol().ShowDialog();
+        }
+
+        private void altasCambiosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            new frmpagomarcha().ShowDialog();
         }
     }
 }

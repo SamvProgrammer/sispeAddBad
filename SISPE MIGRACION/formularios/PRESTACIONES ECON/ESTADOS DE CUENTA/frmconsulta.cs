@@ -16,6 +16,7 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.Edo_cuen
     {
         private frmCatalogoP_quirog frmCatalogoP_quirog;
         private bool guardar = false;
+        private List<Dictionary<string, object>> resultado;
         public frmconsulta()
         {
             InitializeComponent();
@@ -39,25 +40,22 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.Edo_cuen
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             frmCatalogoP_quirog p_quirog = new frmCatalogoP_quirog();
-            p_quirog.enviar = rellenarCamposdeRFC;
+            p_quirog.enviar2 = rellenarConsulta;
+            p_quirog.tablaConsultar = "p_edocta";
             p_quirog.ShowDialog();
             this.ActiveControl = txtfolio;
           //  guardar = false;
         }
 
-        private void rellenarCamposdeRFC(Dictionary<string, object> datos, List<Dictionary<string, object>> avales, bool externo = false)
+        private void rellenarConsulta(Dictionary<string, object> datos)
         {
 
-            string rfc = Convert.ToString(datos["rfc"]);
 
-            MessageBox.Show("Se ha seleccionado un RFC para consulta", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Cursor = Cursors.WaitCursor;
-            string query = string.Format("select * from datos.p_edocta RFC like '%{0}%'", rfc);
-            List<Dictionary<string, object>> resultado = baseDatos.consulta(query);
-            Cursor = Cursors.Default;
-            if (resultado.Count > 0)
-          
-            this.txtrfc.Text = rfc;
+
+
+
+            this.txtrfc.Text = Convert.ToString(datos["rfc"]);
             this.txtnombre.Text = Convert.ToString(datos["nombre_em"]);
             this.txtproyecto.Text = Convert.ToString(datos["proyecto"]);
             this.txtfolio.Text = Convert.ToString(datos["folio"]);
@@ -65,17 +63,50 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.Edo_cuen
             this.txtcheque.Text = Convert.ToString(datos["f_emischeq"]).Replace("12:00:00 a. m.", ""); ;
             this.txtpago.Text = Convert.ToString(datos["tipo_pago"]);
             this.txtimporte.Text = Convert.ToString(datos["importe"]);
-            this.txtubicacion.Text = Convert.ToString(datos["ubic_pagar "]);
-            this.txttotal.Text = Convert.ToString(datos["liquido"]);
+            this.txtubicacion.Text = Convert.ToString(datos["ubic_pagar"]);
+            this.txttotal.Text = Convert.ToString(datos["importe"]);
             this.txtsecretaria.Text = Convert.ToString(datos["secretaria"]);
             this.txtpagocuenta.Text = Convert.ToString(datos["f_primdesc"]).Replace("12:00:00 a. m.", "");
             this.txtfechasolicitud.Text = Convert.ToString(datos["f_solicitud"]).Replace("12:00:00 a. m.", "");
 
+
+            //el código para llenar el dagrid...
+            string aux = Convert.ToString(datos["folio"]);
+            string query = string.Format("select f_descuento,numdesc,totdesc,importe,rfc,cuenta,proyecto,tipo_rel from datos.descuentos where  folio = {0} order by numdesc", aux);
+            List<Dictionary<string, object>> resultado = globales.consulta(query);
+            resultado = baseDatos.consulta(query);
+
+            foreach (Dictionary<string, object> item in resultado )
+            {
+                string f_descuento = Convert.ToString(item["f_descuento"]).Replace("12:00:00 a. m.", "");
+                string numdesc = Convert.ToString(item["numdesc"]);
+                string totdesc = Convert.ToString(item["totdesc"]);
+                string importe = Convert.ToString(item["importe"]);
+                string rfc = Convert.ToString(item["rfc"]);
+                string cuenta = Convert.ToString(item["cuenta"]);
+                string proyecto = Convert.ToString(item["proyecto"]);
+                string tipo_rel = Convert.ToString(item["tipo_rel"]);
+
+                datosgb.Rows.Add(f_descuento, numdesc, totdesc, importe, rfc, cuenta, proyecto, tipo_rel);
+
+            }
+
+
+            Cursor = Cursors.Default;
         }
 
         private void btnsalir_Click(object sender, EventArgs e)
         {
+            DialogResult dialogo = MessageBox.Show("¿Seguro que desea cancelar la operación?", "Cancelar operación", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (dialogo == DialogResult.No) return;
+         
             Close();
+        }
+
+        private void frmconsulta_Load(object sender, EventArgs e)
+        {
+         
+
         }
     }
 }
