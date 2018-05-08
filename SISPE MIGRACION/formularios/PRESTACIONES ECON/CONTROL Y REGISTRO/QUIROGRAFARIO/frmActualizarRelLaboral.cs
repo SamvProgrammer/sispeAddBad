@@ -37,10 +37,10 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.CONTROL_Y_REGISTRO.QUIRO
                     string rfc = Convert.ToString(item["rfc"]);
                     string folio = Convert.ToString(item["folio"]);
                     query = string.Format("select tipo_rel from datos.empleados where rfc='{0}'",rfc);
-                    resultado = globales.consulta(query);
+                    List<Dictionary<string,object>> resultado2 = globales.consulta(query);
                     if (resultado.Count > 0)
                     {
-                        string tipo_relacion = Convert.ToString(resultado[0]["tipo_rel"]);
+                        string tipo_relacion = Convert.ToString(resultado2[0]["tipo_rel"]);
                         if (!string.IsNullOrWhiteSpace(tipo_relacion)) {
                             query = string.Format("update datos.d_ecqdep set tipo_rel = '{0}' where folio = '{1}'",tipo_relacion,folio);
                             globales.consulta(query,true);

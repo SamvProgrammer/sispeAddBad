@@ -34,6 +34,8 @@
             this.fe2 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.fe1 = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -41,6 +43,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.fe2);
@@ -64,18 +68,18 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(172, 204);
+            this.button1.Location = new System.Drawing.Point(171, 218);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(110, 23);
             this.button1.TabIndex = 8;
             this.button1.Text = "&Aceptar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // fe2
             // 
-            this.fe2.Cursor = System.Windows.Forms.Cursors.No;
-            this.fe2.Enabled = false;
-            this.fe2.Location = new System.Drawing.Point(97, 159);
+            this.fe2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.fe2.Location = new System.Drawing.Point(97, 176);
             this.fe2.Name = "fe2";
             this.fe2.Size = new System.Drawing.Size(277, 20);
             this.fe2.TabIndex = 6;
@@ -94,11 +98,30 @@
             // 
             // fe1
             // 
-            this.fe1.Location = new System.Drawing.Point(97, 119);
+            this.fe1.Location = new System.Drawing.Point(97, 125);
             this.fe1.Name = "fe1";
             this.fe1.Size = new System.Drawing.Size(277, 20);
             this.fe1.TabIndex = 4;
             this.fe1.Value = new System.DateTime(2018, 5, 15, 0, 0, 0, 0);
+            this.fe1.ValueChanged += new System.EventHandler(this.fe1_ValueChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(94, 109);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(92, 13);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Primer descuento:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(94, 160);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(80, 13);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Ver si aportó el:";
             // 
             // validarSituacionLaboral
             // 
@@ -127,5 +150,7 @@
         private System.Windows.Forms.DateTimePicker fe2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker fe1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }
