@@ -43,7 +43,6 @@
             this.otorgamientoPQToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.altasDeSolicitudesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizacionFechasDeChequesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.imprimirSolicitudYoPagaréToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.utileriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.folioActualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verProgramaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -181,7 +180,6 @@
             this.otorgamientoPQToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.altasDeSolicitudesToolStripMenuItem,
             this.actualizacionFechasDeChequesToolStripMenuItem,
-            this.imprimirSolicitudYoPagaréToolStripMenuItem,
             this.utileriasToolStripMenuItem,
             this.reportesToolStripMenuItem,
             this.tasasToolStripMenuItem});
@@ -205,12 +203,6 @@
             this.actualizacionFechasDeChequesToolStripMenuItem.Size = new System.Drawing.Size(245, 22);
             this.actualizacionFechasDeChequesToolStripMenuItem.Text = "Actualizacion fechas de cheques";
             this.actualizacionFechasDeChequesToolStripMenuItem.Click += new System.EventHandler(this.actualizacionFechasDeChequesToolStripMenuItem_Click);
-            // 
-            // imprimirSolicitudYoPagaréToolStripMenuItem
-            // 
-            this.imprimirSolicitudYoPagaréToolStripMenuItem.Name = "imprimirSolicitudYoPagaréToolStripMenuItem";
-            this.imprimirSolicitudYoPagaréToolStripMenuItem.Size = new System.Drawing.Size(245, 22);
-            this.imprimirSolicitudYoPagaréToolStripMenuItem.Text = "Imprimir solicitud y/o pagaré";
             // 
             // utileriasToolStripMenuItem
             // 
@@ -378,7 +370,7 @@
             this.validarSituaciónLaboralToolStripMenuItem,
             this.fondoDeGarantíaToolStripMenuItem});
             this.quirografariosToolStripMenuItem.Name = "quirografariosToolStripMenuItem";
-            this.quirografariosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.quirografariosToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.quirografariosToolStripMenuItem.Text = "Quirografarios";
             // 
             // generarPorFechaToolStripMenuItem
@@ -487,7 +479,6 @@
         private System.Windows.Forms.ToolStripMenuItem otorgamientoPQToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem altasDeSolicitudesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem actualizacionFechasDeChequesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem imprimirSolicitudYoPagaréToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem utileriasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem folioActualToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verProgramaciónToolStripMenuItem;
