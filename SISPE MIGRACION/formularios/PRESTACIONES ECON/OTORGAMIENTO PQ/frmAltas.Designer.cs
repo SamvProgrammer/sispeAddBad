@@ -309,7 +309,7 @@
             this.groupBox4.Location = new System.Drawing.Point(6, 387);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(628, 134);
-            this.groupBox4.TabIndex = 5;
+            this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "F4 AVAL";
             // 
@@ -461,7 +461,7 @@
             this.groupBox5.Location = new System.Drawing.Point(6, 527);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(628, 125);
-            this.groupBox5.TabIndex = 6;
+            this.groupBox5.TabIndex = 3;
             this.groupBox5.TabStop = false;
             // 
             // txtnap2
@@ -826,7 +826,7 @@
             this.panel4.Location = new System.Drawing.Point(6, 127);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1087, 122);
-            this.panel4.TabIndex = 8;
+            this.panel4.TabIndex = 0;
             // 
             // txtNap
             // 
@@ -1131,7 +1131,7 @@
             this.panel5.Location = new System.Drawing.Point(6, 255);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1087, 113);
-            this.panel5.TabIndex = 10;
+            this.panel5.TabIndex = 1;
             // 
             // lblmod
             // 

@@ -44,7 +44,6 @@
             this.altasDeSolicitudesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizacionFechasDeChequesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.utileriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.folioActualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verProgramaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.programarChequesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -207,18 +206,11 @@
             // utileriasToolStripMenuItem
             // 
             this.utileriasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.folioActualToolStripMenuItem,
             this.verProgramaciónToolStripMenuItem,
             this.programarChequesToolStripMenuItem});
             this.utileriasToolStripMenuItem.Name = "utileriasToolStripMenuItem";
             this.utileriasToolStripMenuItem.Size = new System.Drawing.Size(245, 22);
             this.utileriasToolStripMenuItem.Text = "Utilerias";
-            // 
-            // folioActualToolStripMenuItem
-            // 
-            this.folioActualToolStripMenuItem.Name = "folioActualToolStripMenuItem";
-            this.folioActualToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-            this.folioActualToolStripMenuItem.Text = "Folio actual";
             // 
             // verProgramaciónToolStripMenuItem
             // 
@@ -480,7 +472,6 @@
         private System.Windows.Forms.ToolStripMenuItem altasDeSolicitudesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem actualizacionFechasDeChequesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem utileriasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem folioActualToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verProgramaciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem programarChequesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;

@@ -20,6 +20,7 @@ namespace SISPE_MIGRACION.formularios.CATÁLOGOS
         private string folio = string.Empty;
         internal string tablaConsultar = string.Empty;
         internal rellenar enviar2;
+        internal bool enviarBool = false;
 
         public frmCatalogoP_quirog()
         {
@@ -117,7 +118,7 @@ namespace SISPE_MIGRACION.formularios.CATÁLOGOS
                     break;
                 }
             }
-            if (this.tablaConsultar == "p_quirog") {
+            if (this.tablaConsultar == "p_quirog" && !enviarBool) {
 
                 string query = string.Format("select * from datos.D_QUIROG where FOLIO = '{0}'", this.folio);
                 List<Dictionary<string, object>> aux2 = null;

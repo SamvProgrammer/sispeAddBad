@@ -31,7 +31,7 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
 
         private void frmprogchq_Load(object sender, EventArgs e)
         {
-            string movimientos = "select folio,rfc,nombre_em,f_solicitud,f_emischeq from datos.prestamos where tprestamo='Q' order by f_solicitud desc limit 1000;";
+            string movimientos = "select folio,rfc,nombre_em,f_solicitud,f_emischeq from datos.p_quirog order by folio desc limit 100;";
             var elemento = baseDatos.consulta(movimientos);
             foreach (var item in elemento)
             {
@@ -58,7 +58,7 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
             try
             {
                 var mod = datoscheque.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
-                string actualiza = "update datos.prestamos set ";
+                string actualiza = "update datos.p_quirog set ";
                 switch (e.ColumnIndex)
                 {
                     case 1:
@@ -127,6 +127,29 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
             {
                 e.Cancel = false;
             }
+        }
+
+        private void btnsalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            SISPE_MIGRACION.formularios.CATÁLOGOS.frmCatalogoP_quirog p = new SISPE_MIGRACION.formularios.CATÁLOGOS.frmCatalogoP_quirog();
+            p.tablaConsultar = "p_quirog";
+            p.enviarBool = true;
+            p.enviar2 = traerRegistro;
+            p.ShowDialog();
+        }
+        private void traerRegistro(Dictionary<string,object> item) {
+            datoscheque.Rows.Clear();
+            string folio = Convert.ToString(item["folio"]);
+            string rfc = Convert.ToString(item["rfc"]);
+            string nombre_em = Convert.ToString(item["nombre_em"]);
+            string f_solicitud = Convert.ToString(item["f_solicitud"]).Replace(" 12:00:00 a. m.", ""); ;
+            string f_emischeq = Convert.ToString(item["f_emischeq"]).Replace(" 12:00:00 a. m.", ""); ;
+            datoscheque.Rows.Add(folio, rfc, nombre_em, f_solicitud, f_emischeq);
         }
     }
 }
