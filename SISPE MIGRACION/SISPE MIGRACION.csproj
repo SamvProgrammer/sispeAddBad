@@ -86,6 +86,7 @@
     <Compile Include="codigo\baseDatos\baseDatos.cs" />
     <Compile Include="codigo\baseDatos\repositorios\repositorios.cs" />
     <Compile Include="codigo\globales.cs" />
+    <Compile Include="codigo\herramientas\convertidorNumerosLetras.cs" />
     <Compile Include="codigo\herramientas\forms\frmAgregarTasaInteres.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +186,12 @@
     <Compile Include="formularios\menuPrincipal.Designer.cs">
       <DependentUpon>menuPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="formularios\PRESTACIONES ECON\CONTROL Y REGISTRO\QUIROGRAFARIO\frmActualizarRelLaboral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\PRESTACIONES ECON\CONTROL Y REGISTRO\QUIROGRAFARIO\frmActualizarRelLaboral.Designer.cs">
+      <DependentUpon>frmActualizarRelLaboral.cs</DependentUpon>
+    </Compile>
     <Compile Include="formularios\PRESTACIONES ECON\CONTROL Y REGISTRO\QUIROGRAFARIO\frmAltasCambios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +203,12 @@
     </Compile>
     <Compile Include="formularios\PRESTACIONES ECON\CONTROL Y REGISTRO\QUIROGRAFARIO\frmGenerarPorFecha.Designer.cs">
       <DependentUpon>frmGenerarPorFecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\PRESTACIONES ECON\CONTROL Y REGISTRO\QUIROGRAFARIO\validarSituacionLaboral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\PRESTACIONES ECON\CONTROL Y REGISTRO\QUIROGRAFARIO\validarSituacionLaboral.Designer.cs">
+      <DependentUpon>validarSituacionLaboral.cs</DependentUpon>
     </Compile>
     <Compile Include="formularios\PRESTACIONES ECON\ESTADOS DE CUENTA\frmconsulta.cs">
       <SubType>Form</SubType>
@@ -327,6 +340,9 @@
     <EmbeddedResource Include="formularios\menuPrincipal.resx">
       <DependentUpon>menuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formularios\PRESTACIONES ECON\CONTROL Y REGISTRO\QUIROGRAFARIO\frmActualizarRelLaboral.resx">
+      <DependentUpon>frmActualizarRelLaboral.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formularios\PRESTACIONES ECON\CONTROL Y REGISTRO\QUIROGRAFARIO\frmAltasCambios.resx">
       <DependentUpon>frmAltasCambios.cs</DependentUpon>
     </EmbeddedResource>
@@ -379,7 +395,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="reportes\prueba.rdlc" />
     <EmbeddedResource Include="reportes\p_quirogSolicitud.rdlc" />
+    <EmbeddedResource Include="reportes\ReporteMarcha.rdlc" />
     <EmbeddedResource Include="reportes\reportePagareQuiro.rdlc" />
     <EmbeddedResource Include="reportes\reporteAlfa.rdlc" />
     <EmbeddedResource Include="reportes\reporteSolicitudEntrega.rdlc" />

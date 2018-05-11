@@ -34,7 +34,7 @@ namespace SISPE_MIGRACION.reportes {
         
         private tasaInteresDataTable tabletasaInteres;
         
-        private p_montosDataTable tablep_montos;
+        private p_marchaDataTable tablep_marcha;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -79,8 +79,8 @@ namespace SISPE_MIGRACION.reportes {
                 if ((ds.Tables["tasaInteres"] != null)) {
                     base.Tables.Add(new tasaInteresDataTable(ds.Tables["tasaInteres"]));
                 }
-                if ((ds.Tables["p_montos"] != null)) {
-                    base.Tables.Add(new p_montosDataTable(ds.Tables["p_montos"]));
+                if ((ds.Tables["p_marcha"] != null)) {
+                    base.Tables.Add(new p_marchaDataTable(ds.Tables["p_marcha"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -154,9 +154,9 @@ namespace SISPE_MIGRACION.reportes {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public p_montosDataTable p_montos {
+        public p_marchaDataTable p_marcha {
             get {
-                return this.tablep_montos;
+                return this.tablep_marcha;
             }
         }
         
@@ -242,8 +242,8 @@ namespace SISPE_MIGRACION.reportes {
                 if ((ds.Tables["tasaInteres"] != null)) {
                     base.Tables.Add(new tasaInteresDataTable(ds.Tables["tasaInteres"]));
                 }
-                if ((ds.Tables["p_montos"] != null)) {
-                    base.Tables.Add(new p_montosDataTable(ds.Tables["p_montos"]));
+                if ((ds.Tables["p_marcha"] != null)) {
+                    base.Tables.Add(new p_marchaDataTable(ds.Tables["p_marcha"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -308,10 +308,10 @@ namespace SISPE_MIGRACION.reportes {
                     this.tabletasaInteres.InitVars();
                 }
             }
-            this.tablep_montos = ((p_montosDataTable)(base.Tables["p_montos"]));
+            this.tablep_marcha = ((p_marchaDataTable)(base.Tables["p_marcha"]));
             if ((initTable == true)) {
-                if ((this.tablep_montos != null)) {
-                    this.tablep_montos.InitVars();
+                if ((this.tablep_marcha != null)) {
+                    this.tablep_marcha.InitVars();
                 }
             }
         }
@@ -334,8 +334,8 @@ namespace SISPE_MIGRACION.reportes {
             base.Tables.Add(this.tablepagare_quirog);
             this.tabletasaInteres = new tasaInteresDataTable();
             base.Tables.Add(this.tabletasaInteres);
-            this.tablep_montos = new p_montosDataTable();
-            base.Tables.Add(this.tablep_montos);
+            this.tablep_marcha = new p_marchaDataTable();
+            base.Tables.Add(this.tablep_marcha);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -370,7 +370,7 @@ namespace SISPE_MIGRACION.reportes {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializep_montos() {
+        private bool ShouldSerializep_marcha() {
             return false;
         }
         
@@ -445,7 +445,7 @@ namespace SISPE_MIGRACION.reportes {
         public delegate void tasaInteresRowChangeEventHandler(object sender, tasaInteresRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void p_montosRowChangeEventHandler(object sender, p_montosRowChangeEvent e);
+        public delegate void p_marchaRowChangeEventHandler(object sender, p_marchaRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -4698,26 +4698,14 @@ namespace SISPE_MIGRACION.reportes {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class p_montosDataTable : global::System.Data.TypedTableBase<p_montosRow> {
+        public partial class p_marchaDataTable : global::System.Data.TypedTableBase<p_marchaRow> {
             
-            private global::System.Data.DataColumn columnfolio;
-            
-            private global::System.Data.DataColumn columnrfc;
-            
-            private global::System.Data.DataColumn columnnombre_em;
-            
-            private global::System.Data.DataColumn columntipo_rel;
-            
-            private global::System.Data.DataColumn columnproyecto;
-            
-            private global::System.Data.DataColumn columnimporte;
-            
-            private global::System.Data.DataColumn columnliquido;
+            private global::System.Data.DataColumn columncampo1;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public p_montosDataTable() {
-                this.TableName = "p_montos";
+            public p_marchaDataTable() {
+                this.TableName = "p_marcha";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -4725,7 +4713,7 @@ namespace SISPE_MIGRACION.reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal p_montosDataTable(global::System.Data.DataTable table) {
+            internal p_marchaDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -4742,64 +4730,16 @@ namespace SISPE_MIGRACION.reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected p_montosDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected p_marchaDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn folioColumn {
+            public global::System.Data.DataColumn campo1Column {
                 get {
-                    return this.columnfolio;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn rfcColumn {
-                get {
-                    return this.columnrfc;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn nombre_emColumn {
-                get {
-                    return this.columnnombre_em;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn tipo_relColumn {
-                get {
-                    return this.columntipo_rel;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn proyectoColumn {
-                get {
-                    return this.columnproyecto;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn importeColumn {
-                get {
-                    return this.columnimporte;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn liquidoColumn {
-                get {
-                    return this.columnliquido;
+                    return this.columncampo1;
                 }
             }
             
@@ -4814,51 +4754,45 @@ namespace SISPE_MIGRACION.reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public p_montosRow this[int index] {
+            public p_marchaRow this[int index] {
                 get {
-                    return ((p_montosRow)(this.Rows[index]));
+                    return ((p_marchaRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event p_montosRowChangeEventHandler p_montosRowChanging;
+            public event p_marchaRowChangeEventHandler p_marchaRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event p_montosRowChangeEventHandler p_montosRowChanged;
+            public event p_marchaRowChangeEventHandler p_marchaRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event p_montosRowChangeEventHandler p_montosRowDeleting;
+            public event p_marchaRowChangeEventHandler p_marchaRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event p_montosRowChangeEventHandler p_montosRowDeleted;
+            public event p_marchaRowChangeEventHandler p_marchaRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Addp_montosRow(p_montosRow row) {
+            public void Addp_marchaRow(p_marchaRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public p_montosRow Addp_montosRow(string folio, string rfc, string nombre_em, string tipo_rel, string proyecto, string importe, string liquido) {
-                p_montosRow rowp_montosRow = ((p_montosRow)(this.NewRow()));
+            public p_marchaRow Addp_marchaRow(string campo1) {
+                p_marchaRow rowp_marchaRow = ((p_marchaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        folio,
-                        rfc,
-                        nombre_em,
-                        tipo_rel,
-                        proyecto,
-                        importe,
-                        liquido};
-                rowp_montosRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowp_montosRow);
-                return rowp_montosRow;
+                        campo1};
+                rowp_marchaRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowp_marchaRow);
+                return rowp_marchaRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                p_montosDataTable cln = ((p_montosDataTable)(base.Clone()));
+                p_marchaDataTable cln = ((p_marchaDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -4866,64 +4800,46 @@ namespace SISPE_MIGRACION.reportes {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new p_montosDataTable();
+                return new p_marchaDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnfolio = base.Columns["folio"];
-                this.columnrfc = base.Columns["rfc"];
-                this.columnnombre_em = base.Columns["nombre_em"];
-                this.columntipo_rel = base.Columns["tipo_rel"];
-                this.columnproyecto = base.Columns["proyecto"];
-                this.columnimporte = base.Columns["importe"];
-                this.columnliquido = base.Columns["liquido"];
+                this.columncampo1 = base.Columns["campo1"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnfolio = new global::System.Data.DataColumn("folio", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfolio);
-                this.columnrfc = new global::System.Data.DataColumn("rfc", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnrfc);
-                this.columnnombre_em = new global::System.Data.DataColumn("nombre_em", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnombre_em);
-                this.columntipo_rel = new global::System.Data.DataColumn("tipo_rel", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntipo_rel);
-                this.columnproyecto = new global::System.Data.DataColumn("proyecto", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnproyecto);
-                this.columnimporte = new global::System.Data.DataColumn("importe", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnimporte);
-                this.columnliquido = new global::System.Data.DataColumn("liquido", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnliquido);
+                this.columncampo1 = new global::System.Data.DataColumn("campo1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncampo1);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public p_montosRow Newp_montosRow() {
-                return ((p_montosRow)(this.NewRow()));
+            public p_marchaRow Newp_marchaRow() {
+                return ((p_marchaRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new p_montosRow(builder);
+                return new p_marchaRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(p_montosRow);
+                return typeof(p_marchaRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.p_montosRowChanged != null)) {
-                    this.p_montosRowChanged(this, new p_montosRowChangeEvent(((p_montosRow)(e.Row)), e.Action));
+                if ((this.p_marchaRowChanged != null)) {
+                    this.p_marchaRowChanged(this, new p_marchaRowChangeEvent(((p_marchaRow)(e.Row)), e.Action));
                 }
             }
             
@@ -4931,8 +4847,8 @@ namespace SISPE_MIGRACION.reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.p_montosRowChanging != null)) {
-                    this.p_montosRowChanging(this, new p_montosRowChangeEvent(((p_montosRow)(e.Row)), e.Action));
+                if ((this.p_marchaRowChanging != null)) {
+                    this.p_marchaRowChanging(this, new p_marchaRowChangeEvent(((p_marchaRow)(e.Row)), e.Action));
                 }
             }
             
@@ -4940,8 +4856,8 @@ namespace SISPE_MIGRACION.reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.p_montosRowDeleted != null)) {
-                    this.p_montosRowDeleted(this, new p_montosRowChangeEvent(((p_montosRow)(e.Row)), e.Action));
+                if ((this.p_marchaRowDeleted != null)) {
+                    this.p_marchaRowDeleted(this, new p_marchaRowChangeEvent(((p_marchaRow)(e.Row)), e.Action));
                 }
             }
             
@@ -4949,14 +4865,14 @@ namespace SISPE_MIGRACION.reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.p_montosRowDeleting != null)) {
-                    this.p_montosRowDeleting(this, new p_montosRowChangeEvent(((p_montosRow)(e.Row)), e.Action));
+                if ((this.p_marchaRowDeleting != null)) {
+                    this.p_marchaRowDeleting(this, new p_marchaRowChangeEvent(((p_marchaRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Removep_montosRow(p_montosRow row) {
+            public void Removep_marchaRow(p_marchaRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -4983,7 +4899,7 @@ namespace SISPE_MIGRACION.reportes {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "p_montosDataTable";
+                attribute2.FixedValue = "p_marchaDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -10797,211 +10713,43 @@ namespace SISPE_MIGRACION.reportes {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class p_montosRow : global::System.Data.DataRow {
+        public partial class p_marchaRow : global::System.Data.DataRow {
             
-            private p_montosDataTable tablep_montos;
+            private p_marchaDataTable tablep_marcha;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal p_montosRow(global::System.Data.DataRowBuilder rb) : 
+            internal p_marchaRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablep_montos = ((p_montosDataTable)(this.Table));
+                this.tablep_marcha = ((p_marchaDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string folio {
+            public string campo1 {
                 get {
                     try {
-                        return ((string)(this[this.tablep_montos.folioColumn]));
+                        return ((string)(this[this.tablep_marcha.campo1Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'folio\' in table \'p_montos\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'campo1\' in table \'p_marcha\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablep_montos.folioColumn] = value;
+                    this[this.tablep_marcha.campo1Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string rfc {
-                get {
-                    try {
-                        return ((string)(this[this.tablep_montos.rfcColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'rfc\' in table \'p_montos\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablep_montos.rfcColumn] = value;
-                }
+            public bool Iscampo1Null() {
+                return this.IsNull(this.tablep_marcha.campo1Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string nombre_em {
-                get {
-                    try {
-                        return ((string)(this[this.tablep_montos.nombre_emColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'nombre_em\' in table \'p_montos\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablep_montos.nombre_emColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string tipo_rel {
-                get {
-                    try {
-                        return ((string)(this[this.tablep_montos.tipo_relColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'tipo_rel\' in table \'p_montos\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablep_montos.tipo_relColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string proyecto {
-                get {
-                    try {
-                        return ((string)(this[this.tablep_montos.proyectoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'proyecto\' in table \'p_montos\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablep_montos.proyectoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string importe {
-                get {
-                    try {
-                        return ((string)(this[this.tablep_montos.importeColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'importe\' in table \'p_montos\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablep_montos.importeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string liquido {
-                get {
-                    try {
-                        return ((string)(this[this.tablep_montos.liquidoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'liquido\' in table \'p_montos\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablep_montos.liquidoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsfolioNull() {
-                return this.IsNull(this.tablep_montos.folioColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetfolioNull() {
-                this[this.tablep_montos.folioColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsrfcNull() {
-                return this.IsNull(this.tablep_montos.rfcColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetrfcNull() {
-                this[this.tablep_montos.rfcColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isnombre_emNull() {
-                return this.IsNull(this.tablep_montos.nombre_emColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setnombre_emNull() {
-                this[this.tablep_montos.nombre_emColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Istipo_relNull() {
-                return this.IsNull(this.tablep_montos.tipo_relColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Settipo_relNull() {
-                this[this.tablep_montos.tipo_relColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsproyectoNull() {
-                return this.IsNull(this.tablep_montos.proyectoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetproyectoNull() {
-                this[this.tablep_montos.proyectoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsimporteNull() {
-                return this.IsNull(this.tablep_montos.importeColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetimporteNull() {
-                this[this.tablep_montos.importeColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsliquidoNull() {
-                return this.IsNull(this.tablep_montos.liquidoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetliquidoNull() {
-                this[this.tablep_montos.liquidoColumn] = global::System.Convert.DBNull;
+            public void Setcampo1Null() {
+                this[this.tablep_marcha.campo1Column] = global::System.Convert.DBNull;
             }
         }
         
@@ -11179,22 +10927,22 @@ namespace SISPE_MIGRACION.reportes {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class p_montosRowChangeEvent : global::System.EventArgs {
+        public class p_marchaRowChangeEvent : global::System.EventArgs {
             
-            private p_montosRow eventRow;
+            private p_marchaRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public p_montosRowChangeEvent(p_montosRow row, global::System.Data.DataRowAction action) {
+            public p_marchaRowChangeEvent(p_marchaRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public p_montosRow Row {
+            public p_marchaRow Row {
                 get {
                     return this.eventRow;
                 }

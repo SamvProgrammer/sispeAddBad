@@ -12,10 +12,17 @@ using System.Windows.Forms;
 namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.CONTROL_Y_REGISTRO.QUIROGRAFARIO
 {
     delegate void rellenar(Dictionary<string,object> resultado);
+ 
     public partial class frmAltasCambios : Form
     {
         private frmCatalogoP_quirog frmFolios;
         private int secuencia = 0;
+        private int numero = 1;
+        private string nombreEmpleado = "3";
+
+      
+
+        private void ejemplo2(string jaja) { }
         public frmAltasCambios()
         {
             InitializeComponent();
@@ -33,6 +40,7 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.CONTROL_Y_REGISTRO.QUIRO
             txtTotdesc_.KeyPress += new KeyPressEventHandler(rellenarDatosGenerales);
             txtImp_unit_.KeyPress += new KeyPressEventHandler(rellenarDatosGenerales);
 
+            
         }
 
         private void rellenarDatosGenerales(object sender, KeyPressEventArgs e)

@@ -326,6 +326,13 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="p_marcha" msprop:Generator_TableClassName="p_marchaDataTable" msprop:Generator_TableVarName="tablep_marcha" msprop:Generator_RowChangedName="p_marchaRowChanged" msprop:Generator_TablePropName="p_marcha" msprop:Generator_RowDeletingName="p_marchaRowDeleting" msprop:Generator_RowChangingName="p_marchaRowChanging" msprop:Generator_RowEvHandlerName="p_marchaRowChangeEventHandler" msprop:Generator_RowDeletedName="p_marchaRowDeleted" msprop:Generator_RowClassName="p_marchaRow" msprop:Generator_UserTableName="p_marcha" msprop:Generator_RowEvArgName="p_marchaRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="campo1" msprop:Generator_ColumnVarNameInTable="columncampo1" msprop:Generator_ColumnPropNameInRow="campo1" msprop:Generator_ColumnPropNameInTable="campo1Column" msprop:Generator_UserColumnName="campo1" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">

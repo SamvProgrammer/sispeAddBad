@@ -472,3 +472,4 @@ F:\sispeMigraci-n\SISPE MIGRACION\bin\Debug\pt\Microsoft.SqlServer.Types.resourc
 F:\sispeMigraci-n\SISPE MIGRACION\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
 F:\sispeMigraci-n\SISPE MIGRACION\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
 F:\sispeMigraci-n\SISPE MIGRACION\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+F:\sispeMigraci-n\SISPE MIGRACION\obj\Debug\SISPE_MIGRACION.formularios.PRESTACIONES_ECON.CONTROL_Y_REGISTRO.QUIROGRAFARIO.frmActualizarRelLaboral.resources

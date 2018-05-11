@@ -44,5 +44,9 @@ class globales
     public static string numerosLetras(int numero) {
         return herramientas.numerosALetras(numero);
     }
+
+    public static string convertirNumerosLetras(String numero, bool mayusculas) {
+        return NumLetra.Convertir(numero, mayusculas);
+    }
 }
 

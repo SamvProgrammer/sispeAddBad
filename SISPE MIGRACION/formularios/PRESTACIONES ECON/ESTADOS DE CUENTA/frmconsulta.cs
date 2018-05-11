@@ -60,7 +60,7 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.Edo_cuen
             this.txtproyecto.Text = Convert.ToString(datos["proyecto"]);
             this.txtfolio.Text = Convert.ToString(datos["folio"]);
             this.txtdirec.Text = Convert.ToString(datos["direccion"]);
-            this.txtcheque.Text = Convert.ToString(datos["f_emischeq"]).Replace("12:00:00 a. m.", ""); ;
+            this.txtcheque.Text = Convert.ToString(datos["f_emischeq"]).Replace("12:00:00 a. m.", ""); 
             this.txtpago.Text = Convert.ToString(datos["tipo_pago"]);
             this.txtimporte.Text = Convert.ToString(datos["importe"]);
             this.txtubicacion.Text = Convert.ToString(datos["ubic_pagar"]);

@@ -38,7 +38,12 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txtconcepto = new System.Windows.Forms.TextBox();
             this.txtimporteletra = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.txtliquido = new System.Windows.Forms.TextBox();
@@ -58,11 +63,14 @@
             this.txtmuerto = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.group = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnguardar2 = new System.Windows.Forms.Button();
+            this.btnmodi = new System.Windows.Forms.Button();
+            this.btnnueo = new System.Windows.Forms.Button();
             this.btnsalir = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnGuarda = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label22 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtdependencia = new System.Windows.Forms.TextBox();
             this.txtnombre = new System.Windows.Forms.TextBox();
@@ -126,14 +134,14 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1302, 75);
+            this.panel3.Size = new System.Drawing.Size(1372, 75);
             this.panel3.TabIndex = 6;
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.pictureBox1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(1027, 0);
+            this.panel4.Location = new System.Drawing.Point(1097, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(275, 75);
             this.panel4.TabIndex = 0;
@@ -148,7 +156,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 75);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1302, 535);
+            this.panel1.Size = new System.Drawing.Size(1372, 681);
             this.panel1.TabIndex = 7;
             // 
             // label18
@@ -178,7 +186,12 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.panel6.Controls.Add(this.textBox18);
+            this.panel6.Controls.Add(this.label24);
+            this.panel6.Controls.Add(this.label23);
+            this.panel6.Controls.Add(this.label21);
+            this.panel6.Controls.Add(this.label20);
+            this.panel6.Controls.Add(this.label19);
+            this.panel6.Controls.Add(this.txtconcepto);
             this.panel6.Controls.Add(this.txtimporteletra);
             this.panel6.Controls.Add(this.label17);
             this.panel6.Controls.Add(this.txtliquido);
@@ -199,22 +212,67 @@
             this.panel6.Controls.Add(this.label15);
             this.panel6.Location = new System.Drawing.Point(15, 216);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1006, 319);
+            this.panel6.Size = new System.Drawing.Size(1113, 424);
             this.panel6.TabIndex = 56;
             // 
-            // textBox18
+            // label24
             // 
-            this.textBox18.Location = new System.Drawing.Point(421, 230);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(550, 20);
-            this.textBox18.TabIndex = 23;
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(337, 148);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(108, 13);
+            this.label24.TabIndex = 28;
+            this.label24.Text = "Ejemplo: 22/03/1994";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(367, 14);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(108, 13);
+            this.label23.TabIndex = 27;
+            this.label23.Text = "Ejemplo: 22/03/1994";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(150, 263);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(13, 13);
+            this.label21.TabIndex = 26;
+            this.label21.Text = "$";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(148, 233);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(13, 13);
+            this.label20.TabIndex = 25;
+            this.label20.Text = "$";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(149, 201);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(13, 13);
+            this.label19.TabIndex = 24;
+            this.label19.Text = "$";
+            // 
+            // txtconcepto
+            // 
+            this.txtconcepto.Location = new System.Drawing.Point(421, 230);
+            this.txtconcepto.Name = "txtconcepto";
+            this.txtconcepto.Size = new System.Drawing.Size(550, 20);
+            this.txtconcepto.TabIndex = 14;
             // 
             // txtimporteletra
             // 
             this.txtimporteletra.Location = new System.Drawing.Point(164, 289);
             this.txtimporteletra.Name = "txtimporteletra";
             this.txtimporteletra.Size = new System.Drawing.Size(807, 20);
-            this.txtimporteletra.TabIndex = 22;
+            this.txtimporteletra.TabIndex = 16;
             // 
             // label17
             // 
@@ -230,7 +288,7 @@
             this.txtliquido.Location = new System.Drawing.Point(164, 260);
             this.txtliquido.Name = "txtliquido";
             this.txtliquido.Size = new System.Drawing.Size(232, 20);
-            this.txtliquido.TabIndex = 20;
+            this.txtliquido.TabIndex = 15;
             // 
             // label16
             // 
@@ -246,7 +304,7 @@
             this.txtdescuento.Location = new System.Drawing.Point(164, 230);
             this.txtdescuento.Name = "txtdescuento";
             this.txtdescuento.Size = new System.Drawing.Size(232, 20);
-            this.txtdescuento.TabIndex = 18;
+            this.txtdescuento.TabIndex = 13;
             // 
             // label13
             // 
@@ -262,7 +320,7 @@
             this.txtmonto.Location = new System.Drawing.Point(164, 198);
             this.txtmonto.Name = "txtmonto";
             this.txtmonto.Size = new System.Drawing.Size(232, 20);
-            this.txtmonto.TabIndex = 16;
+            this.txtmonto.TabIndex = 12;
             // 
             // label11
             // 
@@ -278,7 +336,7 @@
             this.txtfecobro.Location = new System.Drawing.Point(164, 145);
             this.txtfecobro.Name = "txtfecobro";
             this.txtfecobro.Size = new System.Drawing.Size(167, 20);
-            this.txtfecobro.TabIndex = 14;
+            this.txtfecobro.TabIndex = 11;
             // 
             // label10
             // 
@@ -294,7 +352,7 @@
             this.txtparentesco.Location = new System.Drawing.Point(164, 114);
             this.txtparentesco.Name = "txtparentesco";
             this.txtparentesco.Size = new System.Drawing.Size(478, 20);
-            this.txtparentesco.TabIndex = 12;
+            this.txtparentesco.TabIndex = 10;
             // 
             // label9
             // 
@@ -310,7 +368,7 @@
             this.txtsuertudo.Location = new System.Drawing.Point(164, 82);
             this.txtsuertudo.Name = "txtsuertudo";
             this.txtsuertudo.Size = new System.Drawing.Size(807, 20);
-            this.txtsuertudo.TabIndex = 10;
+            this.txtsuertudo.TabIndex = 19;
             // 
             // label12
             // 
@@ -326,7 +384,7 @@
             this.txtmeses.Location = new System.Drawing.Point(183, 36);
             this.txtmeses.Name = "txtmeses";
             this.txtmeses.Size = new System.Drawing.Size(178, 20);
-            this.txtmeses.TabIndex = 3;
+            this.txtmeses.TabIndex = 8;
             // 
             // label14
             // 
@@ -342,7 +400,7 @@
             this.txtmuerto.Location = new System.Drawing.Point(183, 10);
             this.txtmuerto.Name = "txtmuerto";
             this.txtmuerto.Size = new System.Drawing.Size(178, 20);
-            this.txtmuerto.TabIndex = 1;
+            this.txtmuerto.TabIndex = 7;
             // 
             // label15
             // 
@@ -356,32 +414,20 @@
             // group
             // 
             this.group.BackColor = System.Drawing.SystemColors.Menu;
-            this.group.Controls.Add(this.button2);
             this.group.Controls.Add(this.button1);
+            this.group.Controls.Add(this.btnguardar2);
+            this.group.Controls.Add(this.btnmodi);
+            this.group.Controls.Add(this.btnnueo);
             this.group.Controls.Add(this.btnsalir);
-            this.group.Controls.Add(this.btnGuardar);
+            this.group.Controls.Add(this.btnGuarda);
             this.group.Dock = System.Windows.Forms.DockStyle.Right;
             this.group.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.group.Location = new System.Drawing.Point(1087, 0);
+            this.group.Location = new System.Drawing.Point(1157, 0);
             this.group.Name = "group";
-            this.group.Size = new System.Drawing.Size(215, 535);
+            this.group.Size = new System.Drawing.Size(215, 681);
             this.group.TabIndex = 55;
             this.group.TabStop = false;
             this.group.Text = "Opciones";
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(6, 127);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(184, 39);
-            this.button2.TabIndex = 32;
-            this.button2.Text = "MODIFICAR FOLIO";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -389,13 +435,55 @@
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(6, 48);
+            this.button1.Location = new System.Drawing.Point(0, 505);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(184, 39);
-            this.button1.TabIndex = 31;
-            this.button1.Text = "NUEVO / ALTA";
+            this.button1.Size = new System.Drawing.Size(203, 59);
+            this.button1.TabIndex = 34;
+            this.button1.Text = "IMPRIMIR ";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
+            // 
+            // btnguardar2
+            // 
+            this.btnguardar2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnguardar2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnguardar2.Image = ((System.Drawing.Image)(resources.GetObject("btnguardar2.Image")));
+            this.btnguardar2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnguardar2.Location = new System.Drawing.Point(6, 301);
+            this.btnguardar2.Name = "btnguardar2";
+            this.btnguardar2.Size = new System.Drawing.Size(184, 39);
+            this.btnguardar2.TabIndex = 33;
+            this.btnguardar2.Text = "GUARDAR ";
+            this.btnguardar2.UseVisualStyleBackColor = false;
+            this.btnguardar2.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // btnmodi
+            // 
+            this.btnmodi.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnmodi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnmodi.Image = ((System.Drawing.Image)(resources.GetObject("btnmodi.Image")));
+            this.btnmodi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnmodi.Location = new System.Drawing.Point(6, 127);
+            this.btnmodi.Name = "btnmodi";
+            this.btnmodi.Size = new System.Drawing.Size(184, 39);
+            this.btnmodi.TabIndex = 32;
+            this.btnmodi.Text = "MODIFICAR FOLIO";
+            this.btnmodi.UseVisualStyleBackColor = false;
+            this.btnmodi.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnnueo
+            // 
+            this.btnnueo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnnueo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnnueo.Image = ((System.Drawing.Image)(resources.GetObject("btnnueo.Image")));
+            this.btnnueo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnnueo.Location = new System.Drawing.Point(6, 48);
+            this.btnnueo.Name = "btnnueo";
+            this.btnnueo.Size = new System.Drawing.Size(184, 39);
+            this.btnnueo.TabIndex = 31;
+            this.btnnueo.Text = "NUEVO / ALTA";
+            this.btnnueo.UseVisualStyleBackColor = false;
+            this.btnnueo.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnsalir
             // 
@@ -403,7 +491,7 @@
             this.btnsalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnsalir.Image = ((System.Drawing.Image)(resources.GetObject("btnsalir.Image")));
             this.btnsalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnsalir.Location = new System.Drawing.Point(6, 302);
+            this.btnsalir.Location = new System.Drawing.Point(6, 395);
             this.btnsalir.Name = "btnsalir";
             this.btnsalir.Size = new System.Drawing.Size(184, 39);
             this.btnsalir.TabIndex = 30;
@@ -412,22 +500,24 @@
             this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
             this.btnsalir.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.btnsalir_KeyPress);
             // 
-            // btnGuardar
+            // btnGuarda
             // 
-            this.btnGuardar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
-            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(6, 216);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(184, 39);
-            this.btnGuardar.TabIndex = 29;
-            this.btnGuardar.Text = "GUARDAR ";
-            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuarda.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnGuarda.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGuarda.Image = ((System.Drawing.Image)(resources.GetObject("btnGuarda.Image")));
+            this.btnGuarda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuarda.Location = new System.Drawing.Point(6, 216);
+            this.btnGuarda.Name = "btnGuarda";
+            this.btnGuarda.Size = new System.Drawing.Size(184, 39);
+            this.btnGuarda.TabIndex = 29;
+            this.btnGuarda.Text = "GUARDAR ";
+            this.btnGuarda.UseVisualStyleBackColor = false;
+            this.btnGuarda.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.panel5.Controls.Add(this.label22);
             this.panel5.Controls.Add(this.label8);
             this.panel5.Controls.Add(this.txtdependencia);
             this.panel5.Controls.Add(this.txtnombre);
@@ -445,8 +535,17 @@
             this.panel5.Controls.Add(this.label2);
             this.panel5.Location = new System.Drawing.Point(15, 37);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1006, 152);
+            this.panel5.Size = new System.Drawing.Size(1113, 152);
             this.panel5.TabIndex = 0;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(437, 33);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(108, 13);
+            this.label22.TabIndex = 15;
+            this.label22.Text = "Ejemplo: 22/03/1994";
             // 
             // label8
             // 
@@ -462,21 +561,21 @@
             this.txtdependencia.Location = new System.Drawing.Point(486, 87);
             this.txtdependencia.Name = "txtdependencia";
             this.txtdependencia.Size = new System.Drawing.Size(312, 20);
-            this.txtdependencia.TabIndex = 13;
+            this.txtdependencia.TabIndex = 5;
             // 
             // txtnombre
             // 
             this.txtnombre.Location = new System.Drawing.Point(275, 51);
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(523, 20);
-            this.txtnombre.TabIndex = 12;
+            this.txtnombre.TabIndex = 3;
             // 
             // txtnumcheq
             // 
             this.txtnumcheq.Location = new System.Drawing.Point(718, 11);
             this.txtnumcheq.Name = "txtnumcheq";
             this.txtnumcheq.Size = new System.Drawing.Size(116, 20);
-            this.txtnumcheq.TabIndex = 11;
+            this.txtnumcheq.TabIndex = 1;
             // 
             // label7
             // 
@@ -510,21 +609,21 @@
             this.txtvida.Location = new System.Drawing.Point(97, 123);
             this.txtvida.Name = "txtvida";
             this.txtvida.Size = new System.Drawing.Size(242, 20);
-            this.txtvida.TabIndex = 7;
+            this.txtvida.TabIndex = 6;
             // 
             // txtsueldo
             // 
             this.txtsueldo.Location = new System.Drawing.Point(164, 87);
             this.txtsueldo.Name = "txtsueldo";
             this.txtsueldo.Size = new System.Drawing.Size(167, 20);
-            this.txtsueldo.TabIndex = 6;
+            this.txtsueldo.TabIndex = 4;
             // 
             // txtfecharec
             // 
             this.txtfecharec.Location = new System.Drawing.Point(443, 11);
             this.txtfecharec.Name = "txtfecharec";
             this.txtfecharec.Size = new System.Drawing.Size(100, 20);
-            this.txtfecharec.TabIndex = 5;
+            this.txtfecharec.TabIndex = 0;
             // 
             // label4
             // 
@@ -540,7 +639,7 @@
             this.txtrfc.Location = new System.Drawing.Point(69, 51);
             this.txtrfc.Name = "txtrfc";
             this.txtrfc.Size = new System.Drawing.Size(167, 20);
-            this.txtrfc.TabIndex = 3;
+            this.txtrfc.TabIndex = 2;
             // 
             // label3
             // 
@@ -555,6 +654,7 @@
             // 
             this.txtfolio.Location = new System.Drawing.Point(69, 11);
             this.txtfolio.Name = "txtfolio";
+            this.txtfolio.ReadOnly = true;
             this.txtfolio.Size = new System.Drawing.Size(100, 20);
             this.txtfolio.TabIndex = 1;
             // 
@@ -571,7 +671,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1302, 610);
+            this.ClientSize = new System.Drawing.Size(1372, 756);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.KeyPreview = true;
@@ -621,7 +721,7 @@
         private System.Windows.Forms.TextBox txtfolio;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox txtconcepto;
         private System.Windows.Forms.TextBox txtimporteletra;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox txtliquido;
@@ -641,11 +741,19 @@
         private System.Windows.Forms.TextBox txtmuerto;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.GroupBox group;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnmodi;
+        private System.Windows.Forms.Button btnnueo;
         private System.Windows.Forms.Button btnsalir;
-        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnGuarda;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Button btnguardar2;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Button button1;
     }
 }
