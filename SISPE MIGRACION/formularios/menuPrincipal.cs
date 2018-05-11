@@ -3,6 +3,7 @@ using SISPE_MIGRACION.formularios.CATÁLOGOS;
 using SISPE_MIGRACION.formularios.PRESTACIONES_ECON.CONTROL_Y_REGISTRO.QUIROGRAFARIO;
 using SISPE_MIGRACION.formularios.PRESTACIONES_ECON.ESTADOS_DE_CUENTA;
 using SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ;
+using SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.CAJA;
 using SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.Edo_cuenta;
 using SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.reportes;
 using SISPE_MIGRACION.formularios.PRESTACIONES_ECON.PAGO_DE_MARCHA;
@@ -168,6 +169,11 @@ namespace SISPE_MIGRACION.formularios
         private void validarSituaciónLaboralToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new validarSituacionLaboral().ShowDialog();
+        }
+
+        private void pagoPorCajaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frmOpcionesPagoCaja().ShowDialog();
         }
     }
 }

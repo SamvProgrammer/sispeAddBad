@@ -91,6 +91,41 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
             modalidades.Add("M", "MANDOS MEDIOS");
             modalidades.Add("P", "PENSIONADOS");
             modalidades.Add("T", "PENSIONISTAS");
+            //=============================  Inicialziación de eventos para la tecla ENTER -> TAB ===================
+            this.txtProyecto.PreviewKeyDown += new PreviewKeyDownEventHandler(cambiarTab);
+            this.txtrfc2.PreviewKeyDown += new PreviewKeyDownEventHandler(cambiarTab);
+            this.txtSecretaria.PreviewKeyDown += new PreviewKeyDownEventHandler(cambiarTab);
+            this.txtAntQ.PreviewKeyDown += new PreviewKeyDownEventHandler(cambiarTab);
+            this.txtSueldoBase.PreviewKeyDown += new PreviewKeyDownEventHandler(cambiarTab);
+            this.txtTelefono.PreviewKeyDown += new PreviewKeyDownEventHandler(cambiarTab);
+            this.txtExtencion.PreviewKeyDown += new PreviewKeyDownEventHandler(cambiarTab);
+            this.txtDomicilio.PreviewKeyDown += new PreviewKeyDownEventHandler(cambiarTab);
+            this.txtNue.PreviewKeyDown += new PreviewKeyDownEventHandler(cambiarTab);
+            this.txtnap2.PreviewKeyDown += new PreviewKeyDownEventHandler(cambiarTab);
+            this.txtmeses_corres.PreviewKeyDown += new PreviewKeyDownEventHandler(cambiarTab);
+            this.txtOtros_desc.PreviewKeyDown += new PreviewKeyDownEventHandler(cambiarTab);
+            this.txtPorc.PreviewKeyDown += new PreviewKeyDownEventHandler(cambiarTab);
+            this.txtplazo.PreviewKeyDown += new PreviewKeyDownEventHandler(cambiarTab);
+            this.txtdesc.PreviewKeyDown += new PreviewKeyDownEventHandler(cambiarTab);
+            this.txtFolio.PreviewKeyDown += new PreviewKeyDownEventHandler(cambiarTab);
+            this.txtAdscripcion.PreviewKeyDown += new PreviewKeyDownEventHandler(cambiarTab);
+
+            this.txtRfc1.PreviewKeyDown += new PreviewKeyDownEventHandler(cambiarTab);
+            this.txtAnti1.PreviewKeyDown += new PreviewKeyDownEventHandler(cambiarTab);
+            this.txtdomicilio1.PreviewKeyDown += new PreviewKeyDownEventHandler(cambiarTab);
+
+            this.txtrfc2.PreviewKeyDown += new PreviewKeyDownEventHandler(cambiarTab);
+            this.txtantg2.PreviewKeyDown += new PreviewKeyDownEventHandler(cambiarTab);
+            this.txtdomicilio2.PreviewKeyDown += new PreviewKeyDownEventHandler(cambiarTab);
+
+            //==================================================================================================
+        }
+
+        private void cambiarTab(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (Keys.Enter == e.KeyCode) {
+                SendKeys.Send("{TAB}");//Cuando se presiona la tecla enter, este le manda señal a la tecla TAB para que active el evento de traspaso...
+            }
         }
 
         private void ALTAS_Load(object sender, EventArgs e)
@@ -457,9 +492,8 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
                 limpiarSecretariaCampos();
                 return;
             }
-
-            e.Handled = true;
             frmdependencias.ShowDialog();
+            e.Handled = true;
             this.ActiveControl = txtAntQ;
         }
 
@@ -856,6 +890,29 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
         private void btnnuevo_Click(object sender, EventArgs e)
         {
             limpiarTodosCampos();
+
+            //Código que verifica que la emisión de cheque no sea menos a la fecha actual-----
+            this.Cursor = Cursors.WaitCursor;
+            string query = string.Format("select * from datos.u_config");
+            List<Dictionary<string, object>> resultado = globales.consulta(query);
+            string fechaEmisionCheque = Convert.ToString(resultado[0]["fech_chpq"]).Replace(" 12:00:00 a. m.", "");
+            string[] tmp = fechaEmisionCheque.Split('/');
+            DateTime dtFechaEmisionCheque = new DateTime(Convert.ToInt32(tmp[2]), Convert.ToInt32(tmp[1]), Convert.ToInt32(tmp[0]));
+            DateTime hoy = DateTime.Now;
+            if (dtFechaEmisionCheque < hoy) {
+                MessageBox.Show("La fecha de emisión de cheque es menor a la fecha actual, espere mientras se actualiza la información","Fecha emisión de cheque",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                query = string.Format("select * from catalogos.progpq order by fecha desc limit 1");
+                resultado = globales.consulta(query);
+                string fechaProgramacion = Convert.ToString(resultado[0]["fecha"]).Replace(" 12:00:00 a. m.", "");
+                tmp = fechaProgramacion.Split('/');
+                DateTime UltimaFechaProgramada = new DateTime(Convert.ToInt32(tmp[2]), Convert.ToInt32(tmp[1]), Convert.ToInt32(tmp[0]));
+                if (UltimaFechaProgramada < hoy) {
+                    MessageBox.Show("Para continuar las solicitudes se debe generar el mes siguiente..", "Fecha emisión de cheque", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    this.Cursor = Cursors.Default;
+                    return;
+                }
+            }
+
             activarControlesBasicos();
             txtEmisionCheque.Text = txtFecha;
 
@@ -887,15 +944,18 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
             activarControl(txtAntQ);
             activarControl(txtTelefono);
             activarControl(txtExtencion);
-            activarControl(txtdesc);
             activarControl(txtRfc1);
             activarControl(txtrfc2);
+            activarControl(txtdomicilio1);
+            activarControl(txtdomicilio2);
+            activarControl(txtantg2);
+            activarControl(txtAnti1);
             activarControl(txtSueldoBase);
             activarControl(txtmeses_corres);
-            activarControl(txtdesc);
             activarControl(txtPorc);
             activarControl(txtplazo);
             activarControl(txtProyecto);
+            activarControl(txtDomicilio);
         }
         private void desactivarControlesBasicos()
         {
@@ -905,13 +965,15 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
             desactivarControl(txtAntQ);
             desactivarControl(txtTelefono);
             desactivarControl(txtExtencion);
-            desactivarControl(txtdesc);
             desactivarControl(txtRfc1);
             desactivarControl(txtrfc2);
+            desactivarControl(txtAnti1);
+            desactivarControl(txtantg2);
+            desactivarControl(txtdomicilio1);
+            desactivarControl(txtdomicilio2);
 
             desactivarControl(txtSueldoBase);
             desactivarControl(txtmeses_corres);
-            desactivarControl(txtdesc);
             desactivarControl(txtPorc);
             desactivarControl(txtplazo);
             desactivarControl(txtProyecto);
@@ -1551,6 +1613,20 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
             }
 
             imprimir(obj, checador);
+        }
+
+        private void txtSueldoBase_Leave(object sender, EventArgs e)
+        {
+            if (this.txtSueldoBase.ReadOnly) return;
+
+            if (!string.IsNullOrWhiteSpace(txtSecretaria.Text)) {
+                rellenarCamposSecretarias(auxiliar);
+            }
+        }
+
+        private void txtSueldoBase_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
         }
     }
 }

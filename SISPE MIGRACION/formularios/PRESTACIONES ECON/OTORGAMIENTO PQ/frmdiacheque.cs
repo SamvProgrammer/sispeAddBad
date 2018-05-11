@@ -29,17 +29,8 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
                 string inhabil = Convert.ToString(item["inhabil"]);
                 string dia = Convert.ToString(item["dia"]);
                 string programados = Convert.ToString(item["programados"]);
-
                 gridcheques.Rows.Add(fecha, inhabil, dia, programados);
-
-
-
             }
-
-                
-
-           
-
         }
 
         private void frmdiacheque_KeyDown(object sender, KeyEventArgs e)

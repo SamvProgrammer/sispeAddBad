@@ -35,6 +35,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.group = new System.Windows.Forms.GroupBox();
+            this.btnImprimir = new System.Windows.Forms.Button();
             this.btnsalir = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnModifica = new System.Windows.Forms.Button();
@@ -137,7 +138,6 @@
             this.btnCalculo = new System.Windows.Forms.Button();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.btnImprimir = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -217,6 +217,20 @@
             this.group.TabStop = false;
             this.group.Text = "Opciones";
             // 
+            // btnImprimir
+            // 
+            this.btnImprimir.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnImprimir.Image = ((System.Drawing.Image)(resources.GetObject("btnImprimir.Image")));
+            this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnImprimir.Location = new System.Drawing.Point(6, 183);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(184, 43);
+            this.btnImprimir.TabIndex = 4;
+            this.btnImprimir.Text = "IMPRIMIR";
+            this.btnImprimir.UseVisualStyleBackColor = false;
+            this.btnImprimir.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // btnsalir
             // 
             this.btnsalir.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -295,7 +309,7 @@
             this.groupBox4.Location = new System.Drawing.Point(6, 387);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(628, 134);
-            this.groupBox4.TabIndex = 5;
+            this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "F4 AVAL";
             // 
@@ -306,7 +320,7 @@
             this.txtNap1.Name = "txtNap1";
             this.txtNap1.ReadOnly = true;
             this.txtNap1.Size = new System.Drawing.Size(71, 20);
-            this.txtNap1.TabIndex = 20;
+            this.txtNap1.TabIndex = 0;
             // 
             // txtNue1
             // 
@@ -315,7 +329,7 @@
             this.txtNue1.Name = "txtNue1";
             this.txtNue1.ReadOnly = true;
             this.txtNue1.Size = new System.Drawing.Size(118, 20);
-            this.txtNue1.TabIndex = 19;
+            this.txtNue1.TabIndex = 0;
             // 
             // txtAnti1
             // 
@@ -324,7 +338,7 @@
             this.txtAnti1.Name = "txtAnti1";
             this.txtAnti1.ReadOnly = true;
             this.txtAnti1.Size = new System.Drawing.Size(192, 20);
-            this.txtAnti1.TabIndex = 17;
+            this.txtAnti1.TabIndex = 13;
             // 
             // txtdomicilio1
             // 
@@ -333,7 +347,7 @@
             this.txtdomicilio1.Name = "txtdomicilio1";
             this.txtdomicilio1.ReadOnly = true;
             this.txtdomicilio1.Size = new System.Drawing.Size(500, 20);
-            this.txtdomicilio1.TabIndex = 16;
+            this.txtdomicilio1.TabIndex = 14;
             // 
             // txtNombre1
             // 
@@ -342,7 +356,7 @@
             this.txtNombre1.Name = "txtNombre1";
             this.txtNombre1.ReadOnly = true;
             this.txtNombre1.Size = new System.Drawing.Size(500, 20);
-            this.txtNombre1.TabIndex = 15;
+            this.txtNombre1.TabIndex = 0;
             // 
             // txtProyect1
             // 
@@ -351,7 +365,7 @@
             this.txtProyect1.Name = "txtProyect1";
             this.txtProyect1.ReadOnly = true;
             this.txtProyect1.Size = new System.Drawing.Size(179, 20);
-            this.txtProyect1.TabIndex = 14;
+            this.txtProyect1.TabIndex = 0;
             // 
             // txtRfc1
             // 
@@ -360,7 +374,7 @@
             this.txtRfc1.Name = "txtRfc1";
             this.txtRfc1.ReadOnly = true;
             this.txtRfc1.Size = new System.Drawing.Size(179, 20);
-            this.txtRfc1.TabIndex = 13;
+            this.txtRfc1.TabIndex = 12;
             this.txtRfc1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRfc1_KeyPress);
             // 
             // label24
@@ -447,17 +461,18 @@
             this.groupBox5.Location = new System.Drawing.Point(6, 527);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(628, 125);
-            this.groupBox5.TabIndex = 6;
+            this.groupBox5.TabIndex = 3;
             this.groupBox5.TabStop = false;
             // 
             // txtnap2
             // 
             this.txtnap2.Cursor = System.Windows.Forms.Cursors.No;
+            this.txtnap2.Enabled = false;
             this.txtnap2.Location = new System.Drawing.Point(530, 34);
             this.txtnap2.Name = "txtnap2";
             this.txtnap2.ReadOnly = true;
             this.txtnap2.Size = new System.Drawing.Size(63, 20);
-            this.txtnap2.TabIndex = 20;
+            this.txtnap2.TabIndex = 0;
             // 
             // txtnue2
             // 
@@ -466,7 +481,7 @@
             this.txtnue2.Name = "txtnue2";
             this.txtnue2.ReadOnly = true;
             this.txtnue2.Size = new System.Drawing.Size(118, 20);
-            this.txtnue2.TabIndex = 19;
+            this.txtnue2.TabIndex = 0;
             // 
             // txtantg2
             // 
@@ -475,7 +490,7 @@
             this.txtantg2.Name = "txtantg2";
             this.txtantg2.ReadOnly = true;
             this.txtantg2.Size = new System.Drawing.Size(202, 20);
-            this.txtantg2.TabIndex = 17;
+            this.txtantg2.TabIndex = 16;
             // 
             // txtdomicilio2
             // 
@@ -484,7 +499,7 @@
             this.txtdomicilio2.Name = "txtdomicilio2";
             this.txtdomicilio2.ReadOnly = true;
             this.txtdomicilio2.Size = new System.Drawing.Size(423, 20);
-            this.txtdomicilio2.TabIndex = 16;
+            this.txtdomicilio2.TabIndex = 17;
             // 
             // txtnombre2
             // 
@@ -493,7 +508,7 @@
             this.txtnombre2.Name = "txtnombre2";
             this.txtnombre2.ReadOnly = true;
             this.txtnombre2.Size = new System.Drawing.Size(492, 20);
-            this.txtnombre2.TabIndex = 15;
+            this.txtnombre2.TabIndex = 0;
             // 
             // txtproy2
             // 
@@ -502,7 +517,7 @@
             this.txtproy2.Name = "txtproy2";
             this.txtproy2.ReadOnly = true;
             this.txtproy2.Size = new System.Drawing.Size(179, 20);
-            this.txtproy2.TabIndex = 14;
+            this.txtproy2.TabIndex = 0;
             // 
             // txtrfc2
             // 
@@ -511,7 +526,7 @@
             this.txtrfc2.Name = "txtrfc2";
             this.txtrfc2.ReadOnly = true;
             this.txtrfc2.Size = new System.Drawing.Size(179, 20);
-            this.txtrfc2.TabIndex = 13;
+            this.txtrfc2.TabIndex = 15;
             this.txtrfc2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtrfc2_KeyPress);
             // 
             // label18
@@ -748,7 +763,7 @@
             this.txtEmisionCheque.Name = "txtEmisionCheque";
             this.txtEmisionCheque.ReadOnly = true;
             this.txtEmisionCheque.Size = new System.Drawing.Size(204, 20);
-            this.txtEmisionCheque.TabIndex = 12;
+            this.txtEmisionCheque.TabIndex = 0;
             this.txtEmisionCheque.Leave += new System.EventHandler(this.txtEmisionCheque_Leave);
             // 
             // label38
@@ -811,7 +826,7 @@
             this.panel4.Location = new System.Drawing.Point(6, 127);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1087, 122);
-            this.panel4.TabIndex = 8;
+            this.panel4.TabIndex = 0;
             // 
             // txtNap
             // 
@@ -843,6 +858,8 @@
             this.txtSueldoBase.Size = new System.Drawing.Size(165, 20);
             this.txtSueldoBase.TabIndex = 5;
             this.txtSueldoBase.Text = "0.00";
+            this.txtSueldoBase.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSueldoBase_KeyPress);
+            this.txtSueldoBase.Leave += new System.EventHandler(this.txtSueldoBase_Leave);
             // 
             // txtNue
             // 
@@ -1114,7 +1131,7 @@
             this.panel5.Location = new System.Drawing.Point(6, 255);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1087, 113);
-            this.panel5.TabIndex = 10;
+            this.panel5.TabIndex = 1;
             // 
             // lblmod
             // 
@@ -1297,7 +1314,7 @@
             this.btnCalculo.Location = new System.Drawing.Point(859, 658);
             this.btnCalculo.Name = "btnCalculo";
             this.btnCalculo.Size = new System.Drawing.Size(204, 33);
-            this.btnCalculo.TabIndex = 13;
+            this.btnCalculo.TabIndex = 18;
             this.btnCalculo.Text = "REALIZAR CALCULO";
             this.btnCalculo.UseVisualStyleBackColor = false;
             this.btnCalculo.Click += new System.EventHandler(this.button1_Click);
@@ -1309,20 +1326,6 @@
             // printDocument1
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage_1);
-            // 
-            // btnImprimir
-            // 
-            this.btnImprimir.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnImprimir.Image = ((System.Drawing.Image)(resources.GetObject("btnImprimir.Image")));
-            this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimir.Location = new System.Drawing.Point(6, 183);
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(184, 43);
-            this.btnImprimir.TabIndex = 4;
-            this.btnImprimir.Text = "IMPRIMIR";
-            this.btnImprimir.UseVisualStyleBackColor = false;
-            this.btnImprimir.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // frmAltas
             // 

@@ -54,7 +54,7 @@ namespace SISPE_MIGRACION.formularios.CATÁLOGOS
             }
             limpiar();
             Close();
-            enviar(valor);
+            enviar(valor,true);
         }
 
         private void btncerrar_Click(object sender, EventArgs e)

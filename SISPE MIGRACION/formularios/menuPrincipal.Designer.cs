@@ -43,9 +43,7 @@
             this.otorgamientoPQToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.altasDeSolicitudesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizacionFechasDeChequesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.imprimirSolicitudYoPagaréToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.utileriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.folioActualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verProgramaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.programarChequesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -76,6 +74,8 @@
             this.segurosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gastosFuneralToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.altasCambiosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.pagoPorCajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -170,7 +170,9 @@
             this.eToolStripMenuItem,
             this.controlYRegistroToolStripMenuItem,
             this.segurosToolStripMenuItem,
-            this.gastosFuneralToolStripMenuItem});
+            this.gastosFuneralToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.pagoPorCajaToolStripMenuItem});
             this.prestacionesEconómicasToolStripMenuItem.Name = "prestacionesEconómicasToolStripMenuItem";
             this.prestacionesEconómicasToolStripMenuItem.Size = new System.Drawing.Size(152, 20);
             this.prestacionesEconómicasToolStripMenuItem.Text = "Prestaciones económicas";
@@ -181,7 +183,6 @@
             this.otorgamientoPQToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.altasDeSolicitudesToolStripMenuItem,
             this.actualizacionFechasDeChequesToolStripMenuItem,
-            this.imprimirSolicitudYoPagaréToolStripMenuItem,
             this.utileriasToolStripMenuItem,
             this.reportesToolStripMenuItem,
             this.tasasToolStripMenuItem});
@@ -206,27 +207,14 @@
             this.actualizacionFechasDeChequesToolStripMenuItem.Text = "Actualizacion fechas de cheques";
             this.actualizacionFechasDeChequesToolStripMenuItem.Click += new System.EventHandler(this.actualizacionFechasDeChequesToolStripMenuItem_Click);
             // 
-            // imprimirSolicitudYoPagaréToolStripMenuItem
-            // 
-            this.imprimirSolicitudYoPagaréToolStripMenuItem.Name = "imprimirSolicitudYoPagaréToolStripMenuItem";
-            this.imprimirSolicitudYoPagaréToolStripMenuItem.Size = new System.Drawing.Size(245, 22);
-            this.imprimirSolicitudYoPagaréToolStripMenuItem.Text = "Imprimir solicitud y/o pagaré";
-            // 
             // utileriasToolStripMenuItem
             // 
             this.utileriasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.folioActualToolStripMenuItem,
             this.verProgramaciónToolStripMenuItem,
             this.programarChequesToolStripMenuItem});
             this.utileriasToolStripMenuItem.Name = "utileriasToolStripMenuItem";
             this.utileriasToolStripMenuItem.Size = new System.Drawing.Size(245, 22);
             this.utileriasToolStripMenuItem.Text = "Utilerias";
-            // 
-            // folioActualToolStripMenuItem
-            // 
-            this.folioActualToolStripMenuItem.Name = "folioActualToolStripMenuItem";
-            this.folioActualToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-            this.folioActualToolStripMenuItem.Text = "Folio actual";
             // 
             // verProgramaciónToolStripMenuItem
             // 
@@ -378,7 +366,7 @@
             this.validarSituaciónLaboralToolStripMenuItem,
             this.fondoDeGarantíaToolStripMenuItem});
             this.quirografariosToolStripMenuItem.Name = "quirografariosToolStripMenuItem";
-            this.quirografariosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.quirografariosToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.quirografariosToolStripMenuItem.Text = "Quirografarios";
             // 
             // generarPorFechaToolStripMenuItem
@@ -451,12 +439,25 @@
             this.altasCambiosToolStripMenuItem1.Text = "Altas / Cambios";
             this.altasCambiosToolStripMenuItem1.Click += new System.EventHandler(this.altasCambiosToolStripMenuItem1_Click);
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(169, 6);
+            // 
+            // pagoPorCajaToolStripMenuItem
+            // 
+            this.pagoPorCajaToolStripMenuItem.Name = "pagoPorCajaToolStripMenuItem";
+            this.pagoPorCajaToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.pagoPorCajaToolStripMenuItem.Text = "Pago por Caja";
+            this.pagoPorCajaToolStripMenuItem.Click += new System.EventHandler(this.pagoPorCajaToolStripMenuItem_Click);
+            // 
             // menuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1370, 618);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "menuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -487,9 +488,7 @@
         private System.Windows.Forms.ToolStripMenuItem otorgamientoPQToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem altasDeSolicitudesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem actualizacionFechasDeChequesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem imprimirSolicitudYoPagaréToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem utileriasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem folioActualToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verProgramaciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem programarChequesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
@@ -520,5 +519,7 @@
         private System.Windows.Forms.ToolStripMenuItem segurosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gastosFuneralToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem altasCambiosToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem pagoPorCajaToolStripMenuItem;
     }
 }

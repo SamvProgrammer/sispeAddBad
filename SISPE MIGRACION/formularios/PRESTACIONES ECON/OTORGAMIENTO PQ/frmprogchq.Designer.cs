@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmprogchq));
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.datoscheque = new System.Windows.Forms.DataGridView();
@@ -40,31 +41,37 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.group = new System.Windows.Forms.GroupBox();
+            this.btnsalir = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datoscheque)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.group.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.group);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1358, 749);
+            this.panel1.Size = new System.Drawing.Size(1139, 537);
             this.panel1.TabIndex = 0;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.datoscheque);
-            this.groupBox1.Location = new System.Drawing.Point(3, 114);
+            this.groupBox1.Location = new System.Drawing.Point(12, 114);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1343, 634);
+            this.groupBox1.Size = new System.Drawing.Size(923, 401);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "CHEQUES QUIROGRAFARIOS";
@@ -84,7 +91,7 @@
             this.datoscheque.Dock = System.Windows.Forms.DockStyle.Fill;
             this.datoscheque.Location = new System.Drawing.Point(3, 16);
             this.datoscheque.Name = "datoscheque";
-            this.datoscheque.Size = new System.Drawing.Size(1337, 615);
+            this.datoscheque.Size = new System.Drawing.Size(917, 382);
             this.datoscheque.TabIndex = 5;
             this.datoscheque.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datoscheque_CellContentClick);
             this.datoscheque.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.datoscheque_CellValueChanged);
@@ -120,10 +127,11 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.label1);
             this.panel3.Location = new System.Drawing.Point(1, 68);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1004, 40);
+            this.panel3.Size = new System.Drawing.Size(1146, 40);
             this.panel3.TabIndex = 3;
             // 
             // label1
@@ -139,36 +147,79 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1358, 66);
+            this.panel2.Size = new System.Drawing.Size(1139, 66);
             this.panel2.TabIndex = 1;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox1.Image = global::SISPE_MIGRACION.Properties.Resources.logo_pensiones;
-            this.pictureBox1.Location = new System.Drawing.Point(905, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(686, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(453, 66);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // group
+            // 
+            this.group.BackColor = System.Drawing.SystemColors.Menu;
+            this.group.Controls.Add(this.btnsalir);
+            this.group.Controls.Add(this.btnNuevo);
+            this.group.Dock = System.Windows.Forms.DockStyle.Right;
+            this.group.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.group.Location = new System.Drawing.Point(943, 66);
+            this.group.Name = "group";
+            this.group.Size = new System.Drawing.Size(196, 471);
+            this.group.TabIndex = 4;
+            this.group.TabStop = false;
+            this.group.Text = "Opciones";
+            // 
+            // btnsalir
+            // 
+            this.btnsalir.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnsalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnsalir.Image = ((System.Drawing.Image)(resources.GetObject("btnsalir.Image")));
+            this.btnsalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnsalir.Location = new System.Drawing.Point(9, 79);
+            this.btnsalir.Name = "btnsalir";
+            this.btnsalir.Size = new System.Drawing.Size(184, 39);
+            this.btnsalir.TabIndex = 3;
+            this.btnsalir.Text = "SALIR ";
+            this.btnsalir.UseVisualStyleBackColor = false;
+            this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
+            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevo.Location = new System.Drawing.Point(6, 34);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(184, 39);
+            this.btnNuevo.TabIndex = 0;
+            this.btnNuevo.Text = "BUSCAR";
+            this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
             // frmprogchq
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1358, 749);
+            this.ClientSize = new System.Drawing.Size(1139, 537);
             this.Controls.Add(this.panel1);
             this.KeyPreview = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmprogchq";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CHEQUES ";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmprogchq_FormClosing);
             this.Load += new System.EventHandler(this.frmprogchq_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmprogchq_KeyDown);
@@ -179,6 +230,7 @@
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.group.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -197,5 +249,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.GroupBox group;
+        private System.Windows.Forms.Button btnsalir;
+        private System.Windows.Forms.Button btnNuevo;
     }
 }
