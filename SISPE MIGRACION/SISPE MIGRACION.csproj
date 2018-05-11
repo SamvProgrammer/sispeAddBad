@@ -117,6 +117,12 @@
     <Compile Include="codigo\herramientas\forms\frmReporte.Designer.cs">
       <DependentUpon>frmReporte.cs</DependentUpon>
     </Compile>
+    <Compile Include="codigo\herramientas\forms\frmReporteSituacionLaboral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="codigo\herramientas\forms\frmReporteSituacionLaboral.Designer.cs">
+      <DependentUpon>frmReporteSituacionLaboral.cs</DependentUpon>
+    </Compile>
     <Compile Include="codigo\herramientas\forms\frmTasaDeInteresescs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,6 +228,12 @@
     <Compile Include="formularios\PRESTACIONES ECON\ESTADOS DE CUENTA\frmdevol.Designer.cs">
       <DependentUpon>frmdevol.cs</DependentUpon>
     </Compile>
+    <Compile Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\CAJA\frmOpcionesPagoCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\CAJA\frmOpcionesPagoCaja.Designer.cs">
+      <DependentUpon>frmOpcionesPagoCaja.cs</DependentUpon>
+    </Compile>
     <Compile Include="formularios\PRESTACIONES ECON\OTORGAMIENTO PQ\frmAltas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -306,6 +318,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="codigo\herramientas\forms\frmReporte.resx">
       <DependentUpon>frmReporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="codigo\herramientas\forms\frmReporteSituacionLaboral.resx">
+      <DependentUpon>frmReporteSituacionLaboral.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="codigo\herramientas\forms\frmTasaDeInteresescs.resx">
       <DependentUpon>frmTasaDeInteresescs.cs</DependentUpon>
