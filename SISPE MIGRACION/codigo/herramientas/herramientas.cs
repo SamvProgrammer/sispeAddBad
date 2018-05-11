@@ -112,6 +112,27 @@ namespace SISPE_MIGRACION.codigo.herramientas
             return words;
         }
 
+        public static string checarDecimales(object cadena) {
+            string aux = "";
+
+            aux = Convert.ToDouble(cadena).ToString("#.##");
+
+
+            if (aux.Contains("."))
+            {
+                string[] tmp = aux.Split('.');
+                if (tmp[1].Length == 1)
+                {
+                    aux += "0";
+                }
+            }
+            else {
+                aux += ".00";
+            }
+
+            return aux;
+        }
+
 
     }
 }

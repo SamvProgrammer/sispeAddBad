@@ -48,5 +48,9 @@ class globales
     public static string convertirNumerosLetras(String numero, bool mayusculas) {
         return NumLetra.Convertir(numero, mayusculas);
     }
+
+    public static string checarDecimales(object texto) {
+        return herramientas.checarDecimales(texto);
+    }
 }
 

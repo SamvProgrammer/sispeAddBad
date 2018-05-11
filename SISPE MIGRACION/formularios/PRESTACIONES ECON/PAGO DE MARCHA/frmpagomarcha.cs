@@ -345,7 +345,7 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.PAGO_DE_MARCHA
             object[][] parametros = new object[2][];
 
             object[] cabeceras = { "cantidad", "imporletra", "nombre" , "rfc" ,"tipo", "meses" , "sueldo" ,"menos","liquido", "facaec" };
-            object[] valores = {Convert.ToString(resultado["monto"]), Convert.ToString(resultado["liq_letra"]), Convert.ToString(resultado["nombre_em"]), Convert.ToString(resultado["rfc"]), Convert.ToString(resultado["descripcion"]), Convert.ToString(resultado["meses"]), Convert.ToString(resultado["sueldo_base"]),  Convert.ToString(resultado["descuentos"]), Convert.ToString(resultado["liquido"]), Convert.ToString(resultado["f_acaec"]).Replace("12:00:00 a. m.", "") };
+            object[] valores = {globales.checarDecimales(resultado["monto"]), Convert.ToString(resultado["liq_letra"]), Convert.ToString(resultado["nombre_em"]), Convert.ToString(resultado["rfc"]), Convert.ToString(resultado["descripcion"]), Convert.ToString(resultado["meses"]), globales.checarDecimales(resultado["sueldo_base"]), globales.checarDecimales(resultado["descuentos"]), globales.checarDecimales(resultado["liquido"]), Convert.ToString(resultado["f_acaec"]).Replace("12:00:00 a. m.", "") };
 
             parametros[0] = cabeceras;
             parametros[1] = valores;
