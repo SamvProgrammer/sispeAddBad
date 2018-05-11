@@ -74,6 +74,8 @@
             this.segurosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gastosFuneralToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.altasCambiosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.pagoPorCajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -168,7 +170,9 @@
             this.eToolStripMenuItem,
             this.controlYRegistroToolStripMenuItem,
             this.segurosToolStripMenuItem,
-            this.gastosFuneralToolStripMenuItem});
+            this.gastosFuneralToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.pagoPorCajaToolStripMenuItem});
             this.prestacionesEconómicasToolStripMenuItem.Name = "prestacionesEconómicasToolStripMenuItem";
             this.prestacionesEconómicasToolStripMenuItem.Size = new System.Drawing.Size(152, 20);
             this.prestacionesEconómicasToolStripMenuItem.Text = "Prestaciones económicas";
@@ -435,6 +439,18 @@
             this.altasCambiosToolStripMenuItem1.Text = "Altas / Cambios";
             this.altasCambiosToolStripMenuItem1.Click += new System.EventHandler(this.altasCambiosToolStripMenuItem1_Click);
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(169, 6);
+            // 
+            // pagoPorCajaToolStripMenuItem
+            // 
+            this.pagoPorCajaToolStripMenuItem.Name = "pagoPorCajaToolStripMenuItem";
+            this.pagoPorCajaToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.pagoPorCajaToolStripMenuItem.Text = "Pago por Caja";
+            this.pagoPorCajaToolStripMenuItem.Click += new System.EventHandler(this.pagoPorCajaToolStripMenuItem_Click);
+            // 
             // menuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -503,5 +519,7 @@
         private System.Windows.Forms.ToolStripMenuItem segurosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gastosFuneralToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem altasCambiosToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem pagoPorCajaToolStripMenuItem;
     }
 }
