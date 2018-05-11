@@ -890,6 +890,29 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
         private void btnnuevo_Click(object sender, EventArgs e)
         {
             limpiarTodosCampos();
+
+            //Código que verifica que la emisión de cheque no sea menos a la fecha actual-----
+            this.Cursor = Cursors.WaitCursor;
+            string query = string.Format("select * from datos.u_config");
+            List<Dictionary<string, object>> resultado = globales.consulta(query);
+            string fechaEmisionCheque = Convert.ToString(resultado[0]["fech_chpq"]).Replace(" 12:00:00 a. m.", "");
+            string[] tmp = fechaEmisionCheque.Split('/');
+            DateTime dtFechaEmisionCheque = new DateTime(Convert.ToInt32(tmp[2]), Convert.ToInt32(tmp[1]), Convert.ToInt32(tmp[0]));
+            DateTime hoy = DateTime.Now;
+            if (dtFechaEmisionCheque < hoy) {
+                MessageBox.Show("La fecha de emisión de cheque es menor a la fecha actual, espere mientras se actualiza la información","Fecha emisión de cheque",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                query = string.Format("select * from catalogos.progpq order by fecha desc limit 1");
+                resultado = globales.consulta(query);
+                string fechaProgramacion = Convert.ToString(resultado[0]["fecha"]).Replace(" 12:00:00 a. m.", "");
+                tmp = fechaProgramacion.Split('/');
+                DateTime UltimaFechaProgramada = new DateTime(Convert.ToInt32(tmp[2]), Convert.ToInt32(tmp[1]), Convert.ToInt32(tmp[0]));
+                if (UltimaFechaProgramada < hoy) {
+                    MessageBox.Show("Para continuar las solicitudes se debe generar el mes siguiente..", "Fecha emisión de cheque", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    this.Cursor = Cursors.Default;
+                    return;
+                }
+            }
+
             activarControlesBasicos();
             txtEmisionCheque.Text = txtFecha;
 

@@ -48,7 +48,7 @@ namespace SISPE_MIGRACION.formularios
                     MessageBox.Show("Favor de ingresar la contraseña.", "Ingresar contraseña", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
-
+                this.Cursor = Cursors.WaitCursor;
                 string usuario = txtUsuario.Text;
                 string password = txtPassword.Text;
                 string query = string.Format("Select usuario,password from catalogos.usuarios where usuario = '{0}' and password = '{1}'", usuario, password);
@@ -66,6 +66,7 @@ namespace SISPE_MIGRACION.formularios
             catch {
                 MessageBox.Show(string.Format("Error formulario {0} método {1}",formulario,metodo));
             }
+            this.Cursor = Cursors.Default;
         }
 
         private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
