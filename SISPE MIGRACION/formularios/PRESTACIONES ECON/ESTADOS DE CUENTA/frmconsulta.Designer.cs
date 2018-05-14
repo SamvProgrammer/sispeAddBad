@@ -93,7 +93,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1484, 758);
+            this.panel1.Size = new System.Drawing.Size(1370, 749);
             this.panel1.TabIndex = 0;
             // 
             // datosgb
@@ -162,9 +162,9 @@
             this.group.Controls.Add(this.btnNuevo);
             this.group.Dock = System.Windows.Forms.DockStyle.Right;
             this.group.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.group.Location = new System.Drawing.Point(1282, 104);
+            this.group.Location = new System.Drawing.Point(1168, 104);
             this.group.Name = "group";
-            this.group.Size = new System.Drawing.Size(202, 654);
+            this.group.Size = new System.Drawing.Size(202, 645);
             this.group.TabIndex = 5;
             this.group.TabStop = false;
             this.group.Text = "Opciones";
@@ -451,14 +451,14 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1484, 104);
+            this.panel3.Size = new System.Drawing.Size(1370, 104);
             this.panel3.TabIndex = 3;
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.pictureBox1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(1209, 0);
+            this.panel4.Location = new System.Drawing.Point(1095, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(275, 104);
             this.panel4.TabIndex = 0;
@@ -497,11 +497,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1484, 758);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.panel1);
+            this.KeyPreview = true;
             this.Name = "frmconsulta";
             this.Text = "frmconsulta";
             this.Load += new System.EventHandler(this.frmconsulta_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmconsulta_KeyDown);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.datosgb)).EndInit();
             this.group.ResumeLayout(false);
