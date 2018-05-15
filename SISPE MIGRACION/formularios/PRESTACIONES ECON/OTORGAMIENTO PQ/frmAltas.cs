@@ -123,7 +123,8 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
 
         private void cambiarTab(object sender, PreviewKeyDownEventArgs e)
         {
-            if (Keys.Enter == e.KeyCode) {
+            if (Keys.Enter == e.KeyCode)
+            {
                 SendKeys.Send("{TAB}");//Cuando se presiona la tecla enter, este le manda señal a la tecla TAB para que active el evento de traspaso...
             }
         }
@@ -138,10 +139,8 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
             frmdependencias.enviar = rellenarCamposSecretarias;
 
             txtAntiguedad.Text = "A M Q";
-            DateTime fecha = globales.sacarFechaHabil(45);
-            txtFecha = string.Format("{0}/{1}/{2}", fecha.Day, fecha.Month, fecha.Year);
-            b_fecha = txtFecha;
-            txtEmisionCheque.Text = txtFecha;
+     
+            txtEmisionCheque.Text = "";
             fechaSolicitud = string.Format("{0}/{1}/{2}", DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year);
         }
 
@@ -779,7 +778,8 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
         }
 
 
-        private bool modificar(p_quirog obj) {
+        private bool modificar(p_quirog obj)
+        {
             bool registro = false;
 
             try
@@ -800,7 +800,8 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
                 registro = true;
 
             }
-            catch {
+            catch
+            {
                 registro = false;
             }
 
@@ -871,6 +872,12 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
                         registro = true;
                         obj.lista.Add(detalleQuirog);
                     }
+
+                    //Sección de código que aumenta el tope de la fecha de emisión de cheque...... si no pasa a la fecha siguiente.... Santiago antonio mariscal velásquez
+
+                    query = string.Format("update catalogos.progpq set utilizados = utilizados + 1 where fecha = {0}",obj.f_emischeq);
+                    globales.consulta(query,true);
+
                 }
                 else
                 {
@@ -891,27 +898,28 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
         {
             limpiarTodosCampos();
 
-            //Código que verifica que la emisión de cheque no sea menos a la fecha actual-----
+            //Está parte del código verifica la fecha de emisión de cheque.....................
             this.Cursor = Cursors.WaitCursor;
-            string query = string.Format("select * from datos.u_config");
-            List<Dictionary<string, object>> resultado = globales.consulta(query);
-            string fechaEmisionCheque = Convert.ToString(resultado[0]["fech_chpq"]).Replace(" 12:00:00 a. m.", "");
-            string[] tmp = fechaEmisionCheque.Split('/');
-            DateTime dtFechaEmisionCheque = new DateTime(Convert.ToInt32(tmp[2]), Convert.ToInt32(tmp[1]), Convert.ToInt32(tmp[0]));
+
+            List<Dictionary<string, object>> resultado;
+            string query;
             DateTime hoy = DateTime.Now;
-            if (dtFechaEmisionCheque < hoy) {
-                MessageBox.Show("La fecha de emisión de cheque es menor a la fecha actual, espere mientras se actualiza la información","Fecha emisión de cheque",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                query = string.Format("select * from catalogos.progpq order by fecha desc limit 1");
-                resultado = globales.consulta(query);
-                string fechaProgramacion = Convert.ToString(resultado[0]["fecha"]).Replace(" 12:00:00 a. m.", "");
-                tmp = fechaProgramacion.Split('/');
-                DateTime UltimaFechaProgramada = new DateTime(Convert.ToInt32(tmp[2]), Convert.ToInt32(tmp[1]), Convert.ToInt32(tmp[0]));
-                if (UltimaFechaProgramada < hoy) {
-                    MessageBox.Show("Para continuar las solicitudes se debe generar el mes siguiente..", "Fecha emisión de cheque", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    this.Cursor = Cursors.Default;
-                    return;
-                }
+
+            string auxHoy = string.Format("{0}-{1}-{2}", hoy.Year, hoy.Month, hoy.Day);
+            query = string.Format("select * from catalogos.progpq where fecha > '{0}' and inhabil <> '*' and utilizados <> programados  order by fecha asc limit 1", auxHoy);
+            resultado = globales.consulta(query);
+            if (resultado.Count == 0)
+            {
+                MessageBox.Show("Para continuar las solicitudes se debe generar el mes siguiente..", "Fecha emisión de cheque", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                this.Cursor = Cursors.Default;
+                return;
             }
+
+            //----------------- fin de fecha de emisión de cheque-----------------------
+
+
+            //Si todo esta bien se saca la fecha de emisión de cheque.......
+            string fechaProgramacion = Convert.ToString(resultado[0]["fecha"]).Replace(" 12:00:00 a. m.", "");
 
             activarControlesBasicos();
             txtEmisionCheque.Text = txtFecha;
@@ -929,6 +937,8 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
 
             btnsalir.Text = "Cancelar";
             txtFolio.Text = "AUTOGENERADO";
+
+            txtEmisionCheque.Text = fechaProgramacion;
 
             frmEmpleados = new frmEmpleados();
             frmEmpleados.enviar = rellenarCamposdeRFC;
@@ -1267,7 +1277,7 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
 
         private void txtEmisionCheque_Leave(object sender, EventArgs e)
         {
-            calculoLiquido();
+            //calculoLiquido();
         }
 
         private void frmAltas_FormClosing(object sender, FormClosingEventArgs e)
@@ -1398,15 +1408,16 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
             string reduc2 = string.Empty; ;
             string porcentaje2 = string.Empty;
 
-            if (resultado.Count != 0) {
-                 percepciones = Convert.ToDouble((resultado[0]["percepciones"])).ToString("#.##");
-                 deducciones = Convert.ToDouble(resultado[0]["deducciones"]).ToString("#.##");
+            if (resultado.Count != 0)
+            {
+                percepciones = Convert.ToDouble((resultado[0]["percepciones"])).ToString("#.##");
+                deducciones = Convert.ToDouble(resultado[0]["deducciones"]).ToString("#.##");
 
-                 reduc1 = Convert.ToDouble(resultado[0]["deduc_rec1"]).ToString("#.##");
-                 porcentaje1 = Convert.ToDouble(resultado[0]["porcentaje1"]).ToString("#.##");
+                reduc1 = Convert.ToDouble(resultado[0]["deduc_rec1"]).ToString("#.##");
+                porcentaje1 = Convert.ToDouble(resultado[0]["porcentaje1"]).ToString("#.##");
 
-                 reduc2 = Convert.ToDouble(resultado[0]["deduc_rec2"]).ToString("#.##");
-                 porcentaje2 = Convert.ToDouble(resultado[0]["porcentaje2"]).ToString("#.##");
+                reduc2 = Convert.ToDouble(resultado[0]["deduc_rec2"]).ToString("#.##");
+                porcentaje2 = Convert.ToDouble(resultado[0]["porcentaje2"]).ToString("#.##");
             }
 
             percepciones = (string.IsNullOrWhiteSpace(percepciones)) ? "0" : percepciones;
@@ -1546,7 +1557,7 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
             obj.porc = (string.IsNullOrWhiteSpace(txtPorc.Text)) ? 0 : Convert.ToDouble(txtPorc.Text);
             obj.plazo = (string.IsNullOrWhiteSpace(txtplazo.Text)) ? 0 : Convert.ToDouble(txtplazo.Text);
             obj.tipo_pago = Convert.ToChar(txtTipoPago.Text);
-            obj.trel = Convert.ToChar((string.IsNullOrWhiteSpace(txtTrl.Text)?" ": txtTrl.Text));
+            obj.trel = Convert.ToChar((string.IsNullOrWhiteSpace(txtTrl.Text) ? " " : txtTrl.Text));
             obj.f_emischeq = (string.IsNullOrWhiteSpace(txtEmisionCheque.Text)) ? "null" : txtEmisionCheque.Text;
             obj.f_primdesc = (string.IsNullOrWhiteSpace(txtF_primerdesc.Text)) ? "null" : txtF_primerdesc.Text;
             obj.f_ultmode = string.IsNullOrWhiteSpace(txtultpago.Text) ? "null" : txtultpago.Text;
@@ -1619,7 +1630,8 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
         {
             if (this.txtSueldoBase.ReadOnly) return;
 
-            if (!string.IsNullOrWhiteSpace(txtSecretaria.Text)) {
+            if (!string.IsNullOrWhiteSpace(txtSecretaria.Text))
+            {
                 rellenarCamposSecretarias(auxiliar);
             }
         }

@@ -23,33 +23,70 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
 
         private void frmprogcheque_Load(object sender, EventArgs e)
         {
-            string cheques = ("SELECT fecha, inhabil, CASE WHEN to_char(fecha, 'd') = '1' then cast('Domingo' as char(10)) WHEN to_char(fecha,'d') = '2' then cast('Lunes' as char(10)) WHEN to_char(fecha,'d') = '3' then cast('Martes' as char(10)) WHEN to_char(fecha,'d') = '4'then cast('Miercoles' as char(10)) WHEN to_char(fecha,'d') = '5'then cast('Jueves' as char(10)) WHEN to_char(fecha,'d') = '6'then cast('Viernes' as char(10)) WHEN to_char(fecha,'d') = '7' then cast('Sabado' as char(10))END AS dia, programados FROM catalogos.progpq order by fecha desc limit 100");
-            var elemento3 = baseDatos.consulta(cheques);
-            cmbAño.Items.Clear();
-            cmbMes.Items.Clear();
-            foreach (var item in elemento3)
+            try
             {
-                string fecha = Convert.ToString(item["fecha"]).Replace(" 12:00:00 a. m.", "");
-                bool inhabil = Convert.ToString(item["inhabil"]) != "*" ? false : true;
-                string dia = Convert.ToString(item["dia"]);
-                string programados = Convert.ToString(item["programados"]);
-                gridcheques.Rows.Add(fecha, inhabil, dia, programados);
+
+                string cheques = ("SELECT fecha, inhabil, CASE WHEN to_char(fecha, 'd') = '1' then cast('Domingo' as char(10)) WHEN to_char(fecha,'d') = '2' then cast('Lunes' as char(10)) WHEN to_char(fecha,'d') = '3' then cast('Martes' as char(10)) WHEN to_char(fecha,'d') = '4'then cast('Miercoles' as char(10)) WHEN to_char(fecha,'d') = '5'then cast('Jueves' as char(10)) WHEN to_char(fecha,'d') = '6'then cast('Viernes' as char(10)) WHEN to_char(fecha,'d') = '7' then cast('Sabado' as char(10))END AS dia, programados FROM catalogos.progpq order by fecha desc limit 100");
+                var elemento3 = baseDatos.consulta(cheques);
+                cmbAño.Items.Clear();
+                cmbMes.Items.Clear();
+                foreach (var item in elemento3)
+                {
+                    string fecha = Convert.ToString(item["fecha"]).Replace(" 12:00:00 a. m.", "");
+                    bool inhabil = Convert.ToString(item["inhabil"]) != "*" ? false : true;
+                    string dia = Convert.ToString(item["dia"]);
+                    string programados = Convert.ToString(item["programados"]);
+                    gridcheques.Rows.Add(fecha, inhabil, dia, programados);
+
+                }
+
+
+                //Consulta para sacar la fecha más pequeña hasta la fecha actual... combo box
+                List<Dictionary<string, object>> resultado = globales.consulta("select fecha from catalogos.progpq order by fecha asc limit 1");
+                string año = Convert.ToString(resultado[0]["fecha"]).Replace(" 12:00:00 a. m.", "").Split('/')[2];
+                int auxAño = Convert.ToInt32(año);
+                for (int x = DateTime.Now.Year; x >= auxAño; x--)
+                {
+                    cmbAño.Items.Add(x);
+                }
+                for (int x = 1; x < this.meses.Length; x++)
+                {
+                    cmbMes.Items.Add(this.meses[x]);
+                }
+
+
+                //Saca el tope de las últimas fechas......
+                DateTime hoy = DateTime.Now;
+
+                string auxHoy = string.Format("{0}-{1}-{2}", hoy.Year, hoy.Month, hoy.Day);
+                string query = string.Format("select * from catalogos.progpq where fecha > '{0}' and inhabil <> '*'   order by fecha asc ", auxHoy);
+                resultado = globales.consulta(query);
+                bool encontrado = false;
+                if (resultado.Count > 0)
+                {
+                    foreach (Dictionary<string, object> item in resultado)
+                    {
+                        string fecha = Convert.ToString(item["fecha"]).Replace(" 12:00:00 a. m.", "");
+                        cmbFecha.Items.Add(fecha);
+                        if (!encontrado)
+                        {
+                            if (Convert.ToInt32(item["utilizados"]) != Convert.ToInt32(item["programados"]))
+                            {
+                                txtCantidad.Text = Convert.ToString(item["utilizados"]);
+                                txtTotal.Text = Convert.ToString(item["programados"]);
+                                cmbFecha.Text = Convert.ToString(fecha);
+                                encontrado = true;
+                            }
+                        }
+                    }
+                }
+            }
+            catch
+            {
+
 
             }
 
-
-            //Consulta para sacar la fecha más pequeña hasta la fecha actual... combo box
-            List<Dictionary<string, object>> resultado = globales.consulta("select fecha from catalogos.progpq order by fecha asc limit 1");
-            string año = Convert.ToString(resultado[0]["fecha"]).Replace(" 12:00:00 a. m.", "").Split('/')[2];
-            int auxAño = Convert.ToInt32(año);
-            for (int x = DateTime.Now.Year; x >= auxAño; x--)
-            {
-                cmbAño.Items.Add(x);
-            }
-            for (int x = 1; x < this.meses.Length; x++)
-            {
-                cmbMes.Items.Add(this.meses[x]);
-            }
         }
 
         private void frmdiacheque_KeyDown(object sender, KeyEventArgs e)
@@ -200,9 +237,62 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
         {
             new frmGenerarMesCheque().ShowDialog();
             gridcheques.Rows.Clear();
-            frmprogcheque_Load(null,null);
+            frmprogcheque_Load(null, null);
             cmbMes.SelectedIndex = -1;
             cmbAño.SelectedIndex = -1;
         }
+
+        private void btnsalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Desea efectuar los cambios?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
+            {
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtCantidad.Text))
+            {
+                MessageBox.Show("Debes insertar los cheques emitidos", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txtCantidad.Focus();
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtTotal.Text))
+            {
+                MessageBox.Show("Debes insertar el total de cheques a emitir..", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txtTotal.Focus();
+                return;
+            }
+            string[] arregloSplit = cmbFecha.Text.Split('/');
+            string fechaAplicar = string.Format("{0}-{1}-{2}", arregloSplit[2], arregloSplit[1], arregloSplit[0]);
+            string query = string.Format("update catalogos.progpq set utilizados = {0},programados = {1} where fecha =  '{2}';", txtCantidad.Text, txtTotal.Text, fechaAplicar);
+            globales.consulta(query);
+
+            MessageBox.Show("Proceso finalizado!!","Aviso",MessageBoxButtons.OK,MessageBoxIcon.Information);
+
+        }
+
+        private void cmbFecha_SelectedValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string[] arreglo = cmbFecha.Text.Split('/');
+                string fechaAux = string.Format("{0}-{1}-{2}", arreglo[2], arreglo[1], arreglo[0]);
+                string query = string.Format("select * from  catalogos.progpq where inhabil <> '*' and  fecha =  '{0}';",fechaAux);
+                List<Dictionary<string, object>> resultado = globales.consulta(query);
+                if (resultado.Count > 0) {
+                    txtCantidad.Text = Convert.ToString(resultado[0]["utilizados"]);
+                    txtTotal.Text = Convert.ToString(resultado[0]["programados"]);
+                }
+            }
+            catch {
+
+            }
+        }
     }
 }
+

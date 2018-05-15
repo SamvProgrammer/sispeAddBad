@@ -65,7 +65,7 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.UTILERIA
                 string enable = "";
                 if (nombre == "Saturday" || nombre == "Sunday")
                     enable = "*";
-                string query = string.Format("insert into catalogos.progpq(fecha,inhabil,programados) values('{0}','{1}',{2})",fechaInsertar,enable,txtCantidad.Text);
+                string query = string.Format("insert into catalogos.progpq(fecha,inhabil,programados,utilizados) values('{0}','{1}',{2},0)",fechaInsertar,enable,0);
                 if (cmbMes.SelectedIndex != 11)
                 {
                     if (cmbMes.SelectedIndex + 1 != fecha.Month)

@@ -45,7 +45,6 @@
             this.actualizacionFechasDeChequesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.utileriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verProgramaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.programarChequesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.solicEntregaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pagaresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -210,8 +209,7 @@
             // utileriasToolStripMenuItem
             // 
             this.utileriasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.verProgramaciónToolStripMenuItem,
-            this.programarChequesToolStripMenuItem});
+            this.verProgramaciónToolStripMenuItem});
             this.utileriasToolStripMenuItem.Name = "utileriasToolStripMenuItem";
             this.utileriasToolStripMenuItem.Size = new System.Drawing.Size(245, 22);
             this.utileriasToolStripMenuItem.Text = "Utilerias";
@@ -219,15 +217,9 @@
             // verProgramaciónToolStripMenuItem
             // 
             this.verProgramaciónToolStripMenuItem.Name = "verProgramaciónToolStripMenuItem";
-            this.verProgramaciónToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-            this.verProgramaciónToolStripMenuItem.Text = "Ver programación";
+            this.verProgramaciónToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
+            this.verProgramaciónToolStripMenuItem.Text = "Programación de cheques";
             this.verProgramaciónToolStripMenuItem.Click += new System.EventHandler(this.verProgramaciónToolStripMenuItem_Click);
-            // 
-            // programarChequesToolStripMenuItem
-            // 
-            this.programarChequesToolStripMenuItem.Name = "programarChequesToolStripMenuItem";
-            this.programarChequesToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-            this.programarChequesToolStripMenuItem.Text = "Programar cheques";
             // 
             // reportesToolStripMenuItem
             // 
@@ -490,7 +482,6 @@
         private System.Windows.Forms.ToolStripMenuItem actualizacionFechasDeChequesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem utileriasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verProgramaciónToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem programarChequesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem solicEntregaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pagaresToolStripMenuItem;
