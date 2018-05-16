@@ -45,7 +45,7 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
                 List<Dictionary<string, object>> resultado = globales.consulta("select fecha from catalogos.progpq order by fecha asc limit 1");
                 string año = Convert.ToString(resultado[0]["fecha"]).Replace(" 12:00:00 a. m.", "").Split('/')[2];
                 int auxAño = Convert.ToInt32(año);
-                for (int x = DateTime.Now.Year; x >= auxAño; x--)
+                for (int x = DateTime.Now.Year+1; x >= auxAño; x--)
                 {
                     cmbAño.Items.Add(x);
                 }

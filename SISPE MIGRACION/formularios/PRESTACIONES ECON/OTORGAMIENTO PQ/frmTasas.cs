@@ -24,8 +24,15 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
         {
             try
             {
+                this.Cursor = Cursors.WaitCursor;
                 string query = "select * from datos.c_tasai";
                 List<Dictionary<string, object>> resultado = globales.consulta(query);
+
+                if (resultado.Count == 0) {
+                    MessageBox.Show("No existen tasas de interes, favor de ingresar la nueva tasa", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+
                 txtTrel.Text = Convert.ToString(resultado[0]["trel"]);
                 txtTasas_q.Text = Convert.ToString(resultado[0]["tasa_q"]);
                 resultado.ForEach(o => cmbDescripcion.Items.Add(o["descripcion"]));
@@ -36,8 +43,10 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ
 
             }
             catch {
-
+                MessageBox.Show("Error, favor de contactar a los de sistemas", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+
+            this.Cursor = Cursors.Default;
         }
 
         private void cmbDescripcion_TextChanged(object sender, EventArgs e)

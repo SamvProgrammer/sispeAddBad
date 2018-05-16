@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtFecha1 = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtInteres1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.txtInteres1 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtFecha1 = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,33 +53,26 @@
             this.panel1.Size = new System.Drawing.Size(378, 203);
             this.panel1.TabIndex = 0;
             // 
-            // label1
+            // button1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(95, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(182, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Agragar tasa de interes";
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(119, 161);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(128, 30);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "&Aceptar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // txtFecha1
+            // txtInteres1
             // 
-            this.txtFecha1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFecha1.Location = new System.Drawing.Point(37, 65);
-            this.txtFecha1.Name = "txtFecha1";
-            this.txtFecha1.Size = new System.Drawing.Size(307, 20);
-            this.txtFecha1.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(34, 44);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(213, 18);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Seleccionar tasa de interes";
+            this.txtInteres1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtInteres1.Location = new System.Drawing.Point(37, 129);
+            this.txtInteres1.Name = "txtInteres1";
+            this.txtInteres1.Size = new System.Drawing.Size(307, 26);
+            this.txtInteres1.TabIndex = 4;
+            this.txtInteres1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // label3
             // 
@@ -91,25 +84,33 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Ingresar tasa de interes";
             // 
-            // txtInteres1
+            // label2
             // 
-            this.txtInteres1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtInteres1.Location = new System.Drawing.Point(37, 129);
-            this.txtInteres1.Name = "txtInteres1";
-            this.txtInteres1.Size = new System.Drawing.Size(307, 26);
-            this.txtInteres1.TabIndex = 4;
-            this.txtInteres1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(34, 44);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(213, 18);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Seleccionar tasa de interes";
             // 
-            // button1
+            // txtFecha1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(119, 161);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(128, 30);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "&Aceptar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.txtFecha1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFecha1.Location = new System.Drawing.Point(37, 65);
+            this.txtFecha1.Name = "txtFecha1";
+            this.txtFecha1.Size = new System.Drawing.Size(307, 20);
+            this.txtFecha1.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(95, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(182, 18);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Agragar tasa de interes";
             // 
             // frmAgregarTasaInteres
             // 

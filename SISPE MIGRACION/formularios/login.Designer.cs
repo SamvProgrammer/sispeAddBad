@@ -62,7 +62,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(390, 519);
+            this.panel1.Size = new System.Drawing.Size(307, 519);
             this.panel1.TabIndex = 0;
             // 
             // label4
@@ -71,7 +71,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(220, 497);
+            this.label4.Location = new System.Drawing.Point(146, 506);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(158, 13);
             this.label4.TabIndex = 8;
@@ -82,9 +82,9 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(72, 9);
+            this.label5.Location = new System.Drawing.Point(32, 9);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(244, 62);
+            this.label5.Size = new System.Drawing.Size(236, 62);
             this.label5.TabIndex = 9;
             this.label5.Text = "Sistema de Pensiones [SISPE]";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -100,9 +100,9 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(39, 74);
+            this.panel2.Location = new System.Drawing.Point(16, 74);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(302, 398);
+            this.panel2.Size = new System.Drawing.Size(269, 398);
             this.panel2.TabIndex = 1;
             // 
             // btnIngresar
@@ -111,9 +111,9 @@
             this.btnIngresar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresar.ForeColor = System.Drawing.Color.White;
-            this.btnIngresar.Location = new System.Drawing.Point(35, 339);
+            this.btnIngresar.Location = new System.Drawing.Point(17, 339);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(231, 39);
+            this.btnIngresar.Size = new System.Drawing.Size(233, 39);
             this.btnIngresar.TabIndex = 6;
             this.btnIngresar.Text = "INGRESAR";
             this.btnIngresar.UseVisualStyleBackColor = false;
@@ -126,7 +126,7 @@
             this.txtPassword.MaxLength = 50;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '•';
-            this.txtPassword.Size = new System.Drawing.Size(271, 22);
+            this.txtPassword.Size = new System.Drawing.Size(233, 22);
             this.txtPassword.TabIndex = 5;
             // 
             // txtUsuario
@@ -135,7 +135,7 @@
             this.txtUsuario.Location = new System.Drawing.Point(17, 246);
             this.txtUsuario.MaxLength = 20;
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(271, 22);
+            this.txtUsuario.Size = new System.Drawing.Size(233, 22);
             this.txtUsuario.TabIndex = 4;
             // 
             // label3
@@ -161,7 +161,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(48, 189);
+            this.label1.Location = new System.Drawing.Point(23, 189);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(218, 18);
             this.label1.TabIndex = 1;
@@ -173,7 +173,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(14, 15);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(274, 171);
+            this.pictureBox1.Size = new System.Drawing.Size(236, 171);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -182,7 +182,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(390, 519);
+            this.ClientSize = new System.Drawing.Size(307, 519);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;

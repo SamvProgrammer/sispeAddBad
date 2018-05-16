@@ -26,6 +26,18 @@ namespace SISPE_MIGRACION.codigo.herramientas.forms
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtFecha1.Text)) {
+                MessageBox.Show("Se debe ingresar una fecha para aplicar tasa","Aviso",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                txtFecha1.Focus();
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtInteres1.Text)) {
+                MessageBox.Show("Se debe ingresar la tasa de interes a aplicar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txtInteres1.Focus();
+                return;
+            }
+
             this.txtFecha = string.Format("{0}-{1}-{2}", this.txtFecha1.Value.Year, this.txtFecha1.Value.Month, this.txtFecha1.Value.Day);
             this.txtInteres = this.txtInteres1.Text;
             this.aceptar = true;
