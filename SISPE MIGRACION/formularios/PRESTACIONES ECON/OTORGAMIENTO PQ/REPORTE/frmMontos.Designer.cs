@@ -1,8 +1,6 @@
-﻿using System;
-
-namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.reportes
+﻿namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.reportes
 {
-    partial class frmPagares
+    partial class frmMontos
     {
         /// <summary>
         /// Required designer variable.
@@ -32,8 +30,8 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.reportes
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.radioDes = new System.Windows.Forms.RadioButton();
-            this.radioCentral = new System.Windows.Forms.RadioButton();
+            this.radioLiquido = new System.Windows.Forms.RadioButton();
+            this.radioImporte = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.fe2 = new System.Windows.Forms.DateTimePicker();
@@ -47,8 +45,8 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.reportes
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.radioDes);
-            this.panel1.Controls.Add(this.radioCentral);
+            this.panel1.Controls.Add(this.radioLiquido);
+            this.panel1.Controls.Add(this.radioImporte);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.fe2);
@@ -57,8 +55,8 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.reportes
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(454, 301);
-            this.panel1.TabIndex = 2;
+            this.panel1.Size = new System.Drawing.Size(466, 287);
+            this.panel1.TabIndex = 3;
             // 
             // pictureBox1
             // 
@@ -70,27 +68,27 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.reportes
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
-            // radioDes
+            // radioLiquido
             // 
-            this.radioDes.AutoSize = true;
-            this.radioDes.Location = new System.Drawing.Point(265, 209);
-            this.radioDes.Name = "radioDes";
-            this.radioDes.Size = new System.Drawing.Size(101, 17);
-            this.radioDes.TabIndex = 10;
-            this.radioDes.Text = "Descentralizado";
-            this.radioDes.UseVisualStyleBackColor = true;
+            this.radioLiquido.AutoSize = true;
+            this.radioLiquido.Location = new System.Drawing.Point(297, 209);
+            this.radioLiquido.Name = "radioLiquido";
+            this.radioLiquido.Size = new System.Drawing.Size(59, 17);
+            this.radioLiquido.TabIndex = 10;
+            this.radioLiquido.Text = "Liquido";
+            this.radioLiquido.UseVisualStyleBackColor = true;
             // 
-            // radioCentral
+            // radioImporte
             // 
-            this.radioCentral.AutoSize = true;
-            this.radioCentral.Checked = true;
-            this.radioCentral.Location = new System.Drawing.Point(97, 209);
-            this.radioCentral.Name = "radioCentral";
-            this.radioCentral.Size = new System.Drawing.Size(83, 17);
-            this.radioCentral.TabIndex = 9;
-            this.radioCentral.TabStop = true;
-            this.radioCentral.Text = "Centralizado";
-            this.radioCentral.UseVisualStyleBackColor = true;
+            this.radioImporte.AutoSize = true;
+            this.radioImporte.Checked = true;
+            this.radioImporte.Location = new System.Drawing.Point(97, 209);
+            this.radioImporte.Name = "radioImporte";
+            this.radioImporte.Size = new System.Drawing.Size(60, 17);
+            this.radioImporte.TabIndex = 9;
+            this.radioImporte.TabStop = true;
+            this.radioImporte.Text = "Importe";
+            this.radioImporte.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -134,15 +132,15 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.reportes
             this.fe1.Size = new System.Drawing.Size(277, 20);
             this.fe1.TabIndex = 4;
             // 
-            // frmPagares
+            // frmMontos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(454, 301);
+            this.ClientSize = new System.Drawing.Size(466, 287);
             this.Controls.Add(this.panel1);
-            this.Name = "frmPagares";
+            this.Name = "frmMontos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmPagares";
+            this.Text = "Montos";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -150,21 +148,16 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.reportes
 
         }
 
-        private void frmPagares_Load(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
         #endregion
 
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.RadioButton radioLiquido;
+        private System.Windows.Forms.RadioButton radioImporte;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker fe2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker fe1;
-        private System.Windows.Forms.RadioButton radioDes;
-        private System.Windows.Forms.RadioButton radioCentral;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
