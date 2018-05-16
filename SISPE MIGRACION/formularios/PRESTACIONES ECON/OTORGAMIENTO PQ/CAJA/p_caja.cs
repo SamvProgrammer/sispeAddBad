@@ -16,5 +16,43 @@ namespace SISPE_MIGRACION.formularios.PRESTACIONES_ECON.OTORGAMIENTO_PQ.CAJA
         {
             InitializeComponent();
         }
+
+        private void btnsalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void p_caja_Load(object sender, EventArgs e)
+        {
+            deshabilitar();
+        }
+
+        private void deshabilitar(){
+            deshabilitarElemento(txtFolio);
+            deshabilitarElemento(txtF_descuento);
+            deshabilitarElemento(txtTotal);
+
+            deshabilitarElemento(txtRfc);
+            deshabilitarElemento(txtNombre_em);
+            deshabilitarElemento(txtSecretaria);
+            deshabilitarElemento(txtdescripcion);
+
+            deshabilitarElemento(txtDescuentos);
+            deshabilitarElemento(txtImp_unit);
+            deshabilitarElemento(txtDelDescuento);
+            deshabilitarElemento(txtNumDesc);
+            deshabilitarElemento(txtPlazo);
+            deshabilitarElemento(txtImp_unitCap);
+            deshabilitarElemento(txtImp_unitIntereses);
+        }
+
+        private void deshabilitarElemento(Control x) {
+            x.Enabled = false;
+        }
     }
 }
