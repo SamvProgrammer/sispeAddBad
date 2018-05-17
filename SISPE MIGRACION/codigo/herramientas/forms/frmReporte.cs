@@ -94,7 +94,7 @@ namespace SISPE_MIGRACION.codigo.herramientas.forms
         internal void cargarDatos(string tablaNombre, object[] objeto,string mensaje, bool imprimir = false,object[]parametros = null) {
 
             DataTable tabla = tablas.Tables[tablaNombre];
-
+            
             this.mensaje = mensaje;
 
             if (tabla != null) {
