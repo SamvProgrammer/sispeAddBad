@@ -30,6 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(p_caja));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.group = new System.Windows.Forms.GroupBox();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnModifica = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnsalir = new System.Windows.Forms.Button();
             this.txtTitulo = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.txtLetra2 = new System.Windows.Forms.Label();
@@ -59,28 +64,23 @@
             this.txtRfc = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.txtF_descuento = new System.Windows.Forms.DateTimePicker();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtF_descuento = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtFolio = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.group = new System.Windows.Forms.GroupBox();
-            this.btnsalir = new System.Windows.Forms.Button();
-            this.btnModifica = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.group.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.group.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -97,6 +97,78 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1016, 544);
             this.panel1.TabIndex = 0;
+            // 
+            // group
+            // 
+            this.group.BackColor = System.Drawing.SystemColors.Menu;
+            this.group.Controls.Add(this.btnGuardar);
+            this.group.Controls.Add(this.btnModifica);
+            this.group.Controls.Add(this.btnNuevo);
+            this.group.Controls.Add(this.btnsalir);
+            this.group.Dock = System.Windows.Forms.DockStyle.Right;
+            this.group.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.group.Location = new System.Drawing.Point(820, 75);
+            this.group.Name = "group";
+            this.group.Size = new System.Drawing.Size(196, 469);
+            this.group.TabIndex = 11;
+            this.group.TabStop = false;
+            this.group.Text = "Opciones";
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardar.Location = new System.Drawing.Point(6, 137);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(184, 39);
+            this.btnGuardar.TabIndex = 6;
+            this.btnGuardar.Text = "GUARDAR ";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // btnModifica
+            // 
+            this.btnModifica.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnModifica.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnModifica.Image = ((System.Drawing.Image)(resources.GetObject("btnModifica.Image")));
+            this.btnModifica.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModifica.Location = new System.Drawing.Point(6, 74);
+            this.btnModifica.Name = "btnModifica";
+            this.btnModifica.Size = new System.Drawing.Size(184, 39);
+            this.btnModifica.TabIndex = 5;
+            this.btnModifica.Text = "    ACTUALIZAR       SOLICITUD";
+            this.btnModifica.UseVisualStyleBackColor = false;
+            this.btnModifica.Click += new System.EventHandler(this.btnModifica_Click);
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
+            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevo.Location = new System.Drawing.Point(6, 18);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(184, 39);
+            this.btnNuevo.TabIndex = 4;
+            this.btnNuevo.Text = "NUEVA SOLICITUD";
+            this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click_1);
+            // 
+            // btnsalir
+            // 
+            this.btnsalir.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnsalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnsalir.Image = ((System.Drawing.Image)(resources.GetObject("btnsalir.Image")));
+            this.btnsalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnsalir.Location = new System.Drawing.Point(6, 189);
+            this.btnsalir.Name = "btnsalir";
+            this.btnsalir.Size = new System.Drawing.Size(184, 39);
+            this.btnsalir.TabIndex = 3;
+            this.btnsalir.Text = "SALIR ";
+            this.btnsalir.UseVisualStyleBackColor = false;
+            this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
             // 
             // txtTitulo
             // 
@@ -176,6 +248,7 @@
             this.txtImp_unitCap.Name = "txtImp_unitCap";
             this.txtImp_unitCap.Size = new System.Drawing.Size(218, 20);
             this.txtImp_unitCap.TabIndex = 24;
+            this.txtImp_unitCap.Leave += new System.EventHandler(this.txtImp_unitCap_Leave);
             // 
             // label12
             // 
@@ -201,6 +274,7 @@
             this.txtPlazo.Name = "txtPlazo";
             this.txtPlazo.Size = new System.Drawing.Size(113, 20);
             this.txtPlazo.TabIndex = 21;
+            this.txtPlazo.Enter += new System.EventHandler(this.eventoEntrar);
             // 
             // label10
             // 
@@ -213,6 +287,7 @@
             // 
             // txtNumDesc
             // 
+            this.txtNumDesc.Enabled = false;
             this.txtNumDesc.Location = new System.Drawing.Point(290, 66);
             this.txtNumDesc.Name = "txtNumDesc";
             this.txtNumDesc.Size = new System.Drawing.Size(113, 20);
@@ -360,9 +435,9 @@
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.Menu;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel4.Controls.Add(this.txtF_descuento);
             this.panel4.Controls.Add(this.txtTotal);
             this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.txtF_descuento);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.txtFolio);
             this.panel4.Controls.Add(this.label1);
@@ -370,6 +445,13 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(755, 58);
             this.panel4.TabIndex = 2;
+            // 
+            // txtF_descuento
+            // 
+            this.txtF_descuento.Location = new System.Drawing.Point(339, 16);
+            this.txtF_descuento.Name = "txtF_descuento";
+            this.txtF_descuento.Size = new System.Drawing.Size(195, 20);
+            this.txtF_descuento.TabIndex = 6;
             // 
             // txtTotal
             // 
@@ -388,14 +470,6 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "TOTAL:";
             // 
-            // txtF_descuento
-            // 
-            this.txtF_descuento.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtF_descuento.Location = new System.Drawing.Point(338, 17);
-            this.txtF_descuento.Name = "txtF_descuento";
-            this.txtF_descuento.Size = new System.Drawing.Size(184, 20);
-            this.txtF_descuento.TabIndex = 3;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -411,6 +485,7 @@
             this.txtFolio.Name = "txtFolio";
             this.txtFolio.Size = new System.Drawing.Size(153, 20);
             this.txtFolio.TabIndex = 1;
+            this.txtFolio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFolio_KeyPress);
             // 
             // label1
             // 
@@ -451,76 +526,6 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // group
-            // 
-            this.group.BackColor = System.Drawing.SystemColors.Menu;
-            this.group.Controls.Add(this.btnGuardar);
-            this.group.Controls.Add(this.btnModifica);
-            this.group.Controls.Add(this.btnNuevo);
-            this.group.Controls.Add(this.btnsalir);
-            this.group.Dock = System.Windows.Forms.DockStyle.Right;
-            this.group.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.group.Location = new System.Drawing.Point(820, 75);
-            this.group.Name = "group";
-            this.group.Size = new System.Drawing.Size(196, 469);
-            this.group.TabIndex = 11;
-            this.group.TabStop = false;
-            this.group.Text = "Opciones";
-            // 
-            // btnsalir
-            // 
-            this.btnsalir.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnsalir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnsalir.Image = ((System.Drawing.Image)(resources.GetObject("btnsalir.Image")));
-            this.btnsalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnsalir.Location = new System.Drawing.Point(6, 189);
-            this.btnsalir.Name = "btnsalir";
-            this.btnsalir.Size = new System.Drawing.Size(184, 39);
-            this.btnsalir.TabIndex = 3;
-            this.btnsalir.Text = "SALIR ";
-            this.btnsalir.UseVisualStyleBackColor = false;
-            this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
-            // 
-            // btnModifica
-            // 
-            this.btnModifica.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnModifica.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModifica.Image = ((System.Drawing.Image)(resources.GetObject("btnModifica.Image")));
-            this.btnModifica.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModifica.Location = new System.Drawing.Point(6, 74);
-            this.btnModifica.Name = "btnModifica";
-            this.btnModifica.Size = new System.Drawing.Size(184, 39);
-            this.btnModifica.TabIndex = 5;
-            this.btnModifica.Text = "    ACTUALIZAR       SOLICITUD";
-            this.btnModifica.UseVisualStyleBackColor = false;
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
-            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.Location = new System.Drawing.Point(6, 18);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(184, 39);
-            this.btnNuevo.TabIndex = 4;
-            this.btnNuevo.Text = "NUEVA SOLICITUD";
-            this.btnNuevo.UseVisualStyleBackColor = false;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
-            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(6, 137);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(184, 39);
-            this.btnGuardar.TabIndex = 6;
-            this.btnGuardar.Text = "GUARDAR ";
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Visible = false;
-            // 
             // p_caja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -535,6 +540,7 @@
             this.Load += new System.EventHandler(this.p_caja_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.group.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -544,7 +550,6 @@
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.group.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -584,7 +589,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtF_descuento;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtFolio;
         private System.Windows.Forms.Label label1;
@@ -595,5 +599,6 @@
         private System.Windows.Forms.Button btnModifica;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.DateTimePicker txtF_descuento;
     }
 }
