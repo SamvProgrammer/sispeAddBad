@@ -346,10 +346,6 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="prueba1" msprop:Generator_TableClassName="prueba1DataTable" msprop:Generator_TableVarName="tableprueba1" msprop:Generator_TablePropName="prueba1" msprop:Generator_RowDeletingName="prueba1RowDeleting" msprop:Generator_RowChangingName="prueba1RowChanging" msprop:Generator_RowEvHandlerName="prueba1RowChangeEventHandler" msprop:Generator_RowDeletedName="prueba1RowDeleted" msprop:Generator_UserTableName="prueba1" msprop:Generator_RowChangedName="prueba1RowChanged" msprop:Generator_RowEvArgName="prueba1RowChangeEvent" msprop:Generator_RowClassName="prueba1Row">
-          <xs:complexType>
-          </xs:complexType>
-        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
